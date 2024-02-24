@@ -21,12 +21,12 @@ import fnmatch
 
 from enum import IntEnum, IntFlag
 
-from ansible import constants as C
-from ansible.errors import AnsibleAssertionError
-from ansible.module_utils.parsing.convert_bool import boolean
-from ansible.playbook.block import Block
-from ansible.playbook.task import Task
-from ansible.utils.display import Display
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleAssertionError
+from arolemgr.module_utils.parsing.convert_bool import boolean
+from arolemgr.playbook.block import Block
+from arolemgr.playbook.task import Task
+from arolemgr.utils.display import Display
 
 
 display = Display()

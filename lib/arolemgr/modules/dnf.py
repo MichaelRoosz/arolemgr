@@ -390,14 +390,14 @@ import os
 import re
 import sys
 
-from ansible.module_utils.common.text.converters import to_native, to_text
-from ansible.module_utils.urls import fetch_file
-from ansible.module_utils.compat.version import LooseVersion
+from arolemgr.module_utils.common.text.converters import to_native, to_text
+from arolemgr.module_utils.urls import fetch_file
+from arolemgr.module_utils.compat.version import LooseVersion
 
-from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.common.locale import get_best_parsable_locale
-from ansible.module_utils.common.respawn import has_respawned, probe_interpreters_for_module, respawn_module
-from ansible.module_utils.yumdnf import YumDnf, yumdnf_argument_spec
+from arolemgr.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.common.locale import get_best_parsable_locale
+from arolemgr.module_utils.common.respawn import has_respawned, probe_interpreters_for_module, respawn_module
+from arolemgr.module_utils.yumdnf import YumDnf, yumdnf_argument_spec
 
 
 # NOTE dnf Python bindings import is postponed, see DnfModule._ensure_dnf(),

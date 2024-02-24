@@ -17,11 +17,11 @@
 
 from __future__ import annotations
 
-from ansible.errors import AnsibleError
-from ansible.module_utils.six import string_types
-from ansible.playbook.role.definition import RoleDefinition
-from ansible.utils.display import Display
-from ansible.utils.galaxy import scm_archive_resource, scm_archive_resource_async
+from arolemgr.errors import AnsibleError
+from arolemgr.module_utils.six import string_types
+from arolemgr.playbook.role.definition import RoleDefinition
+from arolemgr.utils.display import Display
+from arolemgr.utils.galaxy import scm_archive_resource, scm_archive_resource_async
 
 __all__ = ['RoleRequirement']
 

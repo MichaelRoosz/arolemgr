@@ -14,7 +14,7 @@ extends_documentation_fragment:
 
 import re
 
-from ansible.plugins.shell.powershell import ShellModule as PSShellModule
+from arolemgr.plugins.shell.powershell import ShellModule as PSShellModule
 
 # these are the metachars that have a special meaning in cmd that we want to escape when quoting
 _find_unsafe = re.compile(r'[\s\(\)\%\!^\"\<\>\&\|]').search

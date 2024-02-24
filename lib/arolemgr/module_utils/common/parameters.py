@@ -10,10 +10,10 @@ import os
 from collections import deque
 from itertools import chain
 
-from ansible.module_utils.common.collections import is_iterable
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
-from ansible.module_utils.common.warnings import warn
-from ansible.module_utils.errors import (
+from arolemgr.module_utils.common.collections import is_iterable
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.module_utils.common.warnings import warn
+from arolemgr.module_utils.errors import (
     AliasError,
     AnsibleFallbackNotFound,
     AnsibleValidationErrorMultiple,
@@ -29,9 +29,9 @@ from ansible.module_utils.errors import (
     RequiredTogetherError,
     SubParameterTypeError,
 )
-from ansible.module_utils.parsing.convert_bool import BOOLEANS_FALSE, BOOLEANS_TRUE
+from arolemgr.module_utils.parsing.convert_bool import BOOLEANS_FALSE, BOOLEANS_TRUE
 
-from ansible.module_utils.six.moves.collections_abc import (
+from arolemgr.module_utils.six.moves.collections_abc import (
     KeysView,
     Set,
     Sequence,
@@ -41,7 +41,7 @@ from ansible.module_utils.six.moves.collections_abc import (
     MutableSequence,
 )
 
-from ansible.module_utils.six import (
+from arolemgr.module_utils.six import (
     binary_type,
     integer_types,
     string_types,
@@ -50,7 +50,7 @@ from ansible.module_utils.six import (
     PY3,
 )
 
-from ansible.module_utils.common.validation import (
+from arolemgr.module_utils.common.validation import (
     check_mutually_exclusive,
     check_required_arguments,
     check_required_together,

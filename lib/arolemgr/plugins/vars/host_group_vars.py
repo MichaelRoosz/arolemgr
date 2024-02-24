@@ -53,12 +53,12 @@ DOCUMENTATION = '''
 '''
 
 import os
-from ansible.errors import AnsibleParserError
-from ansible.module_utils.common.text.converters import to_native
-from ansible.plugins.vars import BaseVarsPlugin
-from ansible.utils.path import basedir
-from ansible.inventory.group import InventoryObjectType
-from ansible.utils.vars import combine_vars
+from arolemgr.errors import AnsibleParserError
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.plugins.vars import BaseVarsPlugin
+from arolemgr.utils.path import basedir
+from arolemgr.inventory.group import InventoryObjectType
+from arolemgr.utils.vars import combine_vars
 
 CANONICAL_PATHS = {}  # type: dict[str, str]
 FOUND = {}  # type: dict[str, list[str]]

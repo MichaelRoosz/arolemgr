@@ -23,19 +23,19 @@ from random import Random, SystemRandom, shuffle
 
 from jinja2.filters import pass_environment
 
-from ansible.errors import AnsibleError, AnsibleFilterError, AnsibleFilterTypeError
-from ansible.module_utils.six import string_types, integer_types, reraise, text_type
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
-from ansible.module_utils.common.collections import is_sequence
-from ansible.module_utils.common.yaml import yaml_load, yaml_load_all
-from ansible.parsing.ajson import AnsibleJSONEncoder
-from ansible.parsing.yaml.dumper import AnsibleDumper
-from ansible.template import recursive_check_defined
-from ansible.utils.display import Display
-from ansible.utils.encrypt import do_encrypt, PASSLIB_AVAILABLE
-from ansible.utils.hashing import md5s, checksum_s
-from ansible.utils.unicode import unicode_wrap
-from ansible.utils.vars import merge_hash
+from arolemgr.errors import AnsibleError, AnsibleFilterError, AnsibleFilterTypeError
+from arolemgr.module_utils.six import string_types, integer_types, reraise, text_type
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.module_utils.common.collections import is_sequence
+from arolemgr.module_utils.common.yaml import yaml_load, yaml_load_all
+from arolemgr.parsing.ajson import AnsibleJSONEncoder
+from arolemgr.parsing.yaml.dumper import AnsibleDumper
+from arolemgr.template import recursive_check_defined
+from arolemgr.utils.display import Display
+from arolemgr.utils.encrypt import do_encrypt, PASSLIB_AVAILABLE
+from arolemgr.utils.hashing import md5s, checksum_s
+from arolemgr.utils.unicode import unicode_wrap
+from arolemgr.utils.vars import merge_hash
 
 display = Display()
 

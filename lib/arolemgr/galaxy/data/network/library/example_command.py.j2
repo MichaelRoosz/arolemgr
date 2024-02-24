@@ -17,7 +17,7 @@
 # along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
 #
 from __future__ import annotations
-from ansible.errors import AnsibleError
+from arolemgr.errors import AnsibleError
 
 
 ### Documentation
@@ -42,7 +42,7 @@ RETURN = """
 
 #### Imports
 try:
-    from ansible.module_utils.basic import AnsibleModule
+    from arolemgr.module_utils.basic import AnsibleModule
     """
     Examples:
         https://github.com/ansible/ansible/blob/devel/lib/ansible/modules/network/iosxr/iosxr_command.py

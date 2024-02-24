@@ -3,7 +3,7 @@
 
 from __future__ import annotations
 
-from ansible.module_utils.common.text.converters import to_native
+from arolemgr.module_utils.common.text.converters import to_native
 
 
 def get_best_parsable_locale(module, preferences=None, raise_on_locale=False):

@@ -414,9 +414,9 @@ state:
 
 import os
 
-from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.six.moves import configparser
-from ansible.module_utils.common.text.converters import to_native
+from arolemgr.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.six.moves import configparser
+from arolemgr.module_utils.common.text.converters import to_native
 
 
 class YumRepo(object):

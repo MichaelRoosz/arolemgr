@@ -16,9 +16,9 @@
 # along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
 from __future__ import annotations
 
-from ansible import constants as C
-from ansible.plugins.action import ActionBase
-from ansible.utils.vars import merge_hash
+from arolemgr import  constants as C
+from arolemgr.plugins.action import ActionBase
+from arolemgr.utils.vars import merge_hash
 
 
 class ActionModule(ActionBase):

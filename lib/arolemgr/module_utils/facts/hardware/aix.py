@@ -17,8 +17,8 @@ from __future__ import annotations
 
 import re
 
-from ansible.module_utils.facts.hardware.base import Hardware, HardwareCollector
-from ansible.module_utils.facts.utils import get_mount_size
+from arolemgr.module_utils.facts.hardware.base import Hardware, HardwareCollector
+from arolemgr.module_utils.facts.utils import get_mount_size
 
 
 class AIXHardware(Hardware):

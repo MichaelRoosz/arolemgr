@@ -28,9 +28,9 @@
 
 from __future__ import annotations
 
-from ansible.module_utils.facts.namespace import PrefixFactNamespace
-from ansible.module_utils.facts import default_collectors
-from ansible.module_utils.facts import ansible_collector
+from arolemgr.module_utils.facts.namespace import PrefixFactNamespace
+from arolemgr.module_utils.facts import default_collectors
+from arolemgr.module_utils.facts import ansible_collector
 
 
 def get_all_facts(module):

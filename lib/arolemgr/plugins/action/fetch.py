@@ -18,14 +18,14 @@ from __future__ import annotations
 
 import os
 import base64
-from ansible.errors import AnsibleConnectionFailure, AnsibleError, AnsibleActionFail, AnsibleActionSkip
-from ansible.module_utils.common.text.converters import to_bytes, to_text
-from ansible.module_utils.six import string_types
-from ansible.module_utils.parsing.convert_bool import boolean
-from ansible.plugins.action import ActionBase
-from ansible.utils.display import Display
-from ansible.utils.hashing import checksum, checksum_s, md5, secure_hash
-from ansible.utils.path import makedirs_safe, is_subpath
+from arolemgr.errors import AnsibleConnectionFailure, AnsibleError, AnsibleActionFail, AnsibleActionSkip
+from arolemgr.module_utils.common.text.converters import to_bytes, to_text
+from arolemgr.module_utils.six import string_types
+from arolemgr.module_utils.parsing.convert_bool import boolean
+from arolemgr.plugins.action import ActionBase
+from arolemgr.utils.display import Display
+from arolemgr.utils.hashing import checksum, checksum_s, md5, secure_hash
+from arolemgr.utils.path import makedirs_safe, is_subpath
 
 display = Display()
 

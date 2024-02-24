@@ -15,9 +15,9 @@
 
 from __future__ import annotations
 
-from ansible.module_utils.facts.timeout import TimeoutError
-from ansible.module_utils.facts.hardware.base import HardwareCollector
-from ansible.module_utils.facts.hardware.linux import LinuxHardware
+from arolemgr.module_utils.facts.timeout import TimeoutError
+from arolemgr.module_utils.facts.hardware.base import HardwareCollector
+from arolemgr.module_utils.facts.hardware.linux import LinuxHardware
 
 
 class HurdHardware(LinuxHardware):

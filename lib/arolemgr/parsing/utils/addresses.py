@@ -18,7 +18,7 @@
 from __future__ import annotations
 
 import re
-from ansible.errors import AnsibleParserError, AnsibleError
+from arolemgr.errors import AnsibleParserError, AnsibleError
 
 # Components that match a numeric or alphanumeric begin:end or begin:end:step
 # range expression inside square brackets.

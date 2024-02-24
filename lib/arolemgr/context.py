@@ -14,8 +14,8 @@ from __future__ import annotations
 
 from collections.abc import Mapping, Set
 
-from ansible.module_utils.common.collections import is_sequence
-from ansible.utils.context_objects import CLIArgs, GlobalCLIArgs
+from arolemgr.module_utils.common.collections import is_sequence
+from arolemgr.utils.context_objects import CLIArgs, GlobalCLIArgs
 
 
 __all__ = ('CLIARGS',)

@@ -20,8 +20,8 @@ import os
 import shutil
 
 from errno import EEXIST
-from ansible.errors import AnsibleError
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.errors import AnsibleError
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
 
 
 __all__ = ['unfrackpath', 'makedirs_safe']
@@ -126,7 +126,7 @@ def cleanup_tmp_file(path, warn=False):
             except Exception as e:
                 if warn:
                     # Importing here to avoid circular import
-                    from ansible.utils.display import Display
+                    from arolemgr.utils.display import Display
                     display = Display()
                     display.display(u'Unable to remove temporary file {0}'.format(to_text(e)))
     except Exception:

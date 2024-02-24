@@ -32,22 +32,22 @@ import pkgutil
 from ast import AST, Import, ImportFrom
 from io import BytesIO
 
-from ansible.release import __version__, __author__
-from ansible import constants as C
-from ansible.errors import AnsibleError
-from ansible.executor.interpreter_discovery import InterpreterDiscoveryRequiredError
-from ansible.executor.powershell import module_manifest as ps_manifest
-from ansible.module_utils.common.json import AnsibleJSONEncoder
-from ansible.module_utils.common.text.converters import to_bytes, to_text, to_native
-from ansible.plugins.loader import module_utils_loader
-from ansible.utils.collection_loader._collection_finder import _get_collection_metadata, _nested_dict_get
+from arolemgr.release import __version__, __author__
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError
+from arolemgr.executor.interpreter_discovery import InterpreterDiscoveryRequiredError
+from arolemgr.executor.powershell import module_manifest as ps_manifest
+from arolemgr.module_utils.common.json import AnsibleJSONEncoder
+from arolemgr.module_utils.common.text.converters import to_bytes, to_text, to_native
+from arolemgr.plugins.loader import module_utils_loader
+from arolemgr.utils.collection_loader._collection_finder import _get_collection_metadata, _nested_dict_get
 
 # Must import strategy and use write_locks from there
 # If we import write_locks directly then we end up binding a
 # variable to the object and then it never gets updated.
-from ansible.executor import action_write_locks
+from arolemgr.executor import action_write_locks
 
-from ansible.utils.display import Display
+from arolemgr.utils.display import Display
 from collections import namedtuple
 
 import importlib.util
@@ -191,7 +191,7 @@ def _ansiballz_main():
         sys.path.insert(0, modlib_path)
 
         # Monkeypatch the parameters into basic
-        from ansible.module_utils import basic
+        from arolemgr.module_utils import basic
         basic._ANSIBLE_ARGS = json_params
 %(coverage)s
         # Run the module!  By importing it as '__main__', it thinks it is executing as a script
@@ -282,7 +282,7 @@ def _ansiballz_main():
                 json_params = f.read()
 
             # Monkeypatch the parameters into basic
-            from ansible.module_utils import basic
+            from arolemgr.module_utils import basic
             basic._ANSIBLE_ARGS = json_params
 
             # Run the module!  By importing it as '__main__', it thinks it is executing as a script
@@ -417,9 +417,9 @@ COLLECTION_PATH_RE = re.compile(r'/(?P<path>ansible_collections/[^/]+/[^/]+/plug
 # Detect new-style Python modules by looking for required imports:
 # import ansible_collections.[my_ns.my_col.plugins.module_utils.my_module_util]
 # from ansible_collections.[my_ns.my_col.plugins.module_utils import my_module_util]
-# import ansible.module_utils[.basic]
-# from ansible.module_utils[ import basic]
-# from ansible.module_utils[.basic import AnsibleModule]
+# import arolemgr.module_utils[.basic]
+# from arolemgr.module_utils[ import basic]
+# from arolemgr.module_utils[.basic import AnsibleModule]
 # from ..module_utils[ import basic]
 # from ..module_utils[.basic import AnsibleModule]
 NEW_STYLE_PYTHON_MODULE_RE = re.compile(
@@ -444,7 +444,7 @@ class ModuleDepFinder(ast.NodeVisitor):
             relative import expansion to use the proper package level without having imported it locally first.
 
         Save submodule[.submoduleN][.identifier] into self.submodules
-        when they are from ansible.module_utils or ansible_collections packages
+        when they are from arolemgr.module_utils or ansible_collections packages
 
         self.submodules will end up with tuples like:
           - ('ansible', 'module_utils', 'basic',)
@@ -492,7 +492,7 @@ class ModuleDepFinder(ast.NodeVisitor):
 
     def visit_Import(self, node):
         """
-        Handle import ansible.module_utils.MODLIB[.MODLIBn] [as asname]
+        Handle import arolemgr.module_utils.MODLIB[.MODLIBn] [as asname]
 
         We save these as interesting submodules when the imported library is in ansible.module_utils
         or ansible.collections
@@ -509,7 +509,7 @@ class ModuleDepFinder(ast.NodeVisitor):
 
     def visit_ImportFrom(self, node):
         """
-        Handle from ansible.module_utils.MODLIB import [.MODLIBn] [as asname]
+        Handle from arolemgr.module_utils.MODLIB import [.MODLIBn] [as asname]
 
         Also has to handle relative imports
 
@@ -518,7 +518,7 @@ class ModuleDepFinder(ast.NodeVisitor):
         """
 
         # FIXME: These should all get skipped:
-        # from ansible.executor import module_common
+        # from arolemgr.executor import module_common
         # from ...executor import module_common
         # from ... import executor (Currently it gives a non-helpful error)
         if node.level > 0:
@@ -545,10 +545,10 @@ class ModuleDepFinder(ast.NodeVisitor):
         if node.names[0].name == '_six':
             self.submodules.add(('_six',))
         elif node_module.startswith('ansible.module_utils'):
-            # from ansible.module_utils.MODULE1[.MODULEn] import IDENTIFIER [as asname]
-            # from ansible.module_utils.MODULE1[.MODULEn] import MODULEn+1 [as asname]
-            # from ansible.module_utils.MODULE1[.MODULEn] import MODULEn+1 [,IDENTIFIER] [as asname]
-            # from ansible.module_utils import MODULE1 [,MODULEn] [as asname]
+            # from arolemgr.module_utils.MODULE1[.MODULEn] import IDENTIFIER [as asname]
+            # from arolemgr.module_utils.MODULE1[.MODULEn] import MODULEn+1 [as asname]
+            # from arolemgr.module_utils.MODULE1[.MODULEn] import MODULEn+1 [,IDENTIFIER] [as asname]
+            # from arolemgr.module_utils import MODULE1 [,MODULEn] [as asname]
             py_mod = tuple(node_module.split('.'))
 
         elif node_module.startswith('ansible_collections.'):
@@ -642,7 +642,7 @@ class ModuleUtilLocatorBase:
     def __init__(self, fq_name_parts, is_ambiguous=False, child_is_redirected=False, is_optional=False):
         self._is_ambiguous = is_ambiguous
         # a child package redirection could cause intermediate package levels to be missing, eg
-        # from ansible.module_utils.x.y.z import foo; if x.y.z.foo is redirected, we may not have packages on disk for
+        # from arolemgr.module_utils.x.y.z import foo; if x.y.z.foo is redirected, we may not have packages on disk for
         # the intermediate packages x.y.z, so we'll need to supply empty packages for those
         self._child_is_redirected = child_is_redirected
         self._is_optional = is_optional
@@ -776,7 +776,7 @@ class LegacyModuleUtilLocator(ModuleUtilLocatorBase):
         super(LegacyModuleUtilLocator, self).__init__(fq_name_parts, is_ambiguous, child_is_redirected)
 
         if fq_name_parts[0:2] != ('ansible', 'module_utils'):
-            raise Exception('this class can only locate from ansible.module_utils, got {0}'.format(fq_name_parts))
+            raise Exception('this class can only locate from arolemgr.module_utils, got {0}'.format(fq_name_parts))
 
         if fq_name_parts[2] == 'six':
             # FIXME: handle the ansible.module_utils.six._six case with a redirect or an internal _six attr on six itself?
@@ -1085,11 +1085,11 @@ def _find_module_utils(module_name, b_module_data, module_path, module_args, tas
     if _is_binary(b_module_data):
         module_substyle = module_style = 'binary'
     elif REPLACER in b_module_data:
-        # Do REPLACER before from ansible.module_utils because we need make sure
-        # we substitute "from ansible.module_utils basic" for REPLACER
+        # Do REPLACER before from arolemgr.module_utils because we need make sure
+        # we substitute "from arolemgr.module_utils basic" for REPLACER
         module_style = 'new'
         module_substyle = 'python'
-        b_module_data = b_module_data.replace(REPLACER, b'from ansible.module_utils.basic import *')
+        b_module_data = b_module_data.replace(REPLACER, b'from arolemgr.module_utils.basic import *')
     elif NEW_STYLE_PYTHON_MODULE_RE.search(b_module_data):
         module_style = 'new'
         module_substyle = 'python'
@@ -1350,7 +1350,7 @@ def modify_module(module_name, module_path, module_args, templar, task_vars=None
 
     Example:
 
-    from ansible.module_utils.basic import *
+    from arolemgr.module_utils.basic import *
 
        ... will result in the insertion of basic.py into the module
        from the module_utils/ directory in the source tree.

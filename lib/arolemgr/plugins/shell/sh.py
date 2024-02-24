@@ -15,7 +15,7 @@ extends_documentation_fragment:
 
 import shlex
 
-from ansible.plugins.shell import ShellBase
+from arolemgr.plugins.shell import ShellBase
 
 
 class ShellModule(ShellBase):

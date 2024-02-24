@@ -27,17 +27,17 @@ from collections import OrderedDict
 from collections.abc import MutableMapping
 from copy import deepcopy
 
-from ansible import constants as C
-from ansible.module_utils.common.text.converters import to_text
-from ansible.module_utils.six import text_type
-from ansible.parsing.ajson import AnsibleJSONEncoder
-from ansible.parsing.yaml.dumper import AnsibleDumper
-from ansible.parsing.yaml.objects import AnsibleUnicode
-from ansible.plugins import AnsiblePlugin
-from ansible.utils.color import stringc
-from ansible.utils.display import Display
-from ansible.utils.unsafe_proxy import AnsibleUnsafeText, NativeJinjaUnsafeText
-from ansible.vars.clean import strip_internal_keys, module_response_deepcopy
+from arolemgr import  constants as C
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.module_utils.six import text_type
+from arolemgr.parsing.ajson import AnsibleJSONEncoder
+from arolemgr.parsing.yaml.dumper import AnsibleDumper
+from arolemgr.parsing.yaml.objects import AnsibleUnicode
+from arolemgr.plugins import AnsiblePlugin
+from arolemgr.utils.color import stringc
+from arolemgr.utils.display import Display
+from arolemgr.utils.unsafe_proxy import AnsibleUnsafeText, NativeJinjaUnsafeText
+from arolemgr.vars.clean import strip_internal_keys, module_response_deepcopy
 
 import yaml
 

@@ -445,13 +445,13 @@ import re
 import shutil
 import tempfile
 
-from ansible.module_utils.basic import AnsibleModule, sanitize_keys
-from ansible.module_utils.six import binary_type, iteritems, string_types
-from ansible.module_utils.six.moves.urllib.parse import urlencode, urlsplit
-from ansible.module_utils.common.text.converters import to_native, to_text
-from ansible.module_utils.compat.datetime import utcnow, utcfromtimestamp
-from ansible.module_utils.six.moves.collections_abc import Mapping, Sequence
-from ansible.module_utils.urls import fetch_url, get_response_filename, parse_content_type, prepare_multipart, url_argument_spec
+from arolemgr.module_utils.basic import AnsibleModule, sanitize_keys
+from arolemgr.module_utils.six import binary_type, iteritems, string_types
+from arolemgr.module_utils.six.moves.urllib.parse import urlencode, urlsplit
+from arolemgr.module_utils.common.text.converters import to_native, to_text
+from arolemgr.module_utils.compat.datetime import utcnow, utcfromtimestamp
+from arolemgr.module_utils.six.moves.collections_abc import Mapping, Sequence
+from arolemgr.module_utils.urls import fetch_url, get_response_filename, parse_content_type, prepare_multipart, url_argument_spec
 
 JSON_CANDIDATES = {'json', 'javascript'}
 

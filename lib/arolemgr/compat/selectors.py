@@ -20,7 +20,7 @@ from __future__ import annotations
 import sys
 import selectors
 
-from ansible.module_utils.common.warnings import deprecate
+from arolemgr.module_utils.common.warnings import deprecate
 
 
 sys.modules['ansible.compat.selectors'] = selectors

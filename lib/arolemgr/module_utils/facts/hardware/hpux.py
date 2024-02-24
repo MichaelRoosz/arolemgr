@@ -18,7 +18,7 @@ from __future__ import annotations
 import os
 import re
 
-from ansible.module_utils.facts.hardware.base import Hardware, HardwareCollector
+from arolemgr.module_utils.facts.hardware.base import Hardware, HardwareCollector
 
 
 class HPUXHardware(Hardware):

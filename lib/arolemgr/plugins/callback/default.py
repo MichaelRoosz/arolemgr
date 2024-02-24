@@ -19,12 +19,12 @@ DOCUMENTATION = '''
 '''
 
 
-from ansible import constants as C
-from ansible import context
-from ansible.playbook.task_include import TaskInclude
-from ansible.plugins.callback import CallbackBase
-from ansible.utils.color import colorize, hostcolor
-from ansible.utils.fqcn import add_internal_fqcns
+from arolemgr import  constants as C
+from arolemgr import  context
+from arolemgr.playbook.task_include import TaskInclude
+from arolemgr.plugins.callback import CallbackBase
+from arolemgr.utils.color import colorize, hostcolor
+from arolemgr.utils.fqcn import add_internal_fqcns
 
 
 class CallbackModule(CallbackBase):

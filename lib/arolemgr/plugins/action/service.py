@@ -17,9 +17,9 @@
 from __future__ import annotations
 
 
-from ansible.errors import AnsibleAction, AnsibleActionFail
-from ansible.executor.module_common import get_action_args_with_defaults
-from ansible.plugins.action import ActionBase
+from arolemgr.errors import AnsibleAction, AnsibleActionFail
+from arolemgr.executor.module_common import get_action_args_with_defaults
+from arolemgr.plugins.action import ActionBase
 
 
 class ActionModule(ActionBase):

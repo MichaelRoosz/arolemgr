@@ -8,9 +8,9 @@ import json
 
 import datetime
 
-from ansible.module_utils.common.text.converters import to_text
-from ansible.module_utils.six.moves.collections_abc import Mapping
-from ansible.module_utils.common.collections import is_sequence
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.module_utils.six.moves.collections_abc import Mapping
+from arolemgr.module_utils.common.collections import is_sequence
 
 
 def _is_unsafe(value):

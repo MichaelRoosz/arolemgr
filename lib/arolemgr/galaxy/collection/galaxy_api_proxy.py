@@ -8,17 +8,17 @@ from __future__ import annotations
 import typing as t
 
 if t.TYPE_CHECKING:
-    from ansible.galaxy.api import CollectionVersionMetadata
-    from ansible.galaxy.collection.concrete_artifact_manager import (
+    from arolemgr.galaxy.api import CollectionVersionMetadata
+    from arolemgr.galaxy.collection.concrete_artifact_manager import (
         ConcreteArtifactsManager,
     )
-    from ansible.galaxy.dependency_resolution.dataclasses import (
+    from arolemgr.galaxy.dependency_resolution.dataclasses import (
         Candidate, Requirement,
     )
 
-from ansible.galaxy.api import GalaxyAPI, GalaxyError
-from ansible.module_utils.common.text.converters import to_text
-from ansible.utils.display import Display
+from arolemgr.galaxy.api import GalaxyAPI, GalaxyError
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.utils.display import Display
 
 
 display = Display()

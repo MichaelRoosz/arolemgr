@@ -17,13 +17,13 @@
 
 from __future__ import annotations
 
-from ansible.errors import AnsibleActionFail
-from ansible.module_utils.six import string_types
-from ansible.module_utils.parsing.convert_bool import boolean
-from ansible.plugins.action import ActionBase
-from ansible.utils.vars import isidentifier
+from arolemgr.errors import AnsibleActionFail
+from arolemgr.module_utils.six import string_types
+from arolemgr.module_utils.parsing.convert_bool import boolean
+from arolemgr.plugins.action import ActionBase
+from arolemgr.utils.vars import isidentifier
 
-import ansible.constants as C
+import arolemgr.constants as C
 
 
 class ActionModule(ActionBase):

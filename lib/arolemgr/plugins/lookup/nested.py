@@ -48,9 +48,9 @@ RETURN = """
 
 from jinja2.exceptions import UndefinedError
 
-from ansible.errors import AnsibleError, AnsibleUndefinedVariable
-from ansible.plugins.lookup import LookupBase
-from ansible.utils.listify import listify_lookup_plugin_terms
+from arolemgr.errors import AnsibleError, AnsibleUndefinedVariable
+from arolemgr.plugins.lookup import LookupBase
+from arolemgr.utils.listify import listify_lookup_plugin_terms
 
 
 class LookupModule(LookupBase):

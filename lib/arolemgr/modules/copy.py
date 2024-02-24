@@ -297,10 +297,10 @@ import stat
 import tempfile
 import traceback
 
-from ansible.module_utils.common.text.converters import to_bytes, to_native
-from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.common.process import get_bin_path
-from ansible.module_utils.common.locale import get_best_parsable_locale
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native
+from arolemgr.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.common.process import get_bin_path
+from arolemgr.module_utils.common.locale import get_best_parsable_locale
 
 
 # The AnsibleModule object

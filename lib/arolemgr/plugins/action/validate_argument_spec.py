@@ -3,10 +3,10 @@
 
 from __future__ import annotations
 
-from ansible.errors import AnsibleError
-from ansible.plugins.action import ActionBase
-from ansible.module_utils.common.arg_spec import ArgumentSpecValidator
-from ansible.utils.vars import combine_vars
+from arolemgr.errors import AnsibleError
+from arolemgr.plugins.action import ActionBase
+from arolemgr.module_utils.common.arg_spec import ArgumentSpecValidator
+from arolemgr.utils.vars import combine_vars
 
 
 class ActionModule(ActionBase):

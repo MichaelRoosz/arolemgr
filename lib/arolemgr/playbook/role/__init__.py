@@ -22,23 +22,23 @@ import os
 from collections.abc import Container, Mapping, Set, Sequence
 from types import MappingProxyType
 
-from ansible import constants as C
-from ansible.errors import AnsibleError, AnsibleParserError, AnsibleAssertionError
-from ansible.module_utils.common.text.converters import to_text
-from ansible.module_utils.six import binary_type, text_type
-from ansible.playbook.attribute import FieldAttribute
-from ansible.playbook.base import Base
-from ansible.playbook.collectionsearch import CollectionSearch
-from ansible.playbook.conditional import Conditional
-from ansible.playbook.delegatable import Delegatable
-from ansible.playbook.helpers import load_list_of_blocks
-from ansible.playbook.role.metadata import RoleMetadata
-from ansible.playbook.taggable import Taggable
-from ansible.plugins.loader import add_all_plugin_dirs
-from ansible.utils.collection_loader import AnsibleCollectionConfig
-from ansible.utils.path import is_subpath
-from ansible.utils.sentinel import Sentinel
-from ansible.utils.vars import combine_vars
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError, AnsibleParserError, AnsibleAssertionError
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.module_utils.six import binary_type, text_type
+from arolemgr.playbook.attribute import FieldAttribute
+from arolemgr.playbook.base import Base
+from arolemgr.playbook.collectionsearch import CollectionSearch
+from arolemgr.playbook.conditional import Conditional
+from arolemgr.playbook.delegatable import Delegatable
+from arolemgr.playbook.helpers import load_list_of_blocks
+from arolemgr.playbook.role.metadata import RoleMetadata
+from arolemgr.playbook.taggable import Taggable
+from arolemgr.plugins.loader import add_all_plugin_dirs
+from arolemgr.utils.collection_loader import AnsibleCollectionConfig
+from arolemgr.utils.path import is_subpath
+from arolemgr.utils.sentinel import Sentinel
+from arolemgr.utils.vars import combine_vars
 
 __all__ = ['Role', 'hash_params']
 
@@ -596,8 +596,8 @@ class Role(Base, Conditional, Taggable, CollectionSearch, Delegatable):
         with each task, so tasks know by which route they were found, and
         can correctly take their parent's tags/conditionals into account.
         '''
-        from ansible.playbook.block import Block
-        from ansible.playbook.task import Task
+        from arolemgr.playbook.block import Block
+        from arolemgr.playbook.task import Task
 
         block_list = []
 

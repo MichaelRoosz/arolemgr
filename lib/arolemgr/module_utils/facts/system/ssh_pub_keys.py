@@ -15,11 +15,11 @@
 
 from __future__ import annotations
 
-import ansible.module_utils.compat.typing as t
+import arolemgr.module_utils.compat.typing as t
 
-from ansible.module_utils.facts.utils import get_file_content
+from arolemgr.module_utils.facts.utils import get_file_content
 
-from ansible.module_utils.facts.collector import BaseFactCollector
+from arolemgr.module_utils.facts.collector import BaseFactCollector
 
 
 class SshPubKeyFactCollector(BaseFactCollector):

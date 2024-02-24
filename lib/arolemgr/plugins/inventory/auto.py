@@ -21,9 +21,9 @@ EXAMPLES = '''
 # all installed inventory plugins.
 '''
 
-from ansible.errors import AnsibleParserError
-from ansible.plugins.inventory import BaseInventoryPlugin
-from ansible.plugins.loader import inventory_loader
+from arolemgr.errors import AnsibleParserError
+from arolemgr.plugins.inventory import BaseInventoryPlugin
+from arolemgr.plugins.loader import inventory_loader
 
 
 class InventoryModule(BaseInventoryPlugin):

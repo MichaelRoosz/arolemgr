@@ -19,8 +19,8 @@ from __future__ import annotations
 
 from yaml.resolver import Resolver
 
-from ansible.parsing.yaml.constructor import AnsibleConstructor
-from ansible.module_utils.common.yaml import HAS_LIBYAML, Parser
+from arolemgr.parsing.yaml.constructor import AnsibleConstructor
+from arolemgr.module_utils.common.yaml import HAS_LIBYAML, Parser
 
 if HAS_LIBYAML:
     class AnsibleLoader(Parser, AnsibleConstructor, Resolver):  # type: ignore[misc] # pylint: disable=inconsistent-mro

@@ -25,12 +25,12 @@ import os
 import json
 from stat import S_IRUSR, S_IWUSR
 
-from ansible import constants as C
-from ansible.galaxy.user_agent import user_agent
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
-from ansible.module_utils.common.yaml import yaml_dump, yaml_load
-from ansible.module_utils.urls import open_url
-from ansible.utils.display import Display
+from arolemgr import  constants as C
+from arolemgr.galaxy.user_agent import user_agent
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.module_utils.common.yaml import yaml_dump, yaml_load
+from arolemgr.module_utils.urls import open_url
+from arolemgr.utils.display import Display
 
 display = Display()
 

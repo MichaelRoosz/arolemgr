@@ -92,13 +92,13 @@ import typing as t
 from collections.abc import MutableMapping, MutableSequence
 from functools import partial
 
-from ansible.errors import AnsibleFileNotFound, AnsibleParserError, AnsibleRuntimeError
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
-from ansible.module_utils.six import string_types, text_type
-from ansible.parsing.yaml.objects import AnsibleSequence, AnsibleUnicode
-from ansible.plugins.inventory import BaseFileInventoryPlugin
-from ansible.utils.display import Display
-from ansible.utils.unsafe_proxy import AnsibleUnsafeBytes, AnsibleUnsafeText
+from arolemgr.errors import AnsibleFileNotFound, AnsibleParserError, AnsibleRuntimeError
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.module_utils.six import string_types, text_type
+from arolemgr.parsing.yaml.objects import AnsibleSequence, AnsibleUnicode
+from arolemgr.plugins.inventory import BaseFileInventoryPlugin
+from arolemgr.utils.display import Display
+from arolemgr.utils.unsafe_proxy import AnsibleUnsafeBytes, AnsibleUnsafeText
 
 HAS_TOML = False
 try:

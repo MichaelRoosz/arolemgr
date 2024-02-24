@@ -19,7 +19,7 @@ from __future__ import annotations
 
 from collections.abc import MutableMapping
 
-from ansible.utils.vars import merge_hash
+from arolemgr.utils.vars import merge_hash
 
 
 class AggregateStats:

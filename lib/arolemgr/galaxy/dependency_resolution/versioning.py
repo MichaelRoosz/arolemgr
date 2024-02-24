@@ -7,8 +7,8 @@ from __future__ import annotations
 
 import operator
 
-from ansible.module_utils.compat.version import LooseVersion
-from ansible.utils.version import SemanticVersion
+from arolemgr.module_utils.compat.version import LooseVersion
+from arolemgr.utils.version import SemanticVersion
 
 
 def is_pre_release(version):

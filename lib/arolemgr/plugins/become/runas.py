@@ -61,7 +61,7 @@ DOCUMENTATION = """
         - The Secondary Logon service (seclogon) must be running to use runas
 """
 
-from ansible.plugins.become import BecomeBase
+from arolemgr.plugins.become import BecomeBase
 
 
 class BecomeModule(BecomeBase):

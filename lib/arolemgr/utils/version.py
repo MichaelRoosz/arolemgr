@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import re
 
-from ansible.module_utils.compat.version import LooseVersion, Version
+from arolemgr.module_utils.compat.version import LooseVersion, Version
 
 
 # Regular expression taken from

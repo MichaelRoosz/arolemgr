@@ -20,9 +20,9 @@ from __future__ import annotations
 import datetime
 import time
 
-import ansible.module_utils.compat.typing as t
-from ansible.module_utils.facts.collector import BaseFactCollector
-from ansible.module_utils.compat.datetime import utcfromtimestamp
+import arolemgr.module_utils.compat.typing as t
+from arolemgr.module_utils.facts.collector import BaseFactCollector
+from arolemgr.module_utils.compat.datetime import utcfromtimestamp
 
 
 class DateTimeFactCollector(BaseFactCollector):

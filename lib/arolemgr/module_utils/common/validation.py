@@ -9,12 +9,12 @@ import os
 import re
 
 from ast import literal_eval
-from ansible.module_utils.common.text.converters import to_native
-from ansible.module_utils.common.collections import is_iterable
-from ansible.module_utils.common.text.converters import jsonify
-from ansible.module_utils.common.text.formatters import human_to_bytes
-from ansible.module_utils.parsing.convert_bool import boolean
-from ansible.module_utils.six import (
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.module_utils.common.collections import is_iterable
+from arolemgr.module_utils.common.text.converters import jsonify
+from arolemgr.module_utils.common.text.formatters import human_to_bytes
+from arolemgr.module_utils.parsing.convert_bool import boolean
+from arolemgr.module_utils.six import (
     binary_type,
     integer_types,
     string_types,

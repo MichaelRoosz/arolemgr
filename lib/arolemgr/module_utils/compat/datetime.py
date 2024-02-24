@@ -3,7 +3,7 @@
 
 from __future__ import annotations
 
-from ansible.module_utils.six import PY3
+from arolemgr.module_utils.six import PY3
 
 import datetime
 

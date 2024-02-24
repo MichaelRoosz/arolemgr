@@ -20,10 +20,10 @@ import os
 import re
 import shlex
 
-from ansible.errors import AnsibleError, AnsibleAction, _AnsibleActionDone, AnsibleActionFail, AnsibleActionSkip
-from ansible.executor.powershell import module_manifest as ps_manifest
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
-from ansible.plugins.action import ActionBase
+from arolemgr.errors import AnsibleError, AnsibleAction, _AnsibleActionDone, AnsibleActionFail, AnsibleActionSkip
+from arolemgr.executor.powershell import module_manifest as ps_manifest
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.plugins.action import ActionBase
 
 
 class ActionModule(ActionBase):

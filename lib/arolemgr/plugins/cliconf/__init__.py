@@ -21,9 +21,9 @@ from __future__ import annotations
 from abc import abstractmethod
 from functools import wraps
 
-from ansible.plugins import AnsiblePlugin
-from ansible.errors import AnsibleError, AnsibleConnectionFailure
-from ansible.module_utils.common.text.converters import to_bytes, to_text
+from arolemgr.plugins import AnsiblePlugin
+from arolemgr.errors import AnsibleError, AnsibleConnectionFailure
+from arolemgr.module_utils.common.text.converters import to_bytes, to_text
 
 try:
     from scp import SCPClient
@@ -66,7 +66,7 @@ class CliconfBase(AnsiblePlugin):
     :returns: Returns output received from remote device as byte string
 
             Usage:
-            from ansible.module_utils.connection import Connection
+            from arolemgr.module_utils.connection import Connection
 
             conn = Connection()
             conn.get('show lldp neighbors detail')

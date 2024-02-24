@@ -33,9 +33,9 @@ RETURN = """
 """
 import random
 
-from ansible.errors import AnsibleError
-from ansible.module_utils.common.text.converters import to_native
-from ansible.plugins.lookup import LookupBase
+from arolemgr.errors import AnsibleError
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.plugins.lookup import LookupBase
 
 
 class LookupModule(LookupBase):

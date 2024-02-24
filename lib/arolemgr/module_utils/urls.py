@@ -64,9 +64,9 @@ except ImportError:
 else:
     GzipFile = gzip.GzipFile  # type: ignore[assignment,misc]
 
-from ansible.module_utils.basic import missing_required_lib
-from ansible.module_utils.common.collections import Mapping, is_sequence
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.module_utils.basic import missing_required_lib
+from arolemgr.module_utils.common.collections import Mapping, is_sequence
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
 
 try:
     import ssl
@@ -713,7 +713,7 @@ class Request:
 
         For documentation of params, see ``Request.open``
 
-        >>> from ansible.module_utils.urls import Request
+        >>> from arolemgr.module_utils.urls import Request
         >>> r = Request()
         >>> r.open('GET', 'http://httpbin.org/cookies/set?k1=v1').read()
         '{\n  "cookies": {\n    "k1": "v1"\n  }\n}\n'

@@ -20,14 +20,14 @@ from __future__ import annotations
 
 import sys
 
-from ansible import constants as C
-from ansible.errors import AnsibleError
-from ansible.inventory.group import Group
-from ansible.inventory.host import Host
-from ansible.module_utils.six import string_types
-from ansible.utils.display import Display
-from ansible.utils.vars import combine_vars
-from ansible.utils.path import basedir
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError
+from arolemgr.inventory.group import Group
+from arolemgr.inventory.host import Host
+from arolemgr.module_utils.six import string_types
+from arolemgr.utils.display import Display
+from arolemgr.utils.vars import combine_vars
+from arolemgr.utils.path import basedir
 
 display = Display()
 

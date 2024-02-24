@@ -5,12 +5,12 @@ from __future__ import annotations
 from jinja2.runtime import Undefined
 from jinja2.exceptions import UndefinedError
 
-from ansible.errors import AnsibleFilterError, AnsibleFilterTypeError
-from ansible.module_utils.common.text.converters import to_native, to_bytes
-from ansible.module_utils.six import string_types, binary_type
-from ansible.parsing.yaml.objects import AnsibleVaultEncryptedUnicode
-from ansible.parsing.vault import is_encrypted, VaultSecret, VaultLib
-from ansible.utils.display import Display
+from arolemgr.errors import AnsibleFilterError, AnsibleFilterTypeError
+from arolemgr.module_utils.common.text.converters import to_native, to_bytes
+from arolemgr.module_utils.six import string_types, binary_type
+from arolemgr.parsing.yaml.objects import AnsibleVaultEncryptedUnicode
+from arolemgr.parsing.vault import is_encrypted, VaultSecret, VaultLib
+from arolemgr.utils.display import Display
 
 display = Display()
 

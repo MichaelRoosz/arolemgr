@@ -16,7 +16,7 @@ from urllib.parse import urlparse
 from yaml import safe_load
 
 if t.TYPE_CHECKING:
-    from ansible.galaxy.collection.concrete_artifact_manager import (
+    from arolemgr.galaxy.collection.concrete_artifact_manager import (
         ConcreteArtifactsManager,
     )
     Collection = t.TypeVar(
@@ -26,13 +26,13 @@ if t.TYPE_CHECKING:
     )
 
 
-from ansible.errors import AnsibleError, AnsibleAssertionError
-from ansible.galaxy.api import GalaxyAPI
-from ansible.galaxy.collection import HAS_PACKAGING, PkgReq
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
-from ansible.module_utils.common.arg_spec import ArgumentSpecValidator
-from ansible.utils.collection_loader import AnsibleCollectionRef
-from ansible.utils.display import Display
+from arolemgr.errors import AnsibleError, AnsibleAssertionError
+from arolemgr.galaxy.api import GalaxyAPI
+from arolemgr.galaxy.collection import HAS_PACKAGING, PkgReq
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.module_utils.common.arg_spec import ArgumentSpecValidator
+from arolemgr.utils.collection_loader import AnsibleCollectionRef
+from arolemgr.utils.display import Display
 
 
 _ALLOW_CONCRETE_POINTER_IN_SOURCE = False  # NOTE: This is a feature flag

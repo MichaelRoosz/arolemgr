@@ -8,11 +8,11 @@ import re
 
 from collections.abc import MutableMapping, MutableSequence
 
-from ansible import constants as C
-from ansible.errors import AnsibleError
-from ansible.module_utils import six
-from ansible.plugins.loader import connection_loader
-from ansible.utils.display import Display
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError
+from arolemgr.module_utils import six
+from arolemgr.plugins.loader import connection_loader
+from arolemgr.utils.display import Display
 
 display = Display()
 

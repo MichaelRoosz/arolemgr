@@ -78,11 +78,11 @@ import csv
 
 from collections.abc import MutableSequence
 
-from ansible.errors import AnsibleError, AnsibleAssertionError
-from ansible.parsing.splitter import parse_kv
-from ansible.plugins.lookup import LookupBase
-from ansible.module_utils.six import PY2
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.errors import AnsibleError, AnsibleAssertionError
+from arolemgr.parsing.splitter import parse_kv
+from arolemgr.plugins.lookup import LookupBase
+from arolemgr.module_utils.six import PY2
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
 
 
 class CSVRecoder:

@@ -82,11 +82,11 @@ _list:
   description: list of subelements extracted
 """
 
-from ansible.errors import AnsibleError
-from ansible.module_utils.six import string_types
-from ansible.module_utils.parsing.convert_bool import boolean
-from ansible.plugins.lookup import LookupBase
-from ansible.utils.listify import listify_lookup_plugin_terms
+from arolemgr.errors import AnsibleError
+from arolemgr.module_utils.six import string_types
+from arolemgr.module_utils.parsing.convert_bool import boolean
+from arolemgr.plugins.lookup import LookupBase
+from arolemgr.utils.listify import listify_lookup_plugin_terms
 
 
 FLAGS = ('skip_missing',)

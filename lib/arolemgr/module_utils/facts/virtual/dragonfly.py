@@ -15,7 +15,7 @@
 
 from __future__ import annotations
 
-from ansible.module_utils.facts.virtual.freebsd import FreeBSDVirtual, VirtualCollector
+from arolemgr.module_utils.facts.virtual.freebsd import FreeBSDVirtual, VirtualCollector
 
 
 class DragonFlyVirtualCollector(VirtualCollector):

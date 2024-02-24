@@ -2,12 +2,12 @@
 # GNU General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)
 from __future__ import annotations
 
-from ansible.errors import AnsibleError
-from ansible.cli.galaxy import with_collection_artifacts_manager
-from ansible.galaxy.collection import find_existing_collections
-from ansible.module_utils.common.text.converters import to_bytes
-from ansible.utils.collection_loader._collection_finder import _get_collection_name_from_path
-from ansible.utils.display import Display
+from arolemgr.errors import AnsibleError
+from arolemgr.cli.galaxy import with_collection_artifacts_manager
+from arolemgr.galaxy.collection import find_existing_collections
+from arolemgr.module_utils.common.text.converters import to_bytes
+from arolemgr.utils.collection_loader._collection_finder import _get_collection_name_from_path
+from arolemgr.utils.display import Display
 
 display = Display()
 

@@ -52,10 +52,10 @@ RETURN = """
     elements: str
 """
 
-from ansible.errors import AnsibleError, AnsibleOptionsError, AnsibleLookupError
-from ansible.plugins.lookup import LookupBase
-from ansible.module_utils.common.text.converters import to_text
-from ansible.utils.display import Display
+from arolemgr.errors import AnsibleError, AnsibleOptionsError, AnsibleLookupError
+from arolemgr.plugins.lookup import LookupBase
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.utils.display import Display
 
 display = Display()
 

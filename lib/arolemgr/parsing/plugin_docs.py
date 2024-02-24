@@ -6,11 +6,11 @@ from __future__ import annotations
 import ast
 import tokenize
 
-from ansible import constants as C
-from ansible.errors import AnsibleError, AnsibleParserError
-from ansible.module_utils.common.text.converters import to_text, to_native
-from ansible.parsing.yaml.loader import AnsibleLoader
-from ansible.utils.display import Display
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError, AnsibleParserError
+from arolemgr.module_utils.common.text.converters import to_text, to_native
+from arolemgr.parsing.yaml.loader import AnsibleLoader
+from arolemgr.utils.display import Display
 
 display = Display()
 

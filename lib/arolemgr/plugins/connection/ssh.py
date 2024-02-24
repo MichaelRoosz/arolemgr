@@ -397,20 +397,20 @@ import time
 import typing as t
 
 from functools import wraps
-from ansible.errors import (
+from arolemgr.errors import (
     AnsibleAuthenticationFailure,
     AnsibleConnectionFailure,
     AnsibleError,
     AnsibleFileNotFound,
 )
-from ansible.errors import AnsibleOptionsError
-from ansible.module_utils.six import PY3, text_type, binary_type
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
-from ansible.module_utils.parsing.convert_bool import BOOLEANS, boolean
-from ansible.plugins.connection import ConnectionBase, BUFSIZE
-from ansible.plugins.shell.powershell import _parse_clixml
-from ansible.utils.display import Display
-from ansible.utils.path import unfrackpath, makedirs_safe
+from arolemgr.errors import AnsibleOptionsError
+from arolemgr.module_utils.six import PY3, text_type, binary_type
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.module_utils.parsing.convert_bool import BOOLEANS, boolean
+from arolemgr.plugins.connection import ConnectionBase, BUFSIZE
+from arolemgr.plugins.shell.powershell import _parse_clixml
+from arolemgr.utils.display import Display
+from arolemgr.utils.path import unfrackpath, makedirs_safe
 
 display = Display()
 

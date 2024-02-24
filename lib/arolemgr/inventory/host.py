@@ -19,9 +19,9 @@ from __future__ import annotations
 
 from collections.abc import Mapping, MutableMapping
 
-from ansible.inventory.group import Group, InventoryObjectType
-from ansible.parsing.utils.addresses import patterns
-from ansible.utils.vars import combine_vars, get_unique_id
+from arolemgr.inventory.group import Group, InventoryObjectType
+from arolemgr.parsing.utils.addresses import patterns
+from arolemgr.utils.vars import combine_vars, get_unique_id
 
 
 __all__ = ['Host']

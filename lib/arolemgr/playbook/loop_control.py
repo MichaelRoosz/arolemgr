@@ -17,8 +17,8 @@
 
 from __future__ import annotations
 
-from ansible.playbook.attribute import NonInheritableFieldAttribute
-from ansible.playbook.base import FieldAttributeBase
+from arolemgr.playbook.attribute import NonInheritableFieldAttribute
+from arolemgr.playbook.base import FieldAttributeBase
 
 
 class LoopControl(FieldAttributeBase):

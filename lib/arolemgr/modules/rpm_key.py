@@ -82,9 +82,9 @@ import os.path
 import tempfile
 
 # import module snippets
-from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.urls import fetch_url
-from ansible.module_utils.common.text.converters import to_native
+from arolemgr.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.urls import fetch_url
+from arolemgr.module_utils.common.text.converters import to_native
 
 
 def is_pubkey(string):

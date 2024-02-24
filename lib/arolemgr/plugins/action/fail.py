@@ -17,7 +17,7 @@
 # along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
 from __future__ import annotations
 
-from ansible.plugins.action import ActionBase
+from arolemgr.plugins.action import ActionBase
 
 
 class ActionModule(ActionBase):

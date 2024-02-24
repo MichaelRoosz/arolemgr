@@ -17,15 +17,15 @@
 
 from __future__ import annotations
 
-import ansible.constants as C
-from ansible.errors import AnsibleParserError, AnsibleError, AnsibleAssertionError
-from ansible.module_utils.six import string_types
-from ansible.module_utils.common.text.converters import to_text
-from ansible.parsing.splitter import parse_kv, split_args
-from ansible.plugins.loader import module_loader, action_loader
-from ansible.template import Templar
-from ansible.utils.fqcn import add_internal_fqcns
-from ansible.utils.sentinel import Sentinel
+import arolemgr.constants as C
+from arolemgr.errors import AnsibleParserError, AnsibleError, AnsibleAssertionError
+from arolemgr.module_utils.six import string_types
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.parsing.splitter import parse_kv, split_args
+from arolemgr.plugins.loader import module_loader, action_loader
+from arolemgr.template import Templar
+from arolemgr.utils.fqcn import add_internal_fqcns
+from arolemgr.utils.sentinel import Sentinel
 
 
 # For filtering out modules correctly below
@@ -108,8 +108,8 @@ class ModuleArgsParser:
         self._task_ds = task_ds
         self._collection_list = collection_list
         # delayed local imports to prevent circular import
-        from ansible.playbook.task import Task
-        from ansible.playbook.handler import Handler
+        from arolemgr.playbook.task import Task
+        from arolemgr.playbook.handler import Handler
         # store the valid Task/Handler attrs for quick access
         self._task_attrs = set(Task.fattributes)
         self._task_attrs.update(set(Handler.fattributes))

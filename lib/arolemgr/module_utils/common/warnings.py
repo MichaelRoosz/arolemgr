@@ -4,7 +4,7 @@
 
 from __future__ import annotations
 
-from ansible.module_utils.six import string_types
+from arolemgr.module_utils.six import string_types
 
 _global_warnings = []
 _global_deprecations = []

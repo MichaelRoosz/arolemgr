@@ -11,7 +11,7 @@ try:
 except ImportError:
     from collections import Mapping  # type: ignore[no-redef,attr-defined]  # pylint: disable=ansible-bad-import-from
 
-from ansible.module_utils.common.yaml import yaml_load
+from arolemgr.module_utils.common.yaml import yaml_load
 
 
 def _meta_yml_to_dict(yaml_string_data, content_id):

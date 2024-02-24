@@ -4,9 +4,9 @@
 """Signature verification helpers."""
 from __future__ import annotations
 
-from ansible.errors import AnsibleError
-from ansible.galaxy.user_agent import user_agent
-from ansible.module_utils.urls import open_url
+from arolemgr.errors import AnsibleError
+from arolemgr.galaxy.user_agent import user_agent
+from arolemgr.module_utils.urls import open_url
 
 import contextlib
 import inspect
@@ -20,7 +20,7 @@ from functools import partial
 from urllib.error import HTTPError, URLError
 
 if t.TYPE_CHECKING:
-    from ansible.utils.display import Display
+    from arolemgr.utils.display import Display
 
 IS_PY310_PLUS = sys.version_info[:2] >= (3, 10)
 

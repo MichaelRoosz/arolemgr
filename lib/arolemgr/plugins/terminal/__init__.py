@@ -22,7 +22,7 @@ import re
 
 from abc import ABC, abstractmethod
 
-from ansible.errors import AnsibleConnectionFailure
+from arolemgr.errors import AnsibleConnectionFailure
 
 
 class TerminalBase(ABC):

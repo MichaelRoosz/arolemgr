@@ -64,7 +64,7 @@ initialize_locale()
 
 
 from importlib.metadata import version
-from ansible.module_utils.compat.version import LooseVersion
+from arolemgr.module_utils.compat.version import LooseVersion
 
 # Used for determining if the system is running a new enough Jinja2 version
 # and should only restrict on our documented minimum versions
@@ -83,30 +83,30 @@ from abc import ABC, abstractmethod
 from pathlib import Path
 
 try:
-    from ansible import constants as C
-    from ansible.utils.display import Display
+    from arolemgr import  constants as C
+    from arolemgr.utils.display import Display
     display = Display()
 except Exception as e:
     print('ERROR: %s' % e, file=sys.stderr)
     sys.exit(5)
 
-from ansible import context
-from ansible.cli.arguments import option_helpers as opt_help
-from ansible.errors import AnsibleError, AnsibleOptionsError, AnsibleParserError
-from ansible.inventory.manager import InventoryManager
-from ansible.module_utils.six import string_types
-from ansible.module_utils.common.text.converters import to_bytes, to_text
-from ansible.module_utils.common.collections import is_sequence
-from ansible.module_utils.common.file import is_executable
-from ansible.parsing.dataloader import DataLoader
-from ansible.parsing.vault import PromptVaultSecret, get_file_vault_secret
-from ansible.plugins.loader import add_all_plugin_dirs, init_plugin_loader
-from ansible.release import __version__
-from ansible.utils.collection_loader import AnsibleCollectionConfig
-from ansible.utils.collection_loader._collection_finder import _get_collection_name_from_path
-from ansible.utils.path import unfrackpath
-from ansible.utils.unsafe_proxy import to_unsafe_text
-from ansible.vars.manager import VariableManager
+from arolemgr import  context
+from arolemgr.cli.arguments import option_helpers as opt_help
+from arolemgr.errors import AnsibleError, AnsibleOptionsError, AnsibleParserError
+from arolemgr.inventory.manager import InventoryManager
+from arolemgr.module_utils.six import string_types
+from arolemgr.module_utils.common.text.converters import to_bytes, to_text
+from arolemgr.module_utils.common.collections import is_sequence
+from arolemgr.module_utils.common.file import is_executable
+from arolemgr.parsing.dataloader import DataLoader
+from arolemgr.parsing.vault import PromptVaultSecret, get_file_vault_secret
+from arolemgr.plugins.loader import add_all_plugin_dirs, init_plugin_loader
+from arolemgr.release import __version__
+from arolemgr.utils.collection_loader import AnsibleCollectionConfig
+from arolemgr.utils.collection_loader._collection_finder import _get_collection_name_from_path
+from arolemgr.utils.path import unfrackpath
+from arolemgr.utils.unsafe_proxy import to_unsafe_text
+from arolemgr.vars.manager import VariableManager
 
 try:
     import argcomplete

@@ -29,10 +29,10 @@ DOCUMENTATION = '''
 
 import os
 
-from ansible.constants import TREE_DIR
-from ansible.module_utils.common.text.converters import to_bytes, to_text
-from ansible.plugins.callback import CallbackBase
-from ansible.utils.path import makedirs_safe, unfrackpath
+from arolemgr.constants import TREE_DIR
+from arolemgr.module_utils.common.text.converters import to_bytes, to_text
+from arolemgr.plugins.callback import CallbackBase
+from arolemgr.utils.path import makedirs_safe, unfrackpath
 
 
 class CallbackModule(CallbackBase):

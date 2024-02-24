@@ -66,9 +66,9 @@ _value:
   elements: raw
 """
 
-from ansible.errors import AnsibleError, AnsibleUndefinedVariable
-from ansible.module_utils.six import string_types
-from ansible.plugins.lookup import LookupBase
+from arolemgr.errors import AnsibleError, AnsibleUndefinedVariable
+from arolemgr.module_utils.six import string_types
+from arolemgr.plugins.lookup import LookupBase
 
 
 class LookupModule(LookupBase):

@@ -3,8 +3,8 @@
 
 from __future__ import annotations
 
-from ansible.module_utils.six import binary_type, text_type
-from ansible.module_utils.common.text.converters import to_text
+from arolemgr.module_utils.six import binary_type, text_type
+from arolemgr.module_utils.common.text.converters import to_text
 
 
 BOOLEANS_TRUE = frozenset(('y', 'yes', 'on', '1', 'true', 't', 1, 1.0, True))

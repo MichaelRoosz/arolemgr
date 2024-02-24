@@ -27,11 +27,11 @@ from collections.abc import Mapping, Iterable
 
 from jinja2.filters import pass_environment
 
-from ansible.errors import AnsibleFilterError, AnsibleFilterTypeError
-from ansible.module_utils.common.text import formatters
-from ansible.module_utils.six import binary_type, text_type
-from ansible.module_utils.common.text.converters import to_native, to_text
-from ansible.utils.display import Display
+from arolemgr.errors import AnsibleFilterError, AnsibleFilterTypeError
+from arolemgr.module_utils.common.text import formatters
+from arolemgr.module_utils.six import binary_type, text_type
+from arolemgr.module_utils.common.text.converters import to_native, to_text
+from arolemgr.utils.display import Display
 
 try:
     from jinja2.filters import do_unique

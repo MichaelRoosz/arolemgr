@@ -18,7 +18,7 @@ from __future__ import annotations
 import os
 import re
 
-from ansible.module_utils.facts.virtual.base import Virtual, VirtualCollector
+from arolemgr.module_utils.facts.virtual.base import Virtual, VirtualCollector
 
 
 class HPUXVirtual(Virtual):

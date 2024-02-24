@@ -13,12 +13,12 @@ import time
 
 from jinja2 import __version__ as j2_version
 
-import ansible
-from ansible import constants as C
-from ansible.module_utils.common.text.converters import to_native
-from ansible.module_utils.common.yaml import HAS_LIBYAML, yaml_load
-from ansible.release import __version__
-from ansible.utils.path import unfrackpath
+import arolemgr
+from arolemgr import  constants as C
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.module_utils.common.yaml import HAS_LIBYAML, yaml_load
+from arolemgr.release import __version__
+from arolemgr.utils.path import unfrackpath
 
 
 #

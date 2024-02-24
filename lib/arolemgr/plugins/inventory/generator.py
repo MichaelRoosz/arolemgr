@@ -74,9 +74,9 @@ import os
 
 from itertools import product
 
-from ansible import constants as C
-from ansible.errors import AnsibleParserError
-from ansible.plugins.inventory import BaseInventoryPlugin
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleParserError
+from arolemgr.plugins.inventory import BaseInventoryPlugin
 
 
 class InventoryModule(BaseInventoryPlugin):

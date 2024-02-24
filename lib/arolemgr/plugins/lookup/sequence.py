@@ -79,9 +79,9 @@ RETURN = """
 
 from re import compile as re_compile, IGNORECASE
 
-from ansible.errors import AnsibleError
-from ansible.parsing.splitter import parse_kv
-from ansible.plugins.lookup import LookupBase
+from arolemgr.errors import AnsibleError
+from arolemgr.parsing.splitter import parse_kv
+from arolemgr.plugins.lookup import LookupBase
 
 
 # shortcut format

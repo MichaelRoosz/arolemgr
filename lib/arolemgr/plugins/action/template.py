@@ -18,14 +18,14 @@ from jinja2.defaults import (
     VARIABLE_START_STRING,
 )
 
-from ansible import constants as C
-from ansible.config.manager import ensure_type
-from ansible.errors import AnsibleError, AnsibleFileNotFound, AnsibleAction, AnsibleActionFail
-from ansible.module_utils.common.text.converters import to_bytes, to_text, to_native
-from ansible.module_utils.parsing.convert_bool import boolean
-from ansible.module_utils.six import string_types
-from ansible.plugins.action import ActionBase
-from ansible.template import generate_ansible_template_vars, AnsibleEnvironment
+from arolemgr import  constants as C
+from arolemgr.config.manager import ensure_type
+from arolemgr.errors import AnsibleError, AnsibleFileNotFound, AnsibleAction, AnsibleActionFail
+from arolemgr.module_utils.common.text.converters import to_bytes, to_text, to_native
+from arolemgr.module_utils.parsing.convert_bool import boolean
+from arolemgr.module_utils.six import string_types
+from arolemgr.plugins.action import ActionBase
+from arolemgr.template import generate_ansible_template_vars, AnsibleEnvironment
 
 
 class ActionModule(ActionBase):

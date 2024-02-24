@@ -131,13 +131,13 @@ import string
 import time
 import hashlib
 
-from ansible.errors import AnsibleError, AnsibleAssertionError
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
-from ansible.module_utils.six import string_types
-from ansible.parsing.splitter import parse_kv
-from ansible.plugins.lookup import LookupBase
-from ansible.utils.encrypt import BaseHash, do_encrypt, random_password, random_salt
-from ansible.utils.path import makedirs_safe
+from arolemgr.errors import AnsibleError, AnsibleAssertionError
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.module_utils.six import string_types
+from arolemgr.parsing.splitter import parse_kv
+from arolemgr.plugins.lookup import LookupBase
+from arolemgr.utils.encrypt import BaseHash, do_encrypt, random_password, random_salt
+from arolemgr.utils.path import makedirs_safe
 
 
 VALID_PARAMS = frozenset(('length', 'encrypt', 'chars', 'ident', 'seed'))

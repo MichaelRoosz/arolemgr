@@ -19,20 +19,20 @@ from __future__ import annotations
 
 import os
 
-from ansible import constants as C
-from ansible.errors import AnsibleError, AnsibleAssertionError
-from ansible.module_utils.six import string_types
-from ansible.parsing.yaml.objects import AnsibleBaseYAMLObject, AnsibleMapping
-from ansible.playbook.attribute import NonInheritableFieldAttribute
-from ansible.playbook.base import Base
-from ansible.playbook.collectionsearch import CollectionSearch
-from ansible.playbook.conditional import Conditional
-from ansible.playbook.taggable import Taggable
-from ansible.template import Templar
-from ansible.utils.collection_loader import AnsibleCollectionRef
-from ansible.utils.collection_loader._collection_finder import _get_collection_role_path
-from ansible.utils.path import unfrackpath
-from ansible.utils.display import Display
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError, AnsibleAssertionError
+from arolemgr.module_utils.six import string_types
+from arolemgr.parsing.yaml.objects import AnsibleBaseYAMLObject, AnsibleMapping
+from arolemgr.playbook.attribute import NonInheritableFieldAttribute
+from arolemgr.playbook.base import Base
+from arolemgr.playbook.collectionsearch import CollectionSearch
+from arolemgr.playbook.conditional import Conditional
+from arolemgr.playbook.taggable import Taggable
+from arolemgr.template import Templar
+from arolemgr.utils.collection_loader import AnsibleCollectionRef
+from arolemgr.utils.collection_loader._collection_finder import _get_collection_role_path
+from arolemgr.utils.path import unfrackpath
+from arolemgr.utils.display import Display
 
 __all__ = ['RoleDefinition']
 

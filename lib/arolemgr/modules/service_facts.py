@@ -92,9 +92,9 @@ ansible_facts:
 import os
 import platform
 import re
-from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.common.locale import get_best_parsable_locale
-from ansible.module_utils.service import is_systemd_managed
+from arolemgr.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.common.locale import get_best_parsable_locale
+from arolemgr.module_utils.service import is_systemd_managed
 
 
 class BaseService(object):

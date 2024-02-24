@@ -17,10 +17,10 @@
 # along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
 #
 from __future__ import annotations
-from ansible.errors import AnsibleError
+from arolemgr.errors import AnsibleError
 
 try:
-    from ansible.plugins.terminal import NetconfBase
+    from arolemgr.plugins.terminal import NetconfBase
     """
         Examples:
             https://github.com/ansible/ansible/blob/devel/lib/ansible/plugins/netconf/iosxr.py

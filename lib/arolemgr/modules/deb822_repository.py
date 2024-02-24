@@ -233,16 +233,16 @@ import tempfile
 import textwrap
 import traceback
 
-from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.basic import missing_required_lib
-from ansible.module_utils.common.collections import is_sequence
-from ansible.module_utils.common.text.converters import to_bytes
-from ansible.module_utils.common.text.converters import to_native
-from ansible.module_utils.six import raise_from  # type: ignore[attr-defined]
-from ansible.module_utils.urls import generic_urlparse
-from ansible.module_utils.urls import open_url
-from ansible.module_utils.urls import get_user_agent
-from ansible.module_utils.urls import urlparse
+from arolemgr.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.basic import missing_required_lib
+from arolemgr.module_utils.common.collections import is_sequence
+from arolemgr.module_utils.common.text.converters import to_bytes
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.module_utils.six import raise_from  # type: ignore[attr-defined]
+from arolemgr.module_utils.urls import generic_urlparse
+from arolemgr.module_utils.urls import open_url
+from arolemgr.module_utils.urls import get_user_agent
+from arolemgr.module_utils.urls import urlparse
 
 HAS_DEBIAN = True
 DEBIAN_IMP_ERR = None

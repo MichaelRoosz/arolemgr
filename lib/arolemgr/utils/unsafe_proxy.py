@@ -54,10 +54,10 @@ from __future__ import annotations
 
 from collections.abc import Mapping, Set
 
-from ansible.module_utils.common.text.converters import to_bytes, to_text
-from ansible.module_utils.common.collections import is_sequence
-from ansible.module_utils.six import binary_type, text_type
-from ansible.utils.native_jinja import NativeJinjaText
+from arolemgr.module_utils.common.text.converters import to_bytes, to_text
+from arolemgr.module_utils.common.collections import is_sequence
+from arolemgr.module_utils.six import binary_type, text_type
+from arolemgr.utils.native_jinja import NativeJinjaText
 
 
 __all__ = ['AnsibleUnsafe', 'wrap_var']

@@ -18,7 +18,7 @@
 from __future__ import annotations
 
 # make vendored top-level modules accessible EARLY
-import ansible._vendor
+import arolemgr._vendor
 
 # Note: Do not add any code to this file.  The ansible module may be
 # a namespace package when using Ansible-2.1+ Anything in this file may not be
@@ -26,4 +26,4 @@ import ansible._vendor
 #
 # This is for backwards compat.  Code should be ported to get these from
 # ansible.release instead of from here.
-from ansible.release import __version__, __author__
+from arolemgr.release import __version__, __author__

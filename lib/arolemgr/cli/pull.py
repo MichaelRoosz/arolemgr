@@ -7,7 +7,7 @@
 from __future__ import annotations
 
 # ansible.cli needs to be imported first, to ensure the source bin/* scripts run that code first
-from ansible.cli import CLI
+from arolemgr.cli import CLI
 
 import datetime
 import os
@@ -19,14 +19,14 @@ import socket
 import sys
 import time
 
-from ansible import constants as C
-from ansible import context
-from ansible.cli.arguments import option_helpers as opt_help
-from ansible.errors import AnsibleOptionsError
-from ansible.module_utils.common.text.converters import to_native, to_text
-from ansible.plugins.loader import module_loader
-from ansible.utils.cmd_functions import run_cmd
-from ansible.utils.display import Display
+from arolemgr import  constants as C
+from arolemgr import  context
+from arolemgr.cli.arguments import option_helpers as opt_help
+from arolemgr.errors import AnsibleOptionsError
+from arolemgr.module_utils.common.text.converters import to_native, to_text
+from arolemgr.plugins.loader import module_loader
+from arolemgr.utils.cmd_functions import run_cmd
+from arolemgr.utils.display import Display
 
 
 display = Display()

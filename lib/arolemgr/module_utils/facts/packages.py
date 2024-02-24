@@ -5,9 +5,9 @@ from __future__ import annotations
 
 from abc import ABCMeta, abstractmethod
 
-from ansible.module_utils.six import with_metaclass
-from ansible.module_utils.common.process import get_bin_path
-from ansible.module_utils.common._utils import get_all_subclasses
+from arolemgr.module_utils.six import with_metaclass
+from arolemgr.module_utils.common.process import get_bin_path
+from arolemgr.module_utils.common._utils import get_all_subclasses
 
 
 def get_all_pkg_managers():

@@ -310,16 +310,16 @@ import logging
 import os
 import typing as t
 
-from ansible import constants as C
-from ansible.errors import AnsibleConnectionFailure, AnsibleError
-from ansible.errors import AnsibleFileNotFound
-from ansible.module_utils.parsing.convert_bool import boolean
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
-from ansible.plugins.connection import ConnectionBase
-from ansible.plugins.shell.powershell import ShellModule as PowerShellPlugin
-from ansible.plugins.shell.powershell import _common_args
-from ansible.utils.display import Display
-from ansible.utils.hashing import sha1
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleConnectionFailure, AnsibleError
+from arolemgr.errors import AnsibleFileNotFound
+from arolemgr.module_utils.parsing.convert_bool import boolean
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.plugins.connection import ConnectionBase
+from arolemgr.plugins.shell.powershell import ShellModule as PowerShellPlugin
+from arolemgr.plugins.shell.powershell import _common_args
+from arolemgr.utils.display import Display
+from arolemgr.utils.hashing import sha1
 
 HAS_PYPSRP = True
 PYPSRP_IMP_ERR = None

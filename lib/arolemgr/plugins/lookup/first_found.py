@@ -144,9 +144,9 @@ from collections.abc import Mapping, Sequence
 
 from jinja2.exceptions import UndefinedError
 
-from ansible.errors import AnsibleLookupError, AnsibleUndefinedVariable
-from ansible.module_utils.six import string_types
-from ansible.plugins.lookup import LookupBase
+from arolemgr.errors import AnsibleLookupError, AnsibleUndefinedVariable
+from arolemgr.module_utils.six import string_types
+from arolemgr.plugins.lookup import LookupBase
 
 
 def _split_on(terms, spliters=','):

@@ -6,11 +6,11 @@ from __future__ import annotations
 import json
 
 # Imported for backwards compat
-from ansible.module_utils.common.json import AnsibleJSONEncoder  # pylint: disable=unused-import
+from arolemgr.module_utils.common.json import AnsibleJSONEncoder  # pylint: disable=unused-import
 
-from ansible.parsing.vault import VaultLib
-from ansible.parsing.yaml.objects import AnsibleVaultEncryptedUnicode
-from ansible.utils.unsafe_proxy import wrap_var
+from arolemgr.parsing.vault import VaultLib
+from arolemgr.parsing.yaml.objects import AnsibleVaultEncryptedUnicode
+from arolemgr.utils.unsafe_proxy import wrap_var
 
 
 class AnsibleJSONDecoder(json.JSONDecoder):

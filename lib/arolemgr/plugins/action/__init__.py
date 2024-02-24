@@ -17,22 +17,22 @@ import tempfile
 from abc import ABC, abstractmethod
 from collections.abc import Sequence
 
-from ansible import constants as C
-from ansible.errors import AnsibleError, AnsibleConnectionFailure, AnsibleActionSkip, AnsibleActionFail, AnsibleAuthenticationFailure
-from ansible.executor.module_common import modify_module
-from ansible.executor.interpreter_discovery import discover_interpreter, InterpreterDiscoveryRequiredError
-from ansible.module_utils.common.arg_spec import ArgumentSpecValidator
-from ansible.module_utils.errors import UnsupportedError
-from ansible.module_utils.json_utils import _filter_non_json_lines
-from ansible.module_utils.six import binary_type, string_types, text_type
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
-from ansible.parsing.utils.jsonify import jsonify
-from ansible.release import __version__
-from ansible.utils.collection_loader import resource_from_fqcr
-from ansible.utils.display import Display
-from ansible.utils.unsafe_proxy import wrap_var, AnsibleUnsafeText
-from ansible.vars.clean import remove_internal_keys
-from ansible.utils.plugin_docs import get_versioned_doclink
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError, AnsibleConnectionFailure, AnsibleActionSkip, AnsibleActionFail, AnsibleAuthenticationFailure
+from arolemgr.executor.module_common import modify_module
+from arolemgr.executor.interpreter_discovery import discover_interpreter, InterpreterDiscoveryRequiredError
+from arolemgr.module_utils.common.arg_spec import ArgumentSpecValidator
+from arolemgr.module_utils.errors import UnsupportedError
+from arolemgr.module_utils.json_utils import _filter_non_json_lines
+from arolemgr.module_utils.six import binary_type, string_types, text_type
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.parsing.utils.jsonify import jsonify
+from arolemgr.release import __version__
+from arolemgr.utils.collection_loader import resource_from_fqcr
+from arolemgr.utils.display import Display
+from arolemgr.utils.unsafe_proxy import wrap_var, AnsibleUnsafeText
+from arolemgr.vars.clean import remove_internal_keys
+from arolemgr.utils.plugin_docs import get_versioned_doclink
 
 display = Display()
 
@@ -1228,7 +1228,7 @@ class ActionBase(ABC):
                 try:
                     _validate_utf8_json(data)
                 except UnicodeEncodeError:
-                    # When removing this, also remove the loop and latin-1 from ansible.module_utils.common.text.converters.jsonify
+                    # When removing this, also remove the loop and latin-1 from arolemgr.module_utils.common.text.converters.jsonify
                     display.deprecated(
                         f'Module "{self._task.resolved_action or self._task.action}" returned non UTF-8 data in '
                         'the JSON response. This will become an error in the future',

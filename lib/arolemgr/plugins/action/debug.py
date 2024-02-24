@@ -17,10 +17,10 @@
 # along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
 from __future__ import annotations
 
-from ansible.errors import AnsibleUndefinedVariable
-from ansible.module_utils.six import string_types
-from ansible.module_utils.common.text.converters import to_text
-from ansible.plugins.action import ActionBase
+from arolemgr.errors import AnsibleUndefinedVariable
+from arolemgr.module_utils.six import string_types
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.plugins.action import ActionBase
 
 
 class ActionModule(ActionBase):

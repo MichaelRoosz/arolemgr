@@ -8,18 +8,18 @@ import re
 
 from string import ascii_letters, digits
 
-from ansible.config.manager import ConfigManager
-from ansible.module_utils.common.text.converters import to_text
-from ansible.module_utils.common.collections import Sequence
-from ansible.module_utils.parsing.convert_bool import BOOLEANS_TRUE
-from ansible.release import __version__
-from ansible.utils.fqcn import add_internal_fqcns
+from arolemgr.config.manager import ConfigManager
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.module_utils.common.collections import Sequence
+from arolemgr.module_utils.parsing.convert_bool import BOOLEANS_TRUE
+from arolemgr.release import __version__
+from arolemgr.utils.fqcn import add_internal_fqcns
 
 
 def _warning(msg):
     ''' display is not guaranteed here, nor it being the full class, but try anyways, fallback to sys.stderr.write '''
     try:
-        from ansible.utils.display import Display
+        from arolemgr.utils.display import Display
         Display().warning(msg)
     except Exception:
         import sys
@@ -29,7 +29,7 @@ def _warning(msg):
 def _deprecated(msg, version):
     ''' display is not guaranteed here, nor it being the full class, but try anyways, fallback to sys.stderr.write '''
     try:
-        from ansible.utils.display import Display
+        from arolemgr.utils.display import Display
         Display().deprecated(msg, version=version)
     except Exception:
         import sys

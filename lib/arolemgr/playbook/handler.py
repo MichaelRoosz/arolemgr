@@ -17,9 +17,9 @@
 
 from __future__ import annotations
 
-from ansible.playbook.attribute import NonInheritableFieldAttribute
-from ansible.playbook.task import Task
-from ansible.module_utils.six import string_types
+from arolemgr.playbook.attribute import NonInheritableFieldAttribute
+from arolemgr.playbook.task import Task
+from arolemgr.module_utils.six import string_types
 
 
 class Handler(Task):

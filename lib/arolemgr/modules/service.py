@@ -173,14 +173,14 @@ import time
 # that don't belong on production boxes.  Since our Solaris code doesn't
 # depend on LooseVersion, do not import it on Solaris.
 if platform.system() != 'SunOS':
-    from ansible.module_utils.compat.version import LooseVersion
+    from arolemgr.module_utils.compat.version import LooseVersion
 
-from ansible.module_utils.common.text.converters import to_bytes, to_text
-from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.common.locale import get_best_parsable_locale
-from ansible.module_utils.common.sys_info import get_platform_subclass
-from ansible.module_utils.service import fail_if_missing, is_systemd_managed
-from ansible.module_utils.six import PY2, b
+from arolemgr.module_utils.common.text.converters import to_bytes, to_text
+from arolemgr.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.common.locale import get_best_parsable_locale
+from arolemgr.module_utils.common.sys_info import get_platform_subclass
+from arolemgr.module_utils.service import fail_if_missing, is_systemd_managed
+from arolemgr.module_utils.six import PY2, b
 
 
 class Service(object):

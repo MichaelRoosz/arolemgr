@@ -32,10 +32,10 @@ RETURN = """
     elements: raw
 """
 
-from ansible.errors import AnsibleParserError
-from ansible.plugins.lookup import LookupBase
-from ansible.module_utils.common.text.converters import to_text
-from ansible.utils.display import Display
+from arolemgr.errors import AnsibleParserError
+from arolemgr.plugins.lookup import LookupBase
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.utils.display import Display
 
 display = Display()
 

@@ -46,18 +46,18 @@ import typing as t
 from functools import wraps
 from struct import unpack, pack
 
-from ansible import constants as C
-from ansible.errors import AnsibleError, AnsibleAssertionError, AnsiblePromptInterrupt, AnsiblePromptNoninteractive
-from ansible.module_utils.common.text.converters import to_bytes, to_text
-from ansible.module_utils.six import text_type
-from ansible.utils.color import stringc
-from ansible.utils.multiprocessing import context as multiprocessing_context
-from ansible.utils.singleton import Singleton
-from ansible.utils.unsafe_proxy import wrap_var
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError, AnsibleAssertionError, AnsiblePromptInterrupt, AnsiblePromptNoninteractive
+from arolemgr.module_utils.common.text.converters import to_bytes, to_text
+from arolemgr.module_utils.six import text_type
+from arolemgr.utils.color import stringc
+from arolemgr.utils.multiprocessing import context as multiprocessing_context
+from arolemgr.utils.singleton import Singleton
+from arolemgr.utils.unsafe_proxy import wrap_var
 
 if t.TYPE_CHECKING:
     # avoid circular import at runtime
-    from ansible.executor.task_queue_manager import FinalQueue
+    from arolemgr.executor.task_queue_manager import FinalQueue
 
 P = t.ParamSpec('P')
 
@@ -702,7 +702,7 @@ class Display(metaclass=Singleton):
 
         if encrypt:
             # Circular import because encrypt needs a display class
-            from ansible.utils.encrypt import do_encrypt
+            from arolemgr.utils.encrypt import do_encrypt
             result = do_encrypt(result, encrypt, salt_size=salt_size, salt=salt)
 
         # handle utf-8 chars
@@ -728,7 +728,7 @@ class Display(metaclass=Singleton):
         complete_input: c.Container[bytes] | None = None,
     ) -> bytes:
         if self._final_q:
-            from ansible.executor.process.worker import current_worker
+            from arolemgr.executor.process.worker import current_worker
             self._final_q.send_prompt(
                 worker_id=current_worker.worker_id, prompt=msg, private=private, seconds=seconds,
                 interrupt_input=interrupt_input, complete_input=complete_input

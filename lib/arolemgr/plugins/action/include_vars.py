@@ -7,12 +7,12 @@ from os import path, walk
 import re
 import pathlib
 
-import ansible.constants as C
-from ansible.errors import AnsibleError
-from ansible.module_utils.six import string_types
-from ansible.module_utils.common.text.converters import to_native, to_text
-from ansible.plugins.action import ActionBase
-from ansible.utils.vars import combine_vars
+import arolemgr.constants as C
+from arolemgr.errors import AnsibleError
+from arolemgr.module_utils.six import string_types
+from arolemgr.module_utils.common.text.converters import to_native, to_text
+from arolemgr.plugins.action import ActionBase
+from arolemgr.utils.vars import combine_vars
 
 
 class ActionModule(ActionBase):

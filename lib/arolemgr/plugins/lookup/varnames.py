@@ -44,10 +44,10 @@ _value:
 
 import re
 
-from ansible.errors import AnsibleError
-from ansible.module_utils.common.text.converters import to_native
-from ansible.module_utils.six import string_types
-from ansible.plugins.lookup import LookupBase
+from arolemgr.errors import AnsibleError
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.module_utils.six import string_types
+from arolemgr.plugins.lookup import LookupBase
 
 
 class LookupModule(LookupBase):

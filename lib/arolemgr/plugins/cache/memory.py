@@ -16,7 +16,7 @@ DOCUMENTATION = '''
     author: core team (@ansible-core)
 '''
 
-from ansible.plugins.cache import BaseCacheModule
+from arolemgr.plugins.cache import BaseCacheModule
 
 
 class CacheModule(BaseCacheModule):

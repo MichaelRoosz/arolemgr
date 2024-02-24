@@ -93,8 +93,8 @@ DOCUMENTATION = """
 import re
 import shlex
 
-from ansible.module_utils.common.text.converters import to_bytes
-from ansible.plugins.become import BecomeBase
+from arolemgr.module_utils.common.text.converters import to_bytes
+from arolemgr.plugins.become import BecomeBase
 
 
 class BecomeModule(BecomeBase):

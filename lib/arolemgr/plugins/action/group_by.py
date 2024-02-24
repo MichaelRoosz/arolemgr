@@ -16,8 +16,8 @@
 # along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
 from __future__ import annotations
 
-from ansible.plugins.action import ActionBase
-from ansible.module_utils.six import string_types
+from arolemgr.plugins.action import ActionBase
+from arolemgr.module_utils.six import string_types
 
 
 class ActionModule(ActionBase):

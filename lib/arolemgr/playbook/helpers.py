@@ -19,11 +19,11 @@ from __future__ import annotations
 
 import os
 
-from ansible import constants as C
-from ansible.errors import AnsibleParserError, AnsibleUndefinedVariable, AnsibleAssertionError
-from ansible.module_utils.common.text.converters import to_native
-from ansible.parsing.mod_args import ModuleArgsParser
-from ansible.utils.display import Display
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleParserError, AnsibleUndefinedVariable, AnsibleAssertionError
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.parsing.mod_args import ModuleArgsParser
+from arolemgr.utils.display import Display
 
 display = Display()
 
@@ -36,7 +36,7 @@ def load_list_of_blocks(ds, play, parent_block=None, role=None, task_include=Non
     '''
 
     # we import here to prevent a circular dependency with imports
-    from ansible.playbook.block import Block
+    from arolemgr.playbook.block import Block
 
     if not isinstance(ds, (list, type(None))):
         raise AnsibleAssertionError('%s should be a list or None but is %s' % (ds, type(ds)))
@@ -86,13 +86,13 @@ def load_list_of_tasks(ds, play, block=None, role=None, task_include=None, use_h
     '''
 
     # we import here to prevent a circular dependency with imports
-    from ansible.playbook.block import Block
-    from ansible.playbook.handler import Handler
-    from ansible.playbook.task import Task
-    from ansible.playbook.task_include import TaskInclude
-    from ansible.playbook.role_include import IncludeRole
-    from ansible.playbook.handler_task_include import HandlerTaskInclude
-    from ansible.template import Templar
+    from arolemgr.playbook.block import Block
+    from arolemgr.playbook.handler import Handler
+    from arolemgr.playbook.task import Task
+    from arolemgr.playbook.task_include import TaskInclude
+    from arolemgr.playbook.role_include import IncludeRole
+    from arolemgr.playbook.handler_task_include import HandlerTaskInclude
+    from arolemgr.template import Templar
 
     if not isinstance(ds, list):
         raise AnsibleAssertionError('The ds (%s) should be a list but was a %s' % (ds, type(ds)))
@@ -313,7 +313,7 @@ def load_list_of_roles(ds, play, current_role_path=None, variable_manager=None, 
     :return:
     """
     # we import here to prevent a circular dependency with imports
-    from ansible.playbook.role.include import RoleInclude
+    from arolemgr.playbook.role.include import RoleInclude
 
     if not isinstance(ds, list):
         raise AnsibleAssertionError('ds (%s) should be a list but was a %s' % (ds, type(ds)))

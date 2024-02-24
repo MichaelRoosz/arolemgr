@@ -33,8 +33,8 @@ RETURN = """
     elements: list
 """
 
-from ansible.errors import AnsibleError
-from ansible.plugins.lookup import LookupBase
+from arolemgr.errors import AnsibleError
+from arolemgr.plugins.lookup import LookupBase
 
 
 class LookupModule(LookupBase):

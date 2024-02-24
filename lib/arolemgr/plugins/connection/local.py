@@ -26,13 +26,13 @@ import shutil
 import subprocess
 import typing as t
 
-import ansible.constants as C
-from ansible.errors import AnsibleError, AnsibleFileNotFound
-from ansible.module_utils.six import text_type, binary_type
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
-from ansible.plugins.connection import ConnectionBase
-from ansible.utils.display import Display
-from ansible.utils.path import unfrackpath
+import arolemgr.constants as C
+from arolemgr.errors import AnsibleError, AnsibleFileNotFound
+from arolemgr.module_utils.six import text_type, binary_type
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.plugins.connection import ConnectionBase
+from arolemgr.utils.display import Display
+from arolemgr.utils.path import unfrackpath
 
 display = Display()
 

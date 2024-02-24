@@ -31,15 +31,15 @@ DOCUMENTATION = '''
 
 import time
 
-from ansible import constants as C
-from ansible.errors import AnsibleError, AnsibleParserError
-from ansible.playbook.handler import Handler
-from ansible.playbook.included_file import IncludedFile
-from ansible.plugins.loader import action_loader
-from ansible.plugins.strategy import StrategyBase
-from ansible.template import Templar
-from ansible.module_utils.common.text.converters import to_text
-from ansible.utils.display import Display
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError, AnsibleParserError
+from arolemgr.playbook.handler import Handler
+from arolemgr.playbook.included_file import IncludedFile
+from arolemgr.plugins.loader import action_loader
+from arolemgr.plugins.strategy import StrategyBase
+from arolemgr.template import Templar
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.utils.display import Display
 
 display = Display()
 

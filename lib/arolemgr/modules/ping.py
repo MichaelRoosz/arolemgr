@@ -63,7 +63,7 @@ ping:
     sample: pong
 '''
 
-from ansible.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.basic import AnsibleModule
 
 
 def main():

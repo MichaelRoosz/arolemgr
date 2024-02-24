@@ -7,7 +7,7 @@
 from __future__ import annotations
 
 # ansible.cli needs to be imported first, to ensure the source bin/* scripts run that code first
-from ansible.cli import CLI
+from arolemgr.cli import CLI
 
 import importlib
 import pkgutil
@@ -17,30 +17,30 @@ import re
 import textwrap
 import traceback
 
-import ansible.plugins.loader as plugin_loader
+import arolemgr.plugins.loader as plugin_loader
 
 from pathlib import Path
 
-from ansible import constants as C
-from ansible import context
-from ansible.cli.arguments import option_helpers as opt_help
-from ansible.collections.list import list_collection_dirs
-from ansible.errors import AnsibleError, AnsibleOptionsError, AnsibleParserError, AnsiblePluginNotFound
-from ansible.module_utils.common.text.converters import to_native, to_text
-from ansible.module_utils.common.collections import is_sequence
-from ansible.module_utils.common.json import json_dump
-from ansible.module_utils.common.yaml import yaml_dump
-from ansible.module_utils.six import string_types
-from ansible.parsing.plugin_docs import read_docstub
-from ansible.parsing.utils.yaml import from_yaml
-from ansible.parsing.yaml.dumper import AnsibleDumper
-from ansible.plugins.list import list_plugins
-from ansible.plugins.loader import action_loader, fragment_loader
-from ansible.utils.collection_loader import AnsibleCollectionConfig, AnsibleCollectionRef
-from ansible.utils.collection_loader._collection_finder import _get_collection_name_from_path
-from ansible.utils.color import stringc
-from ansible.utils.display import Display
-from ansible.utils.plugin_docs import get_plugin_docs, get_docstring, get_versioned_doclink
+from arolemgr import  constants as C
+from arolemgr import  context
+from arolemgr.cli.arguments import option_helpers as opt_help
+from arolemgr.collections.list import list_collection_dirs
+from arolemgr.errors import AnsibleError, AnsibleOptionsError, AnsibleParserError, AnsiblePluginNotFound
+from arolemgr.module_utils.common.text.converters import to_native, to_text
+from arolemgr.module_utils.common.collections import is_sequence
+from arolemgr.module_utils.common.json import json_dump
+from arolemgr.module_utils.common.yaml import yaml_dump
+from arolemgr.module_utils.six import string_types
+from arolemgr.parsing.plugin_docs import read_docstub
+from arolemgr.parsing.utils.yaml import from_yaml
+from arolemgr.parsing.yaml.dumper import AnsibleDumper
+from arolemgr.plugins.list import list_plugins
+from arolemgr.plugins.loader import action_loader, fragment_loader
+from arolemgr.utils.collection_loader import AnsibleCollectionConfig, AnsibleCollectionRef
+from arolemgr.utils.collection_loader._collection_finder import _get_collection_name_from_path
+from arolemgr.utils.color import stringc
+from arolemgr.utils.display import Display
+from arolemgr.utils.plugin_docs import get_plugin_docs, get_docstring, get_versioned_doclink
 
 display = Display()
 

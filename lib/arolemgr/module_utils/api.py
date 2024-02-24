@@ -32,7 +32,7 @@ import random
 import sys
 import time
 
-import ansible.module_utils.compat.typing as t
+import arolemgr.module_utils.compat.typing as t
 
 
 def rate_limit_argument_spec(spec=None):

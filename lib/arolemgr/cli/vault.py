@@ -7,19 +7,19 @@
 from __future__ import annotations
 
 # ansible.cli needs to be imported first, to ensure the source bin/* scripts run that code first
-from ansible.cli import CLI
+from arolemgr.cli import CLI
 
 import os
 import sys
 
-from ansible import constants as C
-from ansible import context
-from ansible.cli.arguments import option_helpers as opt_help
-from ansible.errors import AnsibleOptionsError
-from ansible.module_utils.common.text.converters import to_text, to_bytes
-from ansible.parsing.dataloader import DataLoader
-from ansible.parsing.vault import VaultEditor, VaultLib, match_encrypt_secret
-from ansible.utils.display import Display
+from arolemgr import  constants as C
+from arolemgr import  context
+from arolemgr.cli.arguments import option_helpers as opt_help
+from arolemgr.errors import AnsibleOptionsError
+from arolemgr.module_utils.common.text.converters import to_text, to_bytes
+from arolemgr.parsing.dataloader import DataLoader
+from arolemgr.parsing.vault import VaultEditor, VaultLib, match_encrypt_secret
+from arolemgr.utils.display import Display
 
 display = Display()
 

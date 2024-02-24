@@ -19,13 +19,13 @@ import os
 import re
 import time
 
-from ansible.module_utils.six.moves import reduce
+from arolemgr.module_utils.six.moves import reduce
 
-from ansible.module_utils.facts.hardware.base import Hardware, HardwareCollector
-from ansible.module_utils.facts.timeout import TimeoutError, timeout
+from arolemgr.module_utils.facts.hardware.base import Hardware, HardwareCollector
+from arolemgr.module_utils.facts.timeout import TimeoutError, timeout
 
-from ansible.module_utils.facts.utils import get_file_content, get_file_lines, get_mount_size
-from ansible.module_utils.facts.sysctl import get_sysctl
+from arolemgr.module_utils.facts.utils import get_file_content, get_file_lines, get_mount_size
+from arolemgr.module_utils.facts.sysctl import get_sysctl
 
 
 class NetBSDHardware(Hardware):

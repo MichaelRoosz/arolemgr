@@ -17,7 +17,7 @@ from __future__ import annotations
 
 import os
 
-from ansible.module_utils.facts.network.base import Network, NetworkCollector
+from arolemgr.module_utils.facts.network.base import Network, NetworkCollector
 
 
 class HurdPfinetNetwork(Network):

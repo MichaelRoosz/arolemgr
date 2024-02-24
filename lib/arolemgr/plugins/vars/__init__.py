@@ -17,9 +17,9 @@
 # along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
 from __future__ import annotations
 
-from ansible.plugins import AnsiblePlugin
-from ansible.utils.path import basedir
-from ansible.utils.display import Display
+from arolemgr.plugins import AnsiblePlugin
+from arolemgr.utils.path import basedir
+from arolemgr.utils.display import Display
 
 display = Display()
 

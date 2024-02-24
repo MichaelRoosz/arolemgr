@@ -25,10 +25,10 @@ EXAMPLES = r'''
 
 import os
 
-from ansible.errors import AnsibleError, AnsibleParserError
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
-from ansible.parsing.utils.addresses import parse_address
-from ansible.plugins.inventory import BaseInventoryPlugin
+from arolemgr.errors import AnsibleError, AnsibleParserError
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.parsing.utils.addresses import parse_address
+from arolemgr.plugins.inventory import BaseInventoryPlugin
 
 
 class InventoryModule(BaseInventoryPlugin):

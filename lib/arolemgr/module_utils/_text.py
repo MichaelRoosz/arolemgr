@@ -10,6 +10,6 @@ from __future__ import annotations
 # pylint: disable=unused-import
 import codecs
 
-from ansible.module_utils.six import PY3, text_type, binary_type
+from arolemgr.module_utils.six import PY3, text_type, binary_type
 
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text

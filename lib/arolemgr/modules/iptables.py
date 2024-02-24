@@ -547,9 +547,9 @@ EXAMPLES = r'''
 
 import re
 
-from ansible.module_utils.compat.version import LooseVersion
+from arolemgr.module_utils.compat.version import LooseVersion
 
-from ansible.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.basic import AnsibleModule
 
 
 IPTABLES_WAIT_SUPPORT_ADDED = '1.4.20'

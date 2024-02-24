@@ -32,9 +32,9 @@ from collections import defaultdict
 
 import platform
 
-import ansible.module_utils.compat.typing as t
+import arolemgr.module_utils.compat.typing as t
 
-from ansible.module_utils.facts import timeout
+from arolemgr.module_utils.facts import timeout
 
 
 class CycleFoundInFactDeps(Exception):

@@ -371,11 +371,11 @@ import shutil
 import tempfile
 import traceback
 
-from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.six.moves.urllib.parse import urlsplit
-from ansible.module_utils.compat.datetime import utcnow, utcfromtimestamp
-from ansible.module_utils.common.text.converters import to_native
-from ansible.module_utils.urls import fetch_url, url_argument_spec
+from arolemgr.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.six.moves.urllib.parse import urlsplit
+from arolemgr.module_utils.compat.datetime import utcnow, utcfromtimestamp
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.module_utils.urls import fetch_url, url_argument_spec
 
 # ==============================================================
 # url handling

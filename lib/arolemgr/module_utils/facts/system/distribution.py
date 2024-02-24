@@ -9,12 +9,12 @@ import os
 import platform
 import re
 
-import ansible.module_utils.compat.typing as t
+import arolemgr.module_utils.compat.typing as t
 
-from ansible.module_utils.common.sys_info import get_distribution, get_distribution_version, \
+from arolemgr.module_utils.common.sys_info import get_distribution, get_distribution_version, \
     get_distribution_codename
-from ansible.module_utils.facts.utils import get_file_content, get_file_lines
-from ansible.module_utils.facts.collector import BaseFactCollector
+from arolemgr.module_utils.facts.utils import get_file_content, get_file_lines
+from arolemgr.module_utils.facts.collector import BaseFactCollector
 
 
 def get_uname(module, flags=('-v')):

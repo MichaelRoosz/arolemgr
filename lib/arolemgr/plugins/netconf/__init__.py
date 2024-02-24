@@ -21,10 +21,10 @@ from __future__ import annotations
 from abc import abstractmethod
 from functools import wraps
 
-from ansible.errors import AnsibleError
-from ansible.plugins import AnsiblePlugin
-from ansible.module_utils.common.text.converters import to_native
-from ansible.module_utils.basic import missing_required_lib
+from arolemgr.errors import AnsibleError
+from arolemgr.plugins import AnsiblePlugin
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.module_utils.basic import missing_required_lib
 
 try:
     from ncclient.operations import RPCError
@@ -92,7 +92,7 @@ class NetconfBase(AnsiblePlugin):
               'get_capabilities()' returns 'result' as a json string.
 
             Usage:
-            from ansible.module_utils.connection import Connection
+            from arolemgr.module_utils.connection import Connection
 
             conn = Connection()
             data = conn.execute_rpc(rpc)

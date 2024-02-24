@@ -16,15 +16,15 @@
 
 from __future__ import annotations
 
-import ansible.constants as C
-from ansible.errors import AnsibleParserError
-from ansible.playbook.attribute import NonInheritableFieldAttribute
-from ansible.playbook.task_include import TaskInclude
-from ansible.playbook.role import Role
-from ansible.playbook.role.include import RoleInclude
-from ansible.utils.display import Display
-from ansible.module_utils.six import string_types
-from ansible.template import Templar
+import arolemgr.constants as C
+from arolemgr.errors import AnsibleParserError
+from arolemgr.playbook.attribute import NonInheritableFieldAttribute
+from arolemgr.playbook.task_include import TaskInclude
+from arolemgr.playbook.role import Role
+from arolemgr.playbook.role.include import RoleInclude
+from arolemgr.utils.display import Display
+from arolemgr.module_utils.six import string_types
+from arolemgr.template import Templar
 
 __all__ = ['IncludeRole']
 

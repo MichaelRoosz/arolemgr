@@ -22,8 +22,8 @@ import pkgutil
 import xml.etree.ElementTree as ET
 import ntpath
 
-from ansible.module_utils.common.text.converters import to_bytes, to_text
-from ansible.plugins.shell import ShellBase
+from arolemgr.module_utils.common.text.converters import to_bytes, to_text
+from arolemgr.plugins.shell import ShellBase
 
 
 _common_args = ['PowerShell', '-NoProfile', '-NonInteractive', '-ExecutionPolicy', 'Unrestricted']

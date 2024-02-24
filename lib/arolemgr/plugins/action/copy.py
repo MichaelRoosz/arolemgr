@@ -25,13 +25,13 @@ import stat
 import tempfile
 import traceback
 
-from ansible import constants as C
-from ansible.errors import AnsibleError, AnsibleFileNotFound
-from ansible.module_utils.basic import FILE_COMMON_ARGUMENTS
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
-from ansible.module_utils.parsing.convert_bool import boolean
-from ansible.plugins.action import ActionBase
-from ansible.utils.hashing import checksum
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError, AnsibleFileNotFound
+from arolemgr.module_utils.basic import FILE_COMMON_ARGUMENTS
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.module_utils.parsing.convert_bool import boolean
+from arolemgr.plugins.action import ActionBase
+from arolemgr.utils.hashing import checksum
 
 
 # Supplement the FILE_COMMON_ARGUMENTS with arguments that are specific to file

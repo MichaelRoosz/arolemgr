@@ -7,7 +7,7 @@ import os
 import subprocess
 import sys
 
-from ansible.module_utils.common.text.converters import to_bytes
+from arolemgr.module_utils.common.text.converters import to_bytes
 
 
 def has_respawned():
@@ -68,7 +68,7 @@ def probe_interpreters_for_module(interpreter_paths, module_name):
 
 
 def _create_payload():
-    from ansible.module_utils import basic
+    from arolemgr.module_utils import basic
     smuggled_args = getattr(basic, '_ANSIBLE_ARGS')
     if not smuggled_args:
         raise Exception('unable to access ansible.module_utils.basic._ANSIBLE_ARGS (not launched by AnsiballZ?)')
@@ -85,7 +85,7 @@ smuggled_args = {smuggled_args!r}
 if __name__ == '__main__':
     sys.path.insert(0, modlib_path)
 
-    from ansible.module_utils import basic
+    from arolemgr.module_utils import basic
     basic._ANSIBLE_ARGS = smuggled_args
 
     runpy.run_module(module_fqn, init_globals=dict(_respawned=True), run_name='__main__', alter_sys=True)

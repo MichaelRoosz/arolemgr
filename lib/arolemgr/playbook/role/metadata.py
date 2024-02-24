@@ -19,14 +19,14 @@ from __future__ import annotations
 
 import os
 
-from ansible.errors import AnsibleParserError, AnsibleError
-from ansible.module_utils.common.text.converters import to_native
-from ansible.module_utils.six import string_types
-from ansible.playbook.attribute import NonInheritableFieldAttribute
-from ansible.playbook.base import Base
-from ansible.playbook.collectionsearch import CollectionSearch
-from ansible.playbook.helpers import load_list_of_roles
-from ansible.playbook.role.requirement import RoleRequirement
+from arolemgr.errors import AnsibleParserError, AnsibleError
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.module_utils.six import string_types
+from arolemgr.playbook.attribute import NonInheritableFieldAttribute
+from arolemgr.playbook.base import Base
+from arolemgr.playbook.collectionsearch import CollectionSearch
+from arolemgr.playbook.helpers import load_list_of_roles
+from arolemgr.playbook.role.requirement import RoleRequirement
 
 __all__ = ['RoleMetadata']
 

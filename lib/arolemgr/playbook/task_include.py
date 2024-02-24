@@ -17,12 +17,12 @@
 
 from __future__ import annotations
 
-import ansible.constants as C
-from ansible.errors import AnsibleParserError
-from ansible.playbook.block import Block
-from ansible.playbook.task import Task
-from ansible.utils.display import Display
-from ansible.utils.sentinel import Sentinel
+import arolemgr.constants as C
+from arolemgr.errors import AnsibleParserError
+from arolemgr.playbook.block import Block
+from arolemgr.playbook.task import Task
+from arolemgr.utils.display import Display
+from arolemgr.utils.sentinel import Sentinel
 
 __all__ = ['TaskInclude']
 

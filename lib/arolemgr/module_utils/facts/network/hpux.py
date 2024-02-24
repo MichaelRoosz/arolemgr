@@ -15,7 +15,7 @@
 
 from __future__ import annotations
 
-from ansible.module_utils.facts.network.base import Network, NetworkCollector
+from arolemgr.module_utils.facts.network.base import Network, NetworkCollector
 
 
 class HPUXNetwork(Network):

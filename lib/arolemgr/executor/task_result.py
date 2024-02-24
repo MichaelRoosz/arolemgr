@@ -4,9 +4,9 @@
 
 from __future__ import annotations
 
-from ansible import constants as C
-from ansible.parsing.dataloader import DataLoader
-from ansible.vars.clean import module_response_deepcopy, strip_internal_keys
+from arolemgr import  constants as C
+from arolemgr.parsing.dataloader import DataLoader
+from arolemgr.vars.clean import module_response_deepcopy, strip_internal_keys
 
 _IGNORE = ('failed', 'skipped')
 _PRESERVE = ('attempts', 'changed', 'retries')

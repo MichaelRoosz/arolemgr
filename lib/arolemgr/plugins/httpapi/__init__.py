@@ -5,7 +5,7 @@ from __future__ import annotations
 
 from abc import abstractmethod
 
-from ansible.plugins import AnsiblePlugin
+from arolemgr.plugins import AnsiblePlugin
 
 
 class HttpApiBase(AnsiblePlugin):

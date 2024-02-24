@@ -58,8 +58,8 @@ RETURN = r'''
 
 from urllib.parse import urlsplit
 
-from ansible.errors import AnsibleFilterError
-from ansible.utils import helpers
+from arolemgr.errors import AnsibleFilterError
+from arolemgr.utils import helpers
 
 
 def split_url(value, query='', alias='urlsplit'):

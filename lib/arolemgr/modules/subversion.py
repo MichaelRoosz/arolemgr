@@ -133,9 +133,9 @@ RETURN = r'''#'''
 import os
 import re
 
-from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.common.locale import get_best_parsable_locale
-from ansible.module_utils.compat.version import LooseVersion
+from arolemgr.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.common.locale import get_best_parsable_locale
+from arolemgr.module_utils.compat.version import LooseVersion
 
 
 class Subversion(object):

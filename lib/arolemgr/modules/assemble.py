@@ -130,9 +130,9 @@ import os
 import re
 import tempfile
 
-from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.six import b, indexbytes
-from ansible.module_utils.common.text.converters import to_native
+from arolemgr.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.six import b, indexbytes
+from arolemgr.module_utils.common.text.converters import to_native
 
 
 def assemble_from_fragments(src_path, delimiter=None, compiled_regexp=None, ignore_hidden=False, tmpdir=None):

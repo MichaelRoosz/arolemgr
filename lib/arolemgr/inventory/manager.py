@@ -28,18 +28,18 @@ import traceback
 from operator import attrgetter
 from random import shuffle
 
-from ansible import constants as C
-from ansible.errors import AnsibleError, AnsibleOptionsError, AnsibleParserError
-from ansible.inventory.data import InventoryData
-from ansible.module_utils.six import string_types
-from ansible.module_utils.common.text.converters import to_bytes, to_text
-from ansible.parsing.utils.addresses import parse_address
-from ansible.plugins.loader import inventory_loader
-from ansible.utils.helpers import deduplicate_list
-from ansible.utils.path import unfrackpath
-from ansible.utils.display import Display
-from ansible.utils.vars import combine_vars
-from ansible.vars.plugins import get_vars_from_inventory_sources
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError, AnsibleOptionsError, AnsibleParserError
+from arolemgr.inventory.data import InventoryData
+from arolemgr.module_utils.six import string_types
+from arolemgr.module_utils.common.text.converters import to_bytes, to_text
+from arolemgr.parsing.utils.addresses import parse_address
+from arolemgr.plugins.loader import inventory_loader
+from arolemgr.utils.helpers import deduplicate_list
+from arolemgr.utils.path import unfrackpath
+from arolemgr.utils.display import Display
+from arolemgr.utils.vars import combine_vars
+from arolemgr.vars.plugins import get_vars_from_inventory_sources
 
 display = Display()
 

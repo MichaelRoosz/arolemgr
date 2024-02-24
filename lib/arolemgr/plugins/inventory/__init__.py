@@ -23,17 +23,17 @@ import string
 
 from collections.abc import Mapping
 
-from ansible.errors import AnsibleError, AnsibleParserError
-from ansible.inventory.group import to_safe_group_name as original_safe
-from ansible.parsing.utils.addresses import parse_address
-from ansible.plugins import AnsiblePlugin
-from ansible.plugins.cache import CachePluginAdjudicator as CacheObject
-from ansible.module_utils.common.text.converters import to_bytes, to_native
-from ansible.module_utils.parsing.convert_bool import boolean
-from ansible.module_utils.six import string_types
-from ansible.template import Templar
-from ansible.utils.display import Display
-from ansible.utils.vars import combine_vars, load_extra_vars
+from arolemgr.errors import AnsibleError, AnsibleParserError
+from arolemgr.inventory.group import to_safe_group_name as original_safe
+from arolemgr.parsing.utils.addresses import parse_address
+from arolemgr.plugins import AnsiblePlugin
+from arolemgr.plugins.cache import CachePluginAdjudicator as CacheObject
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native
+from arolemgr.module_utils.parsing.convert_bool import boolean
+from arolemgr.module_utils.six import string_types
+from arolemgr.template import Templar
+from arolemgr.utils.display import Display
+from arolemgr.utils.vars import combine_vars, load_extra_vars
 
 display = Display()
 
@@ -141,7 +141,7 @@ def get_cache_plugin(plugin_name, **kwargs):
     if plugin_name != 'memory' and kwargs and not getattr(cache._plugin, '_options', None):
         raise AnsibleError('Unable to use cache plugin {0} for inventory. Cache options were provided but may not reconcile '
                            'correctly unless set via set_options. Refer to the porting guide if the plugin derives user settings '
-                           'from ansible.constants.'.format(plugin_name))
+                           'from arolemgr.constants.'.format(plugin_name))
     return cache
 
 

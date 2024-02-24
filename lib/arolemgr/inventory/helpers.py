@@ -18,7 +18,7 @@
 #############################################
 from __future__ import annotations
 
-from ansible.utils.vars import combine_vars
+from arolemgr.utils.vars import combine_vars
 
 
 def sort_groups(groups):

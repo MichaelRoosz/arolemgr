@@ -22,7 +22,7 @@ import traceback
 
 from collections.abc import Sequence
 
-from ansible.errors.yaml_strings import (
+from arolemgr.errors.yaml_strings import (
     YAML_COMMON_DICT_ERROR,
     YAML_COMMON_LEADING_TAB_ERROR,
     YAML_COMMON_PARTIALLY_QUOTED_LINE_ERROR,
@@ -32,7 +32,7 @@ from ansible.errors.yaml_strings import (
     YAML_POSITION_DETAILS,
     YAML_AND_SHORTHAND_ERROR,
 )
-from ansible.module_utils.common.text.converters import to_native, to_text
+from arolemgr.module_utils.common.text.converters import to_native, to_text
 
 
 class AnsibleError(Exception):
@@ -63,7 +63,7 @@ class AnsibleError(Exception):
     def message(self):
         # we import this here to prevent an import loop problem,
         # since the objects code also imports ansible.errors
-        from ansible.parsing.yaml.objects import AnsibleBaseYAMLObject
+        from arolemgr.parsing.yaml.objects import AnsibleBaseYAMLObject
 
         message = [self._message]
         if isinstance(self.obj, AnsibleBaseYAMLObject):

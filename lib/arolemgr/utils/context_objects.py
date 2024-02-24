@@ -9,9 +9,9 @@ from __future__ import annotations
 from abc import ABCMeta
 from collections.abc import Container, Mapping, Sequence, Set
 
-from ansible.module_utils.common.collections import ImmutableDict
-from ansible.module_utils.six import add_metaclass, binary_type, text_type
-from ansible.utils.singleton import Singleton
+from arolemgr.module_utils.common.collections import ImmutableDict
+from arolemgr.module_utils.six import add_metaclass, binary_type, text_type
+from arolemgr.utils.singleton import Singleton
 
 
 def _make_immutable(obj):

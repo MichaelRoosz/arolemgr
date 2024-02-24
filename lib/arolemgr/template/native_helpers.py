@@ -8,10 +8,10 @@ import ast
 from itertools import islice, chain
 from types import GeneratorType
 
-from ansible.module_utils.common.text.converters import to_text
-from ansible.module_utils.six import string_types
-from ansible.parsing.yaml.objects import AnsibleVaultEncryptedUnicode
-from ansible.utils.native_jinja import NativeJinjaText
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.module_utils.six import string_types
+from arolemgr.parsing.yaml.objects import AnsibleVaultEncryptedUnicode
+from arolemgr.utils.native_jinja import NativeJinjaText
 
 
 _JSON_MAP = {

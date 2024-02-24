@@ -17,7 +17,7 @@
 
 from __future__ import annotations
 
-from ansible.utils.sentinel import Sentinel
+from arolemgr.utils.sentinel import Sentinel
 
 _CONTAINERS = frozenset(('list', 'dict', 'set'))
 
@@ -180,8 +180,8 @@ class FieldAttribute(Attribute):
 
 class ConnectionFieldAttribute(FieldAttribute):
     def __get__(self, obj, obj_type=None):
-        from ansible.module_utils.compat.paramiko import paramiko
-        from ansible.utils.ssh_functions import check_for_controlpersist
+        from arolemgr.module_utils.compat.paramiko import paramiko
+        from arolemgr.utils.ssh_functions import check_for_controlpersist
         value = super().__get__(obj, obj_type)
 
         if value == 'smart':

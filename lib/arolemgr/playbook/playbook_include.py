@@ -19,20 +19,20 @@ from __future__ import annotations
 
 import os
 
-import ansible.constants as C
-from ansible.errors import AnsibleParserError, AnsibleAssertionError
-from ansible.module_utils.common.text.converters import to_bytes
-from ansible.module_utils.six import string_types
-from ansible.parsing.splitter import split_args
-from ansible.parsing.yaml.objects import AnsibleBaseYAMLObject, AnsibleMapping
-from ansible.playbook.attribute import NonInheritableFieldAttribute
-from ansible.playbook.base import Base
-from ansible.playbook.conditional import Conditional
-from ansible.playbook.taggable import Taggable
-from ansible.utils.collection_loader import AnsibleCollectionConfig
-from ansible.utils.collection_loader._collection_finder import _get_collection_name_from_path, _get_collection_playbook_path
-from ansible.template import Templar
-from ansible.utils.display import Display
+import arolemgr.constants as C
+from arolemgr.errors import AnsibleParserError, AnsibleAssertionError
+from arolemgr.module_utils.common.text.converters import to_bytes
+from arolemgr.module_utils.six import string_types
+from arolemgr.parsing.splitter import split_args
+from arolemgr.parsing.yaml.objects import AnsibleBaseYAMLObject, AnsibleMapping
+from arolemgr.playbook.attribute import NonInheritableFieldAttribute
+from arolemgr.playbook.base import Base
+from arolemgr.playbook.conditional import Conditional
+from arolemgr.playbook.taggable import Taggable
+from arolemgr.utils.collection_loader import AnsibleCollectionConfig
+from arolemgr.utils.collection_loader._collection_finder import _get_collection_name_from_path, _get_collection_playbook_path
+from arolemgr.template import Templar
+from arolemgr.utils.display import Display
 
 display = Display()
 
@@ -53,8 +53,8 @@ class PlaybookInclude(Base, Conditional, Taggable):
         '''
 
         # import here to avoid a dependency loop
-        from ansible.playbook import Playbook
-        from ansible.playbook.play import Play
+        from arolemgr.playbook import Playbook
+        from arolemgr.playbook.play import Play
 
         # first, we use the original parent method to correctly load the object
         # via the load_data/preprocess_data system we normally use for other

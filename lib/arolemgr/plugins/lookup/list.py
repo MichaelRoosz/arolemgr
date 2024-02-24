@@ -31,8 +31,8 @@ RETURN = """
 
 from collections.abc import Sequence
 
-from ansible.plugins.lookup import LookupBase
-from ansible.errors import AnsibleError
+from arolemgr.plugins.lookup import LookupBase
+from arolemgr.errors import AnsibleError
 
 
 class LookupModule(LookupBase):

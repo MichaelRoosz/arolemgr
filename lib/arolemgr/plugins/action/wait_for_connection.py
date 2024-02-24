@@ -21,9 +21,9 @@ from __future__ import annotations
 import time
 from datetime import datetime, timedelta, timezone
 
-from ansible.module_utils.common.text.converters import to_text
-from ansible.plugins.action import ActionBase
-from ansible.utils.display import Display
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.plugins.action import ActionBase
+from arolemgr.utils.display import Display
 
 display = Display()
 

@@ -51,7 +51,7 @@ else:
     HAS_DISTLIB = True
 
 if t.TYPE_CHECKING:
-    from ansible.galaxy.collection.concrete_artifact_manager import (
+    from arolemgr.galaxy.collection.concrete_artifact_manager import (
         ConcreteArtifactsManager,
     )
 
@@ -83,33 +83,33 @@ if t.TYPE_CHECKING:
     FileManifestEntryType = t.Dict[FileMetaKeysType, t.Union[str, int, None]]
     FilesManifestType = t.Dict[t.Literal['files', 'format'], t.Union[t.List[FileManifestEntryType], int]]
 
-import ansible.constants as C
-from ansible.compat.importlib_resources import files
-from ansible.errors import AnsibleError
-from ansible.galaxy.api import GalaxyAPI
-from ansible.galaxy.collection.concrete_artifact_manager import (
+import arolemgr.constants as C
+from arolemgr.compat.importlib_resources import files
+from arolemgr.errors import AnsibleError
+from arolemgr.galaxy.api import GalaxyAPI
+from arolemgr.galaxy.collection.concrete_artifact_manager import (
     _consume_file,
     _download_file,
     _get_json_from_installed_dir,
     _get_meta_from_src_dir,
     _tarfile_extract,
 )
-from ansible.galaxy.collection.galaxy_api_proxy import MultiGalaxyAPIProxy
-from ansible.galaxy.collection.gpg import (
+from arolemgr.galaxy.collection.galaxy_api_proxy import MultiGalaxyAPIProxy
+from arolemgr.galaxy.collection.gpg import (
     run_gpg_verify,
     parse_gpg_errors,
     get_signature_from_source,
     GPG_ERROR_MAP,
 )
 try:
-    from ansible.galaxy.dependency_resolution import (
+    from arolemgr.galaxy.dependency_resolution import (
         build_collection_dependency_resolver,
     )
-    from ansible.galaxy.dependency_resolution.errors import (
+    from arolemgr.galaxy.dependency_resolution.errors import (
         CollectionDependencyResolutionImpossible,
         CollectionDependencyInconsistentCandidate,
     )
-    from ansible.galaxy.dependency_resolution.providers import (
+    from arolemgr.galaxy.dependency_resolution.providers import (
         RESOLVELIB_VERSION,
         RESOLVELIB_LOWERBOUND,
         RESOLVELIB_UPPERBOUND,
@@ -119,18 +119,18 @@ except ImportError:
 else:
     HAS_RESOLVELIB = True
 
-from ansible.galaxy.dependency_resolution.dataclasses import (
+from arolemgr.galaxy.dependency_resolution.dataclasses import (
     Candidate, Requirement, _is_installed_collection_dir,
 )
-from ansible.galaxy.dependency_resolution.versioning import meets_requirements
-from ansible.plugins.loader import get_all_plugin_loaders
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
-from ansible.module_utils.common.collections import is_sequence
-from ansible.module_utils.common.yaml import yaml_dump
-from ansible.utils.collection_loader import AnsibleCollectionRef
-from ansible.utils.display import Display
-from ansible.utils.hashing import secure_hash, secure_hash_s
-from ansible.utils.sentinel import Sentinel
+from arolemgr.galaxy.dependency_resolution.versioning import meets_requirements
+from arolemgr.plugins.loader import get_all_plugin_loaders
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.module_utils.common.collections import is_sequence
+from arolemgr.module_utils.common.yaml import yaml_dump
+from arolemgr.utils.collection_loader import AnsibleCollectionRef
+from arolemgr.utils.display import Display
+from arolemgr.utils.hashing import secure_hash, secure_hash_s
+from arolemgr.utils.sentinel import Sentinel
 
 
 display = Display()

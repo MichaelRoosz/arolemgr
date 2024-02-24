@@ -8,14 +8,14 @@ import json
 import pkgutil
 import re
 
-from ansible import constants as C
-from ansible.errors import AnsibleError
-from ansible.module_utils.common.text.converters import to_native, to_text
-from ansible.module_utils.distro import LinuxDistribution
-from ansible.utils.display import Display
-from ansible.utils.plugin_docs import get_versioned_doclink
-from ansible.module_utils.compat.version import LooseVersion
-from ansible.module_utils.facts.system.distribution import Distribution
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError
+from arolemgr.module_utils.common.text.converters import to_native, to_text
+from arolemgr.module_utils.distro import LinuxDistribution
+from arolemgr.utils.display import Display
+from arolemgr.utils.plugin_docs import get_versioned_doclink
+from arolemgr.module_utils.compat.version import LooseVersion
+from arolemgr.module_utils.facts.system.distribution import Distribution
 from traceback import format_exc
 
 OS_FAMILY_LOWER = {k.lower(): v.lower() for k, v in Distribution.OS_FAMILY.items()}

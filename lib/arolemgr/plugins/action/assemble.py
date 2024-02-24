@@ -24,12 +24,12 @@ import os.path
 import re
 import tempfile
 
-from ansible import constants as C
-from ansible.errors import AnsibleError, AnsibleAction, _AnsibleActionDone, AnsibleActionFail
-from ansible.module_utils.common.text.converters import to_native, to_text
-from ansible.module_utils.parsing.convert_bool import boolean
-from ansible.plugins.action import ActionBase
-from ansible.utils.hashing import checksum_s
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError, AnsibleAction, _AnsibleActionDone, AnsibleActionFail
+from arolemgr.module_utils.common.text.converters import to_native, to_text
+from arolemgr.module_utils.parsing.convert_bool import boolean
+from arolemgr.plugins.action import ActionBase
+from arolemgr.utils.hashing import checksum_s
 
 
 class ActionModule(ActionBase):

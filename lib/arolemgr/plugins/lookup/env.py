@@ -57,9 +57,9 @@ RETURN = """
 
 from jinja2.runtime import Undefined
 
-from ansible.errors import AnsibleUndefinedVariable
-from ansible.plugins.lookup import LookupBase
-from ansible.utils import py3compat
+from arolemgr.errors import AnsibleUndefinedVariable
+from arolemgr.plugins.lookup import LookupBase
+from arolemgr.utils import py3compat
 
 
 class LookupModule(LookupBase):

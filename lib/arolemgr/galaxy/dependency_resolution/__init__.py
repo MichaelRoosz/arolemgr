@@ -8,16 +8,16 @@ from __future__ import annotations
 import typing as t
 
 if t.TYPE_CHECKING:
-    from ansible.galaxy.api import GalaxyAPI
-    from ansible.galaxy.collection.concrete_artifact_manager import (
+    from arolemgr.galaxy.api import GalaxyAPI
+    from arolemgr.galaxy.collection.concrete_artifact_manager import (
         ConcreteArtifactsManager,
     )
-    from ansible.galaxy.dependency_resolution.dataclasses import Candidate
+    from arolemgr.galaxy.dependency_resolution.dataclasses import Candidate
 
-from ansible.galaxy.collection.galaxy_api_proxy import MultiGalaxyAPIProxy
-from ansible.galaxy.dependency_resolution.providers import CollectionDependencyProvider
-from ansible.galaxy.dependency_resolution.reporters import CollectionDependencyReporter
-from ansible.galaxy.dependency_resolution.resolvers import CollectionDependencyResolver
+from arolemgr.galaxy.collection.galaxy_api_proxy import MultiGalaxyAPIProxy
+from arolemgr.galaxy.dependency_resolution.providers import CollectionDependencyProvider
+from arolemgr.galaxy.dependency_resolution.reporters import CollectionDependencyReporter
+from arolemgr.galaxy.dependency_resolution.resolvers import CollectionDependencyResolver
 
 
 def build_collection_dependency_resolver(

@@ -3,8 +3,8 @@
 
 from __future__ import annotations
 
-from ansible.plugins.action import ActionBase
-from ansible.utils.vars import merge_hash
+from arolemgr.plugins.action import ActionBase
+from arolemgr.utils.vars import merge_hash
 
 
 class ActionModule(ActionBase):

@@ -21,9 +21,9 @@ import re
 import socket
 import struct
 
-from ansible.module_utils.facts.network.base import Network, NetworkCollector
+from arolemgr.module_utils.facts.network.base import Network, NetworkCollector
 
-from ansible.module_utils.facts.utils import get_file_content
+from arolemgr.module_utils.facts.utils import get_file_content
 
 
 class LinuxNetwork(Network):

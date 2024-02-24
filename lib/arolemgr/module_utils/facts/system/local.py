@@ -20,13 +20,13 @@ import json
 import os
 import stat
 
-import ansible.module_utils.compat.typing as t
+import arolemgr.module_utils.compat.typing as t
 
-from ansible.module_utils.common.text.converters import to_text
-from ansible.module_utils.facts.utils import get_file_content
-from ansible.module_utils.facts.collector import BaseFactCollector
-from ansible.module_utils.six import PY3
-from ansible.module_utils.six.moves import configparser, StringIO
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.module_utils.facts.utils import get_file_content
+from arolemgr.module_utils.facts.collector import BaseFactCollector
+from arolemgr.module_utils.six import PY3
+from arolemgr.module_utils.six.moves import configparser, StringIO
 
 
 class LocalFactCollector(BaseFactCollector):

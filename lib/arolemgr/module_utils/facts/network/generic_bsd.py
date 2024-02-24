@@ -19,7 +19,7 @@ import re
 import socket
 import struct
 
-from ansible.module_utils.facts.network.base import Network
+from arolemgr.module_utils.facts.network.base import Network
 
 
 class GenericBsdIfconfigNetwork(Network):

@@ -30,8 +30,8 @@ DOCUMENTATION = '''
     author: Ansible Core Team
 '''
 
-from ansible.plugins.strategy.free import StrategyModule as FreeStrategyModule
-from ansible.utils.display import Display
+from arolemgr.plugins.strategy.free import StrategyModule as FreeStrategyModule
+from arolemgr.utils.display import Display
 
 display = Display()
 

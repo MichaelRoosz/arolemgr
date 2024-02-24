@@ -20,17 +20,17 @@ from http.client import BadStatusLine, IncompleteRead
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote as urlquote, urlencode, urlparse, parse_qs, urljoin
 
-from ansible import constants as C
-from ansible.errors import AnsibleError
-from ansible.galaxy.user_agent import user_agent
-from ansible.module_utils.api import retry_with_delays_and_condition
-from ansible.module_utils.api import generate_jittered_backoff
-from ansible.module_utils.six import string_types
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
-from ansible.module_utils.urls import open_url, prepare_multipart
-from ansible.utils.display import Display
-from ansible.utils.hashing import secure_hash_s
-from ansible.utils.path import makedirs_safe
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError
+from arolemgr.galaxy.user_agent import user_agent
+from arolemgr.module_utils.api import retry_with_delays_and_condition
+from arolemgr.module_utils.api import generate_jittered_backoff
+from arolemgr.module_utils.six import string_types
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.module_utils.urls import open_url, prepare_multipart
+from arolemgr.utils.display import Display
+from arolemgr.utils.hashing import secure_hash_s
+from arolemgr.utils.path import makedirs_safe
 
 display = Display()
 _CACHE_LOCK = threading.Lock()

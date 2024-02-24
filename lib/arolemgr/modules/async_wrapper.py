@@ -19,7 +19,7 @@ import time
 import syslog
 import multiprocessing
 
-from ansible.module_utils.common.text.converters import to_text, to_bytes
+from arolemgr.module_utils.common.text.converters import to_text, to_bytes
 
 syslog.openlog('ansible-%s' % os.path.basename(__file__))
 syslog.syslog(syslog.LOG_NOTICE, 'Invoked with %s' % " ".join(sys.argv[1:]))

@@ -17,18 +17,18 @@
 
 from __future__ import annotations
 
-import ansible.constants as C
-from ansible.errors import AnsibleParserError
-from ansible.playbook.attribute import NonInheritableFieldAttribute
-from ansible.playbook.base import Base
-from ansible.playbook.conditional import Conditional
-from ansible.playbook.collectionsearch import CollectionSearch
-from ansible.playbook.delegatable import Delegatable
-from ansible.playbook.helpers import load_list_of_tasks
-from ansible.playbook.notifiable import Notifiable
-from ansible.playbook.role import Role
-from ansible.playbook.taggable import Taggable
-from ansible.utils.sentinel import Sentinel
+import arolemgr.constants as C
+from arolemgr.errors import AnsibleParserError
+from arolemgr.playbook.attribute import NonInheritableFieldAttribute
+from arolemgr.playbook.base import Base
+from arolemgr.playbook.conditional import Conditional
+from arolemgr.playbook.collectionsearch import CollectionSearch
+from arolemgr.playbook.delegatable import Delegatable
+from arolemgr.playbook.helpers import load_list_of_tasks
+from arolemgr.playbook.notifiable import Notifiable
+from arolemgr.playbook.role import Role
+from arolemgr.playbook.taggable import Taggable
+from arolemgr.utils.sentinel import Sentinel
 
 
 class Block(Base, Conditional, CollectionSearch, Taggable, Notifiable, Delegatable):
@@ -246,8 +246,8 @@ class Block(Base, Conditional, CollectionSearch, Taggable, Notifiable, Delegatab
         '''
 
         # import is here to avoid import loops
-        from ansible.playbook.task_include import TaskInclude
-        from ansible.playbook.handler_task_include import HandlerTaskInclude
+        from arolemgr.playbook.task_include import TaskInclude
+        from arolemgr.playbook.handler_task_include import HandlerTaskInclude
 
         # we don't want the full set of attributes (the task lists), as that
         # would lead to a serialize/deserialize loop
@@ -423,7 +423,7 @@ class Block(Base, Conditional, CollectionSearch, Taggable, Notifiable, Delegatab
         call their parents all_parents_static() method. Only Block objects in
         the chain check the statically_loaded value of the parent.
         '''
-        from ansible.playbook.task_include import TaskInclude
+        from arolemgr.playbook.task_include import TaskInclude
         if self._parent:
             if isinstance(self._parent, TaskInclude) and not self._parent.statically_loaded:
                 return False
@@ -432,7 +432,7 @@ class Block(Base, Conditional, CollectionSearch, Taggable, Notifiable, Delegatab
         return True
 
     def get_first_parent_include(self):
-        from ansible.playbook.task_include import TaskInclude
+        from arolemgr.playbook.task_include import TaskInclude
         if self._parent:
             if isinstance(self._parent, TaskInclude):
                 return self._parent

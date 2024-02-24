@@ -84,14 +84,14 @@ _raw:
 from copy import deepcopy
 import os
 
-import ansible.constants as C
+import arolemgr.constants as C
 
-from ansible.errors import AnsibleError
-from ansible.plugins.lookup import LookupBase
-from ansible.module_utils.common.text.converters import to_text
-from ansible.template import generate_ansible_template_vars, AnsibleEnvironment
-from ansible.utils.display import Display
-from ansible.utils.native_jinja import NativeJinjaText
+from arolemgr.errors import AnsibleError
+from arolemgr.plugins.lookup import LookupBase
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.template import generate_ansible_template_vars, AnsibleEnvironment
+from arolemgr.utils.display import Display
+from arolemgr.utils.native_jinja import NativeJinjaText
 
 
 display = Display()

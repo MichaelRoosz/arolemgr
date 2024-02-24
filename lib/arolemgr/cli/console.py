@@ -8,7 +8,7 @@
 from __future__ import annotations
 
 # ansible.cli needs to be imported first, to ensure the source bin/* scripts run that code first
-from ansible.cli import CLI
+from arolemgr.cli import CLI
 
 import atexit
 import cmd
@@ -17,19 +17,19 @@ import readline
 import os
 import sys
 
-from ansible import constants as C
-from ansible import context
-from ansible.cli.arguments import option_helpers as opt_help
-from ansible.executor.task_queue_manager import TaskQueueManager
-from ansible.module_utils.common.text.converters import to_native, to_text
-from ansible.module_utils.parsing.convert_bool import boolean
-from ansible.parsing.splitter import parse_kv
-from ansible.playbook.play import Play
-from ansible.plugins.list import list_plugins
-from ansible.plugins.loader import module_loader, fragment_loader
-from ansible.utils import plugin_docs
-from ansible.utils.color import stringc
-from ansible.utils.display import Display
+from arolemgr import  constants as C
+from arolemgr import  context
+from arolemgr.cli.arguments import option_helpers as opt_help
+from arolemgr.executor.task_queue_manager import TaskQueueManager
+from arolemgr.module_utils.common.text.converters import to_native, to_text
+from arolemgr.module_utils.parsing.convert_bool import boolean
+from arolemgr.parsing.splitter import parse_kv
+from arolemgr.playbook.play import Play
+from arolemgr.plugins.list import list_plugins
+from arolemgr.plugins.loader import module_loader, fragment_loader
+from arolemgr.utils import plugin_docs
+from arolemgr.utils.color import stringc
+from arolemgr.utils.display import Display
 
 display = Display()
 

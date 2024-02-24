@@ -7,20 +7,20 @@
 from __future__ import annotations
 
 # ansible.cli needs to be imported first, to ensure the source bin/* scripts run that code first
-from ansible.cli import CLI
+from arolemgr.cli import CLI
 
 import sys
 
 import argparse
 
-from ansible import constants as C
-from ansible import context
-from ansible.cli.arguments import option_helpers as opt_help
-from ansible.errors import AnsibleError, AnsibleOptionsError
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
-from ansible.utils.vars import combine_vars
-from ansible.utils.display import Display
-from ansible.vars.plugins import get_vars_from_inventory_sources, get_vars_from_path
+from arolemgr import  constants as C
+from arolemgr import  context
+from arolemgr.cli.arguments import option_helpers as opt_help
+from arolemgr.errors import AnsibleError, AnsibleOptionsError
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.utils.vars import combine_vars
+from arolemgr.utils.display import Display
+from arolemgr.vars.plugins import get_vars_from_inventory_sources, get_vars_from_path
 
 display = Display()
 
@@ -179,10 +179,10 @@ class InventoryCLI(CLI):
 
         if context.CLIARGS['yaml']:
             import yaml
-            from ansible.parsing.yaml.dumper import AnsibleDumper
+            from arolemgr.parsing.yaml.dumper import AnsibleDumper
             results = to_text(yaml.dump(stuff, Dumper=AnsibleDumper, default_flow_style=False, allow_unicode=True))
         elif context.CLIARGS['toml']:
-            from ansible.plugins.inventory.toml import toml_dumps
+            from arolemgr.plugins.inventory.toml import toml_dumps
             try:
                 results = toml_dumps(stuff)
             except TypeError as e:
@@ -198,7 +198,7 @@ class InventoryCLI(CLI):
                 )
         else:
             import json
-            from ansible.parsing.ajson import AnsibleJSONEncoder
+            from arolemgr.parsing.ajson import AnsibleJSONEncoder
             try:
                 results = json.dumps(stuff, cls=AnsibleJSONEncoder, sort_keys=True, indent=4, preprocess_unsafe=True, ensure_ascii=False)
             except TypeError as e:

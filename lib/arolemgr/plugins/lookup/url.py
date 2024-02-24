@@ -216,11 +216,11 @@ RETURN = """
 
 from urllib.error import HTTPError, URLError
 
-from ansible.errors import AnsibleError
-from ansible.module_utils.common.text.converters import to_text, to_native
-from ansible.module_utils.urls import open_url, ConnectionError, SSLValidationError
-from ansible.plugins.lookup import LookupBase
-from ansible.utils.display import Display
+from arolemgr.errors import AnsibleError
+from arolemgr.module_utils.common.text.converters import to_text, to_native
+from arolemgr.module_utils.urls import open_url, ConnectionError, SSLValidationError
+from arolemgr.plugins.lookup import LookupBase
+from arolemgr.utils.display import Display
 
 display = Display()
 

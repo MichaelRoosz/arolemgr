@@ -213,9 +213,9 @@ import re
 import sys
 import tempfile
 
-from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.common.text.converters import to_bytes, to_native
-from ansible.module_utils.six.moves import shlex_quote
+from arolemgr.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native
+from arolemgr.module_utils.six.moves import shlex_quote
 
 
 class CronTabError(Exception):

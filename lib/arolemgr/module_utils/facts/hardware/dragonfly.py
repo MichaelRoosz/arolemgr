@@ -15,8 +15,8 @@
 
 from __future__ import annotations
 
-from ansible.module_utils.facts.hardware.base import HardwareCollector
-from ansible.module_utils.facts.hardware.freebsd import FreeBSDHardware
+from arolemgr.module_utils.facts.hardware.base import HardwareCollector
+from arolemgr.module_utils.facts.hardware.freebsd import FreeBSDHardware
 
 
 class DragonFlyHardwareCollector(HardwareCollector):

@@ -25,10 +25,10 @@ import time
 
 from collections.abc import Mapping, Sequence
 
-from ansible.errors import AnsibleError
-from ansible.module_utils.common.text.converters import to_native
-from ansible.module_utils.six import text_type, string_types
-from ansible.plugins import AnsiblePlugin
+from arolemgr.errors import AnsibleError
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.module_utils.six import text_type, string_types
+from arolemgr.plugins import AnsiblePlugin
 
 _USER_HOME_PATH_RE = re.compile(r'^~[_.A-Za-z0-9][-_.A-Za-z0-9]*$')
 

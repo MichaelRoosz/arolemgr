@@ -23,12 +23,12 @@ import tempfile
 from subprocess import Popen, PIPE
 import tarfile
 
-import ansible.constants as C
-from ansible import context
-from ansible.errors import AnsibleError
-from ansible.utils.display import Display
-from ansible.module_utils.common.process import get_bin_path
-from ansible.module_utils.common.text.converters import to_text, to_native
+import arolemgr.constants as C
+from arolemgr import  context
+from arolemgr.errors import AnsibleError
+from arolemgr.utils.display import Display
+from arolemgr.module_utils.common.process import get_bin_path
+from arolemgr.module_utils.common.text.converters import to_text, to_native
 
 
 display = Display()

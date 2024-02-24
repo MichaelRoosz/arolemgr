@@ -50,6 +50,6 @@ if _system_distro:
     distro = _system_distro
 else:
     # Our bundled copy
-    from ansible.module_utils.distro import _distro as distro
+    from arolemgr.module_utils.distro import _distro as distro
 
 sys.modules['ansible.module_utils.distro'] = distro

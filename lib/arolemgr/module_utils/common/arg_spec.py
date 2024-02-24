@@ -6,7 +6,7 @@ from __future__ import annotations
 
 from copy import deepcopy
 
-from ansible.module_utils.common.parameters import (
+from arolemgr.module_utils.common.parameters import (
     _ADDITIONAL_CHECKS,
     _get_legal_inputs,
     _get_unsupported_parameters,
@@ -20,15 +20,15 @@ from ansible.module_utils.common.parameters import (
     set_fallbacks,
 )
 
-from ansible.module_utils.common.text.converters import to_native
-from ansible.module_utils.common.warnings import deprecate, warn
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.module_utils.common.warnings import deprecate, warn
 
-from ansible.module_utils.common.validation import (
+from arolemgr.module_utils.common.validation import (
     check_mutually_exclusive,
     check_required_arguments,
 )
 
-from ansible.module_utils.errors import (
+from arolemgr.module_utils.errors import (
     AliasError,
     AnsibleValidationErrorMultiple,
     DeprecationError,

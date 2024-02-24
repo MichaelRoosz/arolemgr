@@ -17,11 +17,11 @@
 
 from __future__ import annotations
 
-from ansible.errors import AnsibleError
-from ansible.module_utils.six import string_types
-from ansible.playbook.attribute import FieldAttribute
-from ansible.template import Templar
-from ansible.utils.sentinel import Sentinel
+from arolemgr.errors import AnsibleError
+from arolemgr.module_utils.six import string_types
+from arolemgr.playbook.attribute import FieldAttribute
+from arolemgr.template import Templar
+from arolemgr.utils.sentinel import Sentinel
 
 
 def _flatten_tags(tags: list) -> list:

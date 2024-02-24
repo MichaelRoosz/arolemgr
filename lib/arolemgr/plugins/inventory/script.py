@@ -156,11 +156,11 @@ import subprocess
 
 from collections.abc import Mapping
 
-from ansible.errors import AnsibleError, AnsibleParserError
-from ansible.module_utils.basic import json_dict_bytes_to_unicode
-from ansible.module_utils.common.text.converters import to_native, to_text
-from ansible.plugins.inventory import BaseInventoryPlugin
-from ansible.utils.display import Display
+from arolemgr.errors import AnsibleError, AnsibleParserError
+from arolemgr.module_utils.basic import json_dict_bytes_to_unicode
+from arolemgr.module_utils.common.text.converters import to_native, to_text
+from arolemgr.plugins.inventory import BaseInventoryPlugin
+from arolemgr.utils.display import Display
 
 display = Display()
 

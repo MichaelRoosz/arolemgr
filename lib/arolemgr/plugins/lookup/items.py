@@ -62,7 +62,7 @@ RETURN = """
     type: list
 """
 
-from ansible.plugins.lookup import LookupBase
+from arolemgr.plugins.lookup import LookupBase
 
 
 class LookupModule(LookupBase):

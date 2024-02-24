@@ -20,9 +20,9 @@ from __future__ import annotations
 import codecs
 import re
 
-from ansible.errors import AnsibleParserError
-from ansible.module_utils.common.text.converters import to_text
-from ansible.parsing.quoting import unquote
+from arolemgr.errors import AnsibleParserError
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.parsing.quoting import unquote
 
 
 # Decode escapes adapted from rspeer's answer here:

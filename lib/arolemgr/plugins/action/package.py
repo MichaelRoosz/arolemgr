@@ -16,11 +16,11 @@
 # along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
 from __future__ import annotations
 
-from ansible.errors import AnsibleAction, AnsibleActionFail
-from ansible.executor.module_common import get_action_args_with_defaults
-from ansible.module_utils.facts.system.pkg_mgr import PKG_MGRS
-from ansible.plugins.action import ActionBase
-from ansible.utils.display import Display
+from arolemgr.errors import AnsibleAction, AnsibleActionFail
+from arolemgr.executor.module_common import get_action_args_with_defaults
+from arolemgr.module_utils.facts.system.pkg_mgr import PKG_MGRS
+from arolemgr.plugins.action import ActionBase
+from arolemgr.utils.display import Display
 
 display = Display()
 

@@ -19,9 +19,9 @@ from __future__ import annotations
 
 from abc import abstractmethod
 
-from ansible.errors import AnsibleFileNotFound
-from ansible.plugins import AnsiblePlugin
-from ansible.utils.display import Display
+from arolemgr.errors import AnsibleFileNotFound
+from arolemgr.plugins import AnsiblePlugin
+from arolemgr.utils.display import Display
 
 display = Display()
 
@@ -98,7 +98,7 @@ class LookupBase(AnsiblePlugin):
         must be converted into python's unicode type as the strings will be run
         through jinja2 which has this requirement.  You can use::
 
-            from ansible.module_utils.common.text.converters import to_text
+            from arolemgr.module_utils.common.text.converters import to_text
             result_string = to_text(result_string)
         """
         pass

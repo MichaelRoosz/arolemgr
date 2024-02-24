@@ -19,7 +19,7 @@ from __future__ import annotations
 
 from collections.abc import Mapping
 
-from ansible.template import Templar, AnsibleUndefined
+from arolemgr.template import Templar, AnsibleUndefined
 
 STATIC_VARS = [
     'ansible_version',

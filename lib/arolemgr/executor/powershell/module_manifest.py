@@ -12,13 +12,13 @@ import random
 import re
 from importlib import import_module
 
-from ansible.module_utils.compat.version import LooseVersion
+from arolemgr.module_utils.compat.version import LooseVersion
 
-from ansible import constants as C
-from ansible.errors import AnsibleError
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
-from ansible.plugins.loader import ps_module_utils_loader
-from ansible.utils.collection_loader import resource_from_fqcr
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.plugins.loader import ps_module_utils_loader
+from arolemgr.utils.collection_loader import resource_from_fqcr
 
 
 class PSModuleDepFinder(object):

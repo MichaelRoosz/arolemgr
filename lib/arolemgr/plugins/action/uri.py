@@ -7,11 +7,11 @@ from __future__ import annotations
 
 import os
 
-from ansible.errors import AnsibleError, AnsibleAction, _AnsibleActionDone, AnsibleActionFail
-from ansible.module_utils.common.text.converters import to_native
-from ansible.module_utils.common.collections import Mapping, MutableMapping
-from ansible.module_utils.parsing.convert_bool import boolean
-from ansible.plugins.action import ActionBase
+from arolemgr.errors import AnsibleError, AnsibleAction, _AnsibleActionDone, AnsibleActionFail
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.module_utils.common.collections import Mapping, MutableMapping
+from arolemgr.module_utils.parsing.convert_bool import boolean
+from arolemgr.plugins.action import ActionBase
 
 
 class ActionModule(ActionBase):

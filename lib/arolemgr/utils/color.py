@@ -19,7 +19,7 @@ from __future__ import annotations
 import re
 import sys
 
-from ansible import constants as C
+from arolemgr import  constants as C
 
 ANSIBLE_COLOR = True
 if C.ANSIBLE_NOCOLOR:

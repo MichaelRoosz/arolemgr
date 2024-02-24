@@ -17,11 +17,11 @@
 
 from __future__ import annotations
 
-from ansible.playbook import Play
-from ansible.playbook.block import Block
-from ansible.playbook.role import Role
-from ansible.playbook.task import Task
-from ansible.utils.display import Display
+from arolemgr.playbook import Play
+from arolemgr.playbook.block import Block
+from arolemgr.playbook.role import Role
+from arolemgr.playbook.task import Task
+from arolemgr.utils.display import Display
 
 display = Display()
 

@@ -123,8 +123,8 @@ EXAMPLES = r'''
 
 RETURN = r'''#'''
 
-from ansible.module_utils.common.text.converters import to_text
-from ansible.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.module_utils.basic import AnsibleModule
 
 
 def get_password_value(module, pkg, question, vtype):

@@ -17,10 +17,10 @@
 # along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
 #
 from __future__ import annotations
-from ansible.errors import AnsibleError
+from arolemgr.errors import AnsibleError
 
 try:
-    from ansible.plugins.terminal import TerminalBase
+    from arolemgr.plugins.terminal import TerminalBase
     """
         Examples:
             https://github.com/ansible/ansible/blob/devel/lib/ansible/plugins/terminal/iosxr.py

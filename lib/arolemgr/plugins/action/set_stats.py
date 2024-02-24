@@ -17,9 +17,9 @@
 
 from __future__ import annotations
 
-from ansible.module_utils.parsing.convert_bool import boolean
-from ansible.plugins.action import ActionBase
-from ansible.utils.vars import isidentifier
+from arolemgr.module_utils.parsing.convert_bool import boolean
+from arolemgr.plugins.action import ActionBase
+from arolemgr.utils.vars import isidentifier
 
 
 class ActionModule(ActionBase):

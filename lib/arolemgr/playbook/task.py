@@ -17,26 +17,26 @@
 
 from __future__ import annotations
 
-from ansible import constants as C
-from ansible.errors import AnsibleError, AnsibleParserError, AnsibleUndefinedVariable, AnsibleAssertionError
-from ansible.module_utils.common.text.converters import to_native
-from ansible.module_utils.six import string_types
-from ansible.parsing.mod_args import ModuleArgsParser
-from ansible.parsing.yaml.objects import AnsibleBaseYAMLObject, AnsibleMapping
-from ansible.plugins.loader import lookup_loader
-from ansible.playbook.attribute import NonInheritableFieldAttribute
-from ansible.playbook.base import Base
-from ansible.playbook.block import Block
-from ansible.playbook.collectionsearch import CollectionSearch
-from ansible.playbook.conditional import Conditional
-from ansible.playbook.delegatable import Delegatable
-from ansible.playbook.loop_control import LoopControl
-from ansible.playbook.notifiable import Notifiable
-from ansible.playbook.role import Role
-from ansible.playbook.taggable import Taggable
-from ansible.utils.collection_loader import AnsibleCollectionConfig
-from ansible.utils.display import Display
-from ansible.utils.sentinel import Sentinel
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError, AnsibleParserError, AnsibleUndefinedVariable, AnsibleAssertionError
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.module_utils.six import string_types
+from arolemgr.parsing.mod_args import ModuleArgsParser
+from arolemgr.parsing.yaml.objects import AnsibleBaseYAMLObject, AnsibleMapping
+from arolemgr.plugins.loader import lookup_loader
+from arolemgr.playbook.attribute import NonInheritableFieldAttribute
+from arolemgr.playbook.base import Base
+from arolemgr.playbook.block import Block
+from arolemgr.playbook.collectionsearch import CollectionSearch
+from arolemgr.playbook.conditional import Conditional
+from arolemgr.playbook.delegatable import Delegatable
+from arolemgr.playbook.loop_control import LoopControl
+from arolemgr.playbook.notifiable import Notifiable
+from arolemgr.playbook.role import Role
+from arolemgr.playbook.taggable import Taggable
+from arolemgr.utils.collection_loader import AnsibleCollectionConfig
+from arolemgr.utils.display import Display
+from arolemgr.utils.sentinel import Sentinel
 
 __all__ = ['Task']
 
@@ -414,8 +414,8 @@ class Task(Base, Conditional, Taggable, CollectionSearch, Notifiable, Delegatabl
     def deserialize(self, data):
 
         # import is here to avoid import loops
-        from ansible.playbook.task_include import TaskInclude
-        from ansible.playbook.handler_task_include import HandlerTaskInclude
+        from arolemgr.playbook.task_include import TaskInclude
+        from arolemgr.playbook.handler_task_include import HandlerTaskInclude
 
         parent_data = data.get('parent', None)
         if parent_data:
@@ -500,7 +500,7 @@ class Task(Base, Conditional, Taggable, CollectionSearch, Notifiable, Delegatabl
         return True
 
     def get_first_parent_include(self):
-        from ansible.playbook.task_include import TaskInclude
+        from arolemgr.playbook.task_include import TaskInclude
         if self._parent:
             if isinstance(self._parent, TaskInclude):
                 return self._parent

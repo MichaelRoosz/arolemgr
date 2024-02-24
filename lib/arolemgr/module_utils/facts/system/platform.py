@@ -19,11 +19,11 @@ import re
 import socket
 import platform
 
-import ansible.module_utils.compat.typing as t
+import arolemgr.module_utils.compat.typing as t
 
-from ansible.module_utils.facts.utils import get_file_content
+from arolemgr.module_utils.facts.utils import get_file_content
 
-from ansible.module_utils.facts.collector import BaseFactCollector
+from arolemgr.module_utils.facts.collector import BaseFactCollector
 
 # i86pc is a Solaris and derivatives-ism
 SOLARIS_I86_RE_PATTERN = r'i([3456]86|86pc)'

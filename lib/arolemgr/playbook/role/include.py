@@ -17,12 +17,12 @@
 
 from __future__ import annotations
 
-from ansible.errors import AnsibleError, AnsibleParserError
-from ansible.module_utils.six import string_types
-from ansible.parsing.yaml.objects import AnsibleBaseYAMLObject
-from ansible.playbook.delegatable import Delegatable
-from ansible.playbook.role.definition import RoleDefinition
-from ansible.module_utils.common.text.converters import to_native
+from arolemgr.errors import AnsibleError, AnsibleParserError
+from arolemgr.module_utils.six import string_types
+from arolemgr.parsing.yaml.objects import AnsibleBaseYAMLObject
+from arolemgr.playbook.delegatable import Delegatable
+from arolemgr.playbook.role.definition import RoleDefinition
+from arolemgr.module_utils.common.text.converters import to_native
 
 
 __all__ = ['RoleInclude']

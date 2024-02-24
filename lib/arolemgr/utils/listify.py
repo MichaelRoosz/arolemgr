@@ -19,8 +19,8 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 
-from ansible.module_utils.six import string_types
-from ansible.utils.display import Display
+from arolemgr.module_utils.six import string_types
+from arolemgr.utils.display import Display
 
 display = Display()
 

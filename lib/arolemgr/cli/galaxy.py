@@ -7,7 +7,7 @@
 from __future__ import annotations
 
 # ansible.cli needs to be imported first, to ensure the source bin/* scripts run that code first
-from ansible.cli import CLI
+from arolemgr.cli import CLI
 
 import argparse
 import asyncio
@@ -25,13 +25,13 @@ import typing as t
 from dataclasses import dataclass
 from yaml.error import YAMLError
 
-import ansible.constants as C
-from ansible import context
-from ansible.cli.arguments import option_helpers as opt_help
-from ansible.errors import AnsibleError, AnsibleOptionsError
-from ansible.galaxy import Galaxy, get_collections_galaxy_meta_info
-from ansible.galaxy.api import GalaxyAPI, GalaxyError
-from ansible.galaxy.collection import (
+import arolemgr.constants as C
+from arolemgr import  context
+from arolemgr.cli.arguments import option_helpers as opt_help
+from arolemgr.errors import AnsibleError, AnsibleOptionsError
+from arolemgr.galaxy import Galaxy, get_collections_galaxy_meta_info
+from arolemgr.galaxy.api import GalaxyAPI, GalaxyError
+from arolemgr.galaxy.collection import (
     build_collection,
     download_collections,
     find_existing_collections,
@@ -42,27 +42,27 @@ from ansible.galaxy.collection import (
     verify_collections,
     SIGNATURE_COUNT_RE,
 )
-from ansible.galaxy.collection.concrete_artifact_manager import (
+from arolemgr.galaxy.collection.concrete_artifact_manager import (
     ConcreteArtifactsManager,
 )
-from ansible.galaxy.collection.gpg import GPG_ERROR_MAP
-from ansible.galaxy.dependency_resolution.dataclasses import Requirement
+from arolemgr.galaxy.collection.gpg import GPG_ERROR_MAP
+from arolemgr.galaxy.dependency_resolution.dataclasses import Requirement
 
-from ansible.galaxy.role import GalaxyRole
-from ansible.galaxy.token import BasicAuthToken, GalaxyToken, KeycloakToken, NoTokenSentinel
-from ansible.module_utils.ansible_release import __version__ as ansible_version
-from ansible.module_utils.common.collections import is_iterable
-from ansible.module_utils.common.yaml import yaml_dump, yaml_load
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
-from ansible.module_utils import six
-from ansible.parsing.dataloader import DataLoader
-from ansible.parsing.yaml.loader import AnsibleLoader
-from ansible.playbook.role.requirement import RoleRequirement
-from ansible.template import Templar
-from ansible.utils.collection_loader import AnsibleCollectionConfig
-from ansible.utils.display import Display
-from ansible.utils.plugin_docs import get_versioned_doclink
-from ansible.utils.vars import load_extra_vars
+from arolemgr.galaxy.role import GalaxyRole
+from arolemgr.galaxy.token import BasicAuthToken, GalaxyToken, KeycloakToken, NoTokenSentinel
+from arolemgr.module_utils.ansible_release import __version__ as ansible_version
+from arolemgr.module_utils.common.collections import is_iterable
+from arolemgr.module_utils.common.yaml import yaml_dump, yaml_load
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.module_utils import six
+from arolemgr.parsing.dataloader import DataLoader
+from arolemgr.parsing.yaml.loader import AnsibleLoader
+from arolemgr.playbook.role.requirement import RoleRequirement
+from arolemgr.template import Templar
+from arolemgr.utils.collection_loader import AnsibleCollectionConfig
+from arolemgr.utils.display import Display
+from arolemgr.utils.plugin_docs import get_versioned_doclink
+from arolemgr.utils.vars import load_extra_vars
 
 display = Display()
 urlparse = six.moves.urllib.parse.urlparse

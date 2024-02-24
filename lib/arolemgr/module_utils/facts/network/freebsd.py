@@ -15,8 +15,8 @@
 
 from __future__ import annotations
 
-from ansible.module_utils.facts.network.base import NetworkCollector
-from ansible.module_utils.facts.network.generic_bsd import GenericBsdIfconfigNetwork
+from arolemgr.module_utils.facts.network.base import NetworkCollector
+from arolemgr.module_utils.facts.network.generic_bsd import GenericBsdIfconfigNetwork
 
 
 class FreeBSDNetwork(GenericBsdIfconfigNetwork):

@@ -43,8 +43,8 @@ DOCUMENTATION = '''
 import codecs
 import json
 
-from ansible.parsing.ajson import AnsibleJSONEncoder, AnsibleJSONDecoder
-from ansible.plugins.cache import BaseFileCacheModule
+from arolemgr.parsing.ajson import AnsibleJSONEncoder, AnsibleJSONDecoder
+from arolemgr.plugins.cache import BaseFileCacheModule
 
 
 class CacheModule(BaseFileCacheModule):

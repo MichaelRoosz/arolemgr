@@ -185,8 +185,8 @@ import re
 import tempfile
 from traceback import format_exc
 
-from ansible.module_utils.common.text.converters import to_text, to_bytes
-from ansible.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.common.text.converters import to_text, to_bytes
+from arolemgr.module_utils.basic import AnsibleModule
 
 
 def write_changes(module, contents, path):

@@ -77,7 +77,7 @@ DOCUMENTATION = """
 import re
 import shlex
 
-from ansible.plugins.become import BecomeBase
+from arolemgr.plugins.become import BecomeBase
 
 
 class BecomeModule(BecomeBase):

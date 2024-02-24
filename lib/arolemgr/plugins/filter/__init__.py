@@ -3,8 +3,8 @@
 
 from __future__ import annotations
 
-from ansible import constants as C
-from ansible.plugins import AnsibleJinja2Plugin
+from arolemgr import  constants as C
+from arolemgr.plugins import AnsibleJinja2Plugin
 
 
 class AnsibleJinja2Filter(AnsibleJinja2Plugin):

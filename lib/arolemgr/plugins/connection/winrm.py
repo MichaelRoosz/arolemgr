@@ -182,18 +182,18 @@ try:
 except ImportError:
     pass
 
-from ansible import constants as C
-from ansible.errors import AnsibleError, AnsibleConnectionFailure
-from ansible.errors import AnsibleFileNotFound
-from ansible.module_utils.json_utils import _filter_non_json_lines
-from ansible.module_utils.parsing.convert_bool import boolean
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
-from ansible.module_utils.six import binary_type
-from ansible.plugins.connection import ConnectionBase
-from ansible.plugins.shell.powershell import _parse_clixml
-from ansible.plugins.shell.powershell import ShellBase as PowerShellBase
-from ansible.utils.hashing import secure_hash
-from ansible.utils.display import Display
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError, AnsibleConnectionFailure
+from arolemgr.errors import AnsibleFileNotFound
+from arolemgr.module_utils.json_utils import _filter_non_json_lines
+from arolemgr.module_utils.parsing.convert_bool import boolean
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.module_utils.six import binary_type
+from arolemgr.plugins.connection import ConnectionBase
+from arolemgr.plugins.shell.powershell import _parse_clixml
+from arolemgr.plugins.shell.powershell import ShellBase as PowerShellBase
+from arolemgr.utils.hashing import secure_hash
+from arolemgr.utils.display import Display
 
 
 try:

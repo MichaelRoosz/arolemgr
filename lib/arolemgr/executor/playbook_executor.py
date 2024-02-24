@@ -19,20 +19,20 @@ from __future__ import annotations
 
 import os
 
-from ansible import constants as C
-from ansible import context
-from ansible.executor.task_queue_manager import TaskQueueManager, AnsibleEndPlay
-from ansible.module_utils.common.text.converters import to_text
-from ansible.module_utils.parsing.convert_bool import boolean
-from ansible.plugins.loader import become_loader, connection_loader, shell_loader
-from ansible.playbook import Playbook
-from ansible.template import Templar
-from ansible.utils.helpers import pct_to_int
-from ansible.utils.collection_loader import AnsibleCollectionConfig
-from ansible.utils.collection_loader._collection_finder import _get_collection_name_from_path, _get_collection_playbook_path
-from ansible.utils.path import makedirs_safe
-from ansible.utils.ssh_functions import set_default_transport
-from ansible.utils.display import Display
+from arolemgr import  constants as C
+from arolemgr import  context
+from arolemgr.executor.task_queue_manager import TaskQueueManager, AnsibleEndPlay
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.module_utils.parsing.convert_bool import boolean
+from arolemgr.plugins.loader import become_loader, connection_loader, shell_loader
+from arolemgr.playbook import Playbook
+from arolemgr.template import Templar
+from arolemgr.utils.helpers import pct_to_int
+from arolemgr.utils.collection_loader import AnsibleCollectionConfig
+from arolemgr.utils.collection_loader._collection_finder import _get_collection_name_from_path, _get_collection_playbook_path
+from arolemgr.utils.path import makedirs_safe
+from arolemgr.utils.ssh_functions import set_default_transport
+from arolemgr.utils.display import Display
 
 
 display = Display()

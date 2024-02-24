@@ -14,15 +14,15 @@ import typing as t
 from abc import abstractmethod
 from functools import wraps
 
-from ansible import constants as C
-from ansible.module_utils.common.text.converters import to_bytes, to_text
-from ansible.playbook.play_context import PlayContext
-from ansible.plugins import AnsiblePlugin
-from ansible.plugins.become import BecomeBase
-from ansible.plugins.shell import ShellBase
-from ansible.utils.display import Display
-from ansible.plugins.loader import connection_loader, get_shell_plugin
-from ansible.utils.path import unfrackpath
+from arolemgr import  constants as C
+from arolemgr.module_utils.common.text.converters import to_bytes, to_text
+from arolemgr.playbook.play_context import PlayContext
+from arolemgr.plugins import AnsiblePlugin
+from arolemgr.plugins.become import BecomeBase
+from arolemgr.plugins.shell import ShellBase
+from arolemgr.utils.display import Display
+from arolemgr.plugins.loader import connection_loader, get_shell_plugin
+from arolemgr.utils.path import unfrackpath
 
 display = Display()
 

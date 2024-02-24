@@ -7,12 +7,12 @@ import os
 
 from functools import lru_cache
 
-from ansible import constants as C
-from ansible.errors import AnsibleError
-from ansible.inventory.group import InventoryObjectType
-from ansible.plugins.loader import vars_loader
-from ansible.utils.display import Display
-from ansible.utils.vars import combine_vars
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError
+from arolemgr.inventory.group import InventoryObjectType
+from arolemgr.plugins.loader import vars_loader
+from arolemgr.utils.display import Display
+from arolemgr.utils.vars import combine_vars
 
 display = Display()
 

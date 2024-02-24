@@ -31,11 +31,11 @@ from __future__ import annotations
 import fnmatch
 import sys
 
-import ansible.module_utils.compat.typing as t
+import arolemgr.module_utils.compat.typing as t
 
-from ansible.module_utils.facts import timeout
-from ansible.module_utils.facts import collector
-from ansible.module_utils.common.collections import is_string
+from arolemgr.module_utils.facts import timeout
+from arolemgr.module_utils.facts import collector
+from arolemgr.module_utils.common.collections import is_string
 
 
 class AnsibleFactCollector(collector.BaseFactCollector):

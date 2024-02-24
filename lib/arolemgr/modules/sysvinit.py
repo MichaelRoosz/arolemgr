@@ -135,8 +135,8 @@ results:
 
 import re
 from time import sleep
-from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.service import sysv_is_enabled, get_sysv_script, sysv_exists, fail_if_missing, get_ps, daemonize
+from arolemgr.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.service import sysv_is_enabled, get_sysv_script, sysv_exists, fail_if_missing, get_ps, daemonize
 
 
 def main():

@@ -42,9 +42,9 @@ RETURN = """
 """
 
 import subprocess
-from ansible.errors import AnsibleError
-from ansible.plugins.lookup import LookupBase
-from ansible.module_utils.common.text.converters import to_text
+from arolemgr.errors import AnsibleError
+from arolemgr.plugins.lookup import LookupBase
+from arolemgr.module_utils.common.text.converters import to_text
 
 
 class LookupModule(LookupBase):

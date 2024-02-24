@@ -51,8 +51,8 @@ RETURN = """
 import os
 import glob
 
-from ansible.plugins.lookup import LookupBase
-from ansible.module_utils.common.text.converters import to_bytes, to_text
+from arolemgr.plugins.lookup import LookupBase
+from arolemgr.module_utils.common.text.converters import to_bytes, to_text
 
 
 class LookupModule(LookupBase):

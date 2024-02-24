@@ -9,12 +9,12 @@ import json
 
 from yaml import YAMLError
 
-from ansible.errors import AnsibleParserError
-from ansible.errors.yaml_strings import YAML_SYNTAX_ERROR
-from ansible.module_utils.common.text.converters import to_native
-from ansible.parsing.yaml.loader import AnsibleLoader
-from ansible.parsing.yaml.objects import AnsibleBaseYAMLObject
-from ansible.parsing.ajson import AnsibleJSONDecoder
+from arolemgr.errors import AnsibleParserError
+from arolemgr.errors.yaml_strings import YAML_SYNTAX_ERROR
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.parsing.yaml.loader import AnsibleLoader
+from arolemgr.parsing.yaml.objects import AnsibleBaseYAMLObject
+from arolemgr.parsing.ajson import AnsibleJSONDecoder
 
 
 __all__ = ('from_yaml',)

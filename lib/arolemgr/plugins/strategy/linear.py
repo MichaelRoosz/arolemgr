@@ -29,17 +29,17 @@ DOCUMENTATION = '''
     author: Ansible Core Team
 '''
 
-from ansible import constants as C
-from ansible.errors import AnsibleError, AnsibleAssertionError, AnsibleParserError
-from ansible.executor.play_iterator import IteratingStates
-from ansible.module_utils.common.text.converters import to_text
-from ansible.playbook.handler import Handler
-from ansible.playbook.included_file import IncludedFile
-from ansible.playbook.task import Task
-from ansible.plugins.loader import action_loader
-from ansible.plugins.strategy import StrategyBase
-from ansible.template import Templar
-from ansible.utils.display import Display
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError, AnsibleAssertionError, AnsibleParserError
+from arolemgr.executor.play_iterator import IteratingStates
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.playbook.handler import Handler
+from arolemgr.playbook.included_file import IncludedFile
+from arolemgr.playbook.task import Task
+from arolemgr.plugins.loader import action_loader
+from arolemgr.plugins.strategy import StrategyBase
+from arolemgr.template import Templar
+from arolemgr.utils.display import Display
 
 display = Display()
 

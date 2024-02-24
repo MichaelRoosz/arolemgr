@@ -17,7 +17,7 @@
 
 from __future__ import annotations
 
-from ansible.module_utils.six import string_types
+from arolemgr.module_utils.six import string_types
 
 
 def pct_to_int(value, num_items, min_value=1):

@@ -5,8 +5,8 @@ from __future__ import annotations
 
 import os
 
-from ansible.module_utils.common.file import is_executable
-from ansible.module_utils.common.warnings import deprecate
+from arolemgr.module_utils.common.file import is_executable
+from arolemgr.module_utils.common.warnings import deprecate
 
 
 def get_bin_path(arg, opt_dirs=None, required=None):

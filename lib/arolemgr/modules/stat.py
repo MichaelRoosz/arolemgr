@@ -375,8 +375,8 @@ import pwd
 import stat
 
 # import module snippets
-from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.common.text.converters import to_bytes
+from arolemgr.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.common.text.converters import to_bytes
 
 
 def format_output(module, path, st):

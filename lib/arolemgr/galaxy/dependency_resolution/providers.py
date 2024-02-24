@@ -9,23 +9,23 @@ import functools
 import typing as t
 
 if t.TYPE_CHECKING:
-    from ansible.galaxy.collection.concrete_artifact_manager import (
+    from arolemgr.galaxy.collection.concrete_artifact_manager import (
         ConcreteArtifactsManager,
     )
-    from ansible.galaxy.collection.galaxy_api_proxy import MultiGalaxyAPIProxy
-    from ansible.galaxy.api import GalaxyAPI
+    from arolemgr.galaxy.collection.galaxy_api_proxy import MultiGalaxyAPIProxy
+    from arolemgr.galaxy.api import GalaxyAPI
 
-from ansible.galaxy.collection.gpg import get_signature_from_source
-from ansible.galaxy.dependency_resolution.dataclasses import (
+from arolemgr.galaxy.collection.gpg import get_signature_from_source
+from arolemgr.galaxy.dependency_resolution.dataclasses import (
     Candidate,
     Requirement,
 )
-from ansible.galaxy.dependency_resolution.versioning import (
+from arolemgr.galaxy.dependency_resolution.versioning import (
     is_pre_release,
     meets_requirements,
 )
-from ansible.module_utils.six import string_types
-from ansible.utils.version import SemanticVersion, LooseVersion
+from arolemgr.module_utils.six import string_types
+from arolemgr.utils.version import SemanticVersion, LooseVersion
 
 try:
     from resolvelib import AbstractProvider

@@ -21,19 +21,19 @@ import os
 import platform
 import re
 
-import ansible.module_utils.compat.typing as t
+import arolemgr.module_utils.compat.typing as t
 
-from ansible.module_utils.common.text.converters import to_native
+from arolemgr.module_utils.common.text.converters import to_native
 
-from ansible.module_utils.facts.utils import get_file_content
-from ansible.module_utils.facts.collector import BaseFactCollector
+from arolemgr.module_utils.facts.utils import get_file_content
+from arolemgr.module_utils.facts.collector import BaseFactCollector
 
 # The distutils module is not shipped with SUNWPython on Solaris.
 # It's in the SUNWPython-devel package which also contains development files
 # that don't belong on production boxes.  Since our Solaris code doesn't
 # depend on LooseVersion, do not import it on Solaris.
 if platform.system() != 'SunOS':
-    from ansible.module_utils.compat.version import LooseVersion
+    from arolemgr.module_utils.compat.version import LooseVersion
 
 
 class ServiceMgrFactCollector(BaseFactCollector):

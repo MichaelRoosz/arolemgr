@@ -52,8 +52,8 @@ EXAMPLES = '''
     selection: install
 '''
 
-from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.common.locale import get_best_parsable_locale
+from arolemgr.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.common.locale import get_best_parsable_locale
 
 
 def main():

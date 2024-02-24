@@ -6,7 +6,7 @@ from __future__ import annotations
 import os
 import sys
 
-from ansible.module_utils.common.text.converters import to_native, to_bytes
+from arolemgr.module_utils.common.text.converters import to_native, to_bytes
 from ctypes import CDLL, c_char_p, c_int, byref, POINTER, get_errno
 
 try:

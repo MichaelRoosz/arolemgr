@@ -195,9 +195,9 @@ EXAMPLES = r'''
 import re
 import os
 import tempfile
-from ansible.module_utils.six import b
-from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.common.text.converters import to_bytes, to_native
+from arolemgr.module_utils.six import b
+from arolemgr.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native
 
 
 def write_changes(module, contents, path):

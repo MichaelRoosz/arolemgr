@@ -23,7 +23,7 @@ DOCUMENTATION = '''
     author: Kishin Yagami (!UNKNOWN)
 '''
 
-from ansible.plugins.strategy.linear import StrategyModule as LinearStrategyModule
+from arolemgr.plugins.strategy.linear import StrategyModule as LinearStrategyModule
 
 
 class StrategyModule(LinearStrategyModule):

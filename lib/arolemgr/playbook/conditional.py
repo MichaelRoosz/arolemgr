@@ -19,11 +19,11 @@ from __future__ import annotations
 
 import typing as t
 
-from ansible.errors import AnsibleError, AnsibleUndefinedVariable
-from ansible.module_utils.common.text.converters import to_native
-from ansible.playbook.attribute import FieldAttribute
-from ansible.template import Templar
-from ansible.utils.display import Display
+from arolemgr.errors import AnsibleError, AnsibleUndefinedVariable
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.playbook.attribute import FieldAttribute
+from arolemgr.template import Templar
+from arolemgr.utils.display import Display
 
 display = Display()
 

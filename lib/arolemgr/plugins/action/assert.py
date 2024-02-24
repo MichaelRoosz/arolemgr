@@ -16,11 +16,11 @@
 # along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
 from __future__ import annotations
 
-from ansible.errors import AnsibleError
-from ansible.playbook.conditional import Conditional
-from ansible.plugins.action import ActionBase
-from ansible.module_utils.six import string_types
-from ansible.module_utils.parsing.convert_bool import boolean
+from arolemgr.errors import AnsibleError
+from arolemgr.playbook.conditional import Conditional
+from arolemgr.plugins.action import ActionBase
+from arolemgr.module_utils.six import string_types
+from arolemgr.module_utils.parsing.convert_bool import boolean
 
 
 class ActionModule(ActionBase):

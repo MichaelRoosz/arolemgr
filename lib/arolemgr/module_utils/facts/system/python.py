@@ -17,9 +17,9 @@ from __future__ import annotations
 
 import sys
 
-import ansible.module_utils.compat.typing as t
+import arolemgr.module_utils.compat.typing as t
 
-from ansible.module_utils.facts.collector import BaseFactCollector
+from arolemgr.module_utils.facts.collector import BaseFactCollector
 
 try:
     # Check if we have SSLContext support

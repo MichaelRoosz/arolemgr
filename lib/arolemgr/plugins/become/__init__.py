@@ -10,9 +10,9 @@ from random import choice
 from string import ascii_lowercase
 from gettext import dgettext
 
-from ansible.errors import AnsibleError
-from ansible.module_utils.common.text.converters import to_bytes
-from ansible.plugins import AnsiblePlugin
+from arolemgr.errors import AnsibleError
+from arolemgr.module_utils.common.text.converters import to_bytes
+from arolemgr.plugins import AnsiblePlugin
 
 
 def _gen_id(length=32):

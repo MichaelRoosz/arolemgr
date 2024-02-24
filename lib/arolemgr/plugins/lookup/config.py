@@ -80,14 +80,14 @@ _raw:
   type: raw
 """
 
-import ansible.plugins.loader as plugin_loader
+import arolemgr.plugins.loader as plugin_loader
 
-from ansible import constants as C
-from ansible.errors import AnsibleError, AnsibleLookupError, AnsibleOptionsError
-from ansible.module_utils.common.text.converters import to_native
-from ansible.module_utils.six import string_types
-from ansible.plugins.lookup import LookupBase
-from ansible.utils.sentinel import Sentinel
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError, AnsibleLookupError, AnsibleOptionsError
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.module_utils.six import string_types
+from arolemgr.plugins.lookup import LookupBase
+from arolemgr.utils.sentinel import Sentinel
 
 
 class MissingSetting(AnsibleOptionsError):

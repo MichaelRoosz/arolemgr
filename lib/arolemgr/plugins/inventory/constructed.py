@@ -81,14 +81,14 @@ EXAMPLES = r'''
 
 import os
 
-from ansible import constants as C
-from ansible.errors import AnsibleParserError, AnsibleOptionsError
-from ansible.inventory.helpers import get_group_vars
-from ansible.plugins.inventory import BaseInventoryPlugin, Constructable
-from ansible.module_utils.common.text.converters import to_native
-from ansible.utils.vars import combine_vars
-from ansible.vars.fact_cache import FactCache
-from ansible.vars.plugins import get_vars_from_inventory_sources
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleParserError, AnsibleOptionsError
+from arolemgr.inventory.helpers import get_group_vars
+from arolemgr.plugins.inventory import BaseInventoryPlugin, Constructable
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.utils.vars import combine_vars
+from arolemgr.vars.fact_cache import FactCache
+from arolemgr.vars.plugins import get_vars_from_inventory_sources
 
 
 class InventoryModule(BaseInventoryPlugin, Constructable):

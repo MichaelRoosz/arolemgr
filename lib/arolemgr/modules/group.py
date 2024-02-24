@@ -116,9 +116,9 @@ system:
 import grp
 import os
 
-from ansible.module_utils.common.text.converters import to_bytes
-from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.common.sys_info import get_platform_subclass
+from arolemgr.module_utils.common.text.converters import to_bytes
+from arolemgr.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.common.sys_info import get_platform_subclass
 
 
 class Group(object):

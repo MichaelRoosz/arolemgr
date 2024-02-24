@@ -86,9 +86,9 @@ from io import StringIO
 from collections import defaultdict
 from collections.abc import MutableSequence
 
-from ansible.errors import AnsibleLookupError, AnsibleOptionsError
-from ansible.module_utils.common.text.converters import to_text, to_native
-from ansible.plugins.lookup import LookupBase
+from arolemgr.errors import AnsibleLookupError, AnsibleOptionsError
+from arolemgr.module_utils.common.text.converters import to_text, to_native
+from arolemgr.plugins.lookup import LookupBase
 
 
 def _parse_params(term, paramvals):

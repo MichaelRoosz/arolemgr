@@ -3,8 +3,8 @@
 
 from __future__ import annotations
 
-from ansible.errors import AnsibleActionFail
-from ansible.plugins.action import ActionBase
+from arolemgr.errors import AnsibleActionFail
+from arolemgr.plugins.action import ActionBase
 
 
 class ActionModule(ActionBase):

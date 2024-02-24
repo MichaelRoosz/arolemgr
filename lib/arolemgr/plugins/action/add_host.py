@@ -20,12 +20,12 @@ from __future__ import annotations
 
 from collections.abc import Mapping
 
-from ansible.errors import AnsibleActionFail
-from ansible.module_utils.six import string_types
-from ansible.plugins.action import ActionBase
-from ansible.parsing.utils.addresses import parse_address
-from ansible.utils.display import Display
-from ansible.utils.vars import combine_vars
+from arolemgr.errors import AnsibleActionFail
+from arolemgr.module_utils.six import string_types
+from arolemgr.plugins.action import ActionBase
+from arolemgr.parsing.utils.addresses import parse_address
+from arolemgr.utils.display import Display
+from arolemgr.utils.vars import combine_vars
 
 display = Display()
 

@@ -70,17 +70,17 @@ import platform
 import socket
 import traceback
 
-import ansible.module_utils.compat.typing as t
+import arolemgr.module_utils.compat.typing as t
 
-from ansible.module_utils.basic import (
+from arolemgr.module_utils.basic import (
     AnsibleModule,
     get_distribution,
     get_distribution_version,
 )
-from ansible.module_utils.common.sys_info import get_platform_subclass
-from ansible.module_utils.facts.system.service_mgr import ServiceMgrFactCollector
-from ansible.module_utils.facts.utils import get_file_lines, get_file_content
-from ansible.module_utils.common.text.converters import to_native, to_text
+from arolemgr.module_utils.common.sys_info import get_platform_subclass
+from arolemgr.module_utils.facts.system.service_mgr import ServiceMgrFactCollector
+from arolemgr.module_utils.facts.utils import get_file_lines, get_file_content
+from arolemgr.module_utils.common.text.converters import to_native, to_text
 
 STRATS = {
     'alpine': 'Alpine',

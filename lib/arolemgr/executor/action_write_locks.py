@@ -21,7 +21,7 @@ import multiprocessing.synchronize
 
 from multiprocessing import Lock
 
-from ansible.module_utils.facts.system.pkg_mgr import PKG_MGRS
+from arolemgr.module_utils.facts.system.pkg_mgr import PKG_MGRS
 
 if 'action_write_locks' not in globals():
     # Do not initialize this more than once because it seems to bash

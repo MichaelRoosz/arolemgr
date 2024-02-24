@@ -86,10 +86,10 @@ import os
 import time
 import re
 
-from ansible import constants as C
-from ansible.module_utils.common.text.converters import to_bytes, to_text
-from ansible.plugins.callback import CallbackBase
-from ansible.utils._junit_xml import (
+from arolemgr import  constants as C
+from arolemgr.module_utils.common.text.converters import to_bytes, to_text
+from arolemgr.plugins.callback import CallbackBase
+from arolemgr.utils._junit_xml import (
     TestCase,
     TestError,
     TestFailure,

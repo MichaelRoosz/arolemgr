@@ -7,18 +7,18 @@
 from __future__ import annotations
 
 # ansible.cli needs to be imported first, to ensure the source bin/* scripts run that code first
-from ansible.cli import CLI
-from ansible import constants as C
-from ansible import context
-from ansible.cli.arguments import option_helpers as opt_help
-from ansible.errors import AnsibleError, AnsibleOptionsError, AnsibleParserError
-from ansible.executor.task_queue_manager import TaskQueueManager
-from ansible.module_utils.common.text.converters import to_text
-from ansible.parsing.splitter import parse_kv
-from ansible.parsing.utils.yaml import from_yaml
-from ansible.playbook import Playbook
-from ansible.playbook.play import Play
-from ansible.utils.display import Display
+from arolemgr.cli import CLI
+from arolemgr import  constants as C
+from arolemgr import  context
+from arolemgr.cli.arguments import option_helpers as opt_help
+from arolemgr.errors import AnsibleError, AnsibleOptionsError, AnsibleParserError
+from arolemgr.executor.task_queue_manager import TaskQueueManager
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.parsing.splitter import parse_kv
+from arolemgr.parsing.utils.yaml import from_yaml
+from arolemgr.playbook import Playbook
+from arolemgr.playbook.play import Play
+from arolemgr.utils.display import Display
 
 display = Display()
 

@@ -33,9 +33,9 @@ RETURN = """
     type: list
 """
 
-from ansible.errors import AnsibleError
-from ansible.inventory.manager import InventoryManager
-from ansible.plugins.lookup import LookupBase
+from arolemgr.errors import AnsibleError
+from arolemgr.inventory.manager import InventoryManager
+from arolemgr.plugins.lookup import LookupBase
 
 
 class LookupModule(LookupBase):

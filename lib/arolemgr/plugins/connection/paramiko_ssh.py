@@ -294,20 +294,20 @@ import fcntl
 import re
 import typing as t
 
-from ansible.module_utils.compat.version import LooseVersion
+from arolemgr.module_utils.compat.version import LooseVersion
 from binascii import hexlify
 
-from ansible.errors import (
+from arolemgr.errors import (
     AnsibleAuthenticationFailure,
     AnsibleConnectionFailure,
     AnsibleError,
     AnsibleFileNotFound,
 )
-from ansible.module_utils.compat.paramiko import PARAMIKO_IMPORT_ERR, paramiko
-from ansible.plugins.connection import ConnectionBase
-from ansible.utils.display import Display
-from ansible.utils.path import makedirs_safe
-from ansible.module_utils.common.text.converters import to_bytes, to_native, to_text
+from arolemgr.module_utils.compat.paramiko import PARAMIKO_IMPORT_ERR, paramiko
+from arolemgr.plugins.connection import ConnectionBase
+from arolemgr.utils.display import Display
+from arolemgr.utils.path import makedirs_safe
+from arolemgr.module_utils.common.text.converters import to_bytes, to_native, to_text
 
 display = Display()
 

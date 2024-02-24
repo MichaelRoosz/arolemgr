@@ -19,15 +19,15 @@ from __future__ import annotations
 
 import os
 
-from ansible import constants as C
-from ansible.errors import AnsibleError
-from ansible.executor.task_executor import remove_omit
-from ansible.module_utils.common.text.converters import to_text
-from ansible.playbook.handler import Handler
-from ansible.playbook.task_include import TaskInclude
-from ansible.playbook.role_include import IncludeRole
-from ansible.template import Templar
-from ansible.utils.display import Display
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError
+from arolemgr.executor.task_executor import remove_omit
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.playbook.handler import Handler
+from arolemgr.playbook.task_include import TaskInclude
+from arolemgr.playbook.role_include import IncludeRole
+from arolemgr.template import Templar
+from arolemgr.utils.display import Display
 
 display = Display()
 

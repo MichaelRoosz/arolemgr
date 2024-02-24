@@ -17,23 +17,23 @@ from collections import defaultdict, namedtuple
 from importlib import import_module
 from traceback import format_exc
 
-import ansible.module_utils.compat.typing as t
+import arolemgr.module_utils.compat.typing as t
 
 from .filter import AnsibleJinja2Filter
 from .test import AnsibleJinja2Test
 
-from ansible import __version__ as ansible_version
-from ansible import constants as C
-from ansible.errors import AnsibleError, AnsiblePluginCircularRedirect, AnsiblePluginRemovedError, AnsibleCollectionUnsupportedVersionError
-from ansible.module_utils.common.text.converters import to_bytes, to_text, to_native
-from ansible.module_utils.six import string_types
-from ansible.parsing.utils.yaml import from_yaml
-from ansible.parsing.yaml.loader import AnsibleLoader
-from ansible.plugins import get_plugin_class, MODULE_CACHE, PATH_CACHE, PLUGIN_PATH_CACHE
-from ansible.utils.collection_loader import AnsibleCollectionConfig, AnsibleCollectionRef
-from ansible.utils.collection_loader._collection_finder import _AnsibleCollectionFinder, _get_collection_metadata
-from ansible.utils.display import Display
-from ansible.utils.plugin_docs import add_fragments
+from arolemgr import  __version__ as ansible_version
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError, AnsiblePluginCircularRedirect, AnsiblePluginRemovedError, AnsibleCollectionUnsupportedVersionError
+from arolemgr.module_utils.common.text.converters import to_bytes, to_text, to_native
+from arolemgr.module_utils.six import string_types
+from arolemgr.parsing.utils.yaml import from_yaml
+from arolemgr.parsing.yaml.loader import AnsibleLoader
+from arolemgr.plugins import get_plugin_class, MODULE_CACHE, PATH_CACHE, PLUGIN_PATH_CACHE
+from arolemgr.utils.collection_loader import AnsibleCollectionConfig, AnsibleCollectionRef
+from arolemgr.utils.collection_loader._collection_finder import _AnsibleCollectionFinder, _get_collection_metadata
+from arolemgr.utils.display import Display
+from arolemgr.utils.plugin_docs import add_fragments
 
 # TODO: take the packaging dep, or vendor SpecifierSet?
 

@@ -24,11 +24,11 @@ import traceback
 from jinja2.exceptions import TemplateNotFound
 from multiprocessing.queues import Queue
 
-from ansible.errors import AnsibleConnectionFailure, AnsibleError
-from ansible.executor.task_executor import TaskExecutor
-from ansible.module_utils.common.text.converters import to_text
-from ansible.utils.display import Display
-from ansible.utils.multiprocessing import context as multiprocessing_context
+from arolemgr.errors import AnsibleConnectionFailure, AnsibleError
+from arolemgr.executor.task_executor import TaskExecutor
+from arolemgr.module_utils.common.text.converters import to_text
+from arolemgr.utils.display import Display
+from arolemgr.utils.multiprocessing import context as multiprocessing_context
 
 __all__ = ['WorkerProcess']
 

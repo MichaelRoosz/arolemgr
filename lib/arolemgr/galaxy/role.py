@@ -32,17 +32,17 @@ import tempfile
 from collections.abc import MutableSequence
 from shutil import rmtree
 
-from ansible import context
-from ansible.errors import AnsibleError, AnsibleParserError
-from ansible.galaxy.api import GalaxyAPI
-from ansible.galaxy.user_agent import user_agent
-from ansible.module_utils.common.text.converters import to_native, to_text
-from ansible.module_utils.common.yaml import yaml_dump, yaml_load
-from ansible.module_utils.compat.version import LooseVersion
-from ansible.module_utils.urls import open_url
-from ansible.playbook.role.requirement import RoleRequirement
-from ansible.utils.display import Display
-from ansible.utils.path import is_subpath, unfrackpath
+from arolemgr import  context
+from arolemgr.errors import AnsibleError, AnsibleParserError
+from arolemgr.galaxy.api import GalaxyAPI
+from arolemgr.galaxy.user_agent import user_agent
+from arolemgr.module_utils.common.text.converters import to_native, to_text
+from arolemgr.module_utils.common.yaml import yaml_dump, yaml_load
+from arolemgr.module_utils.compat.version import LooseVersion
+from arolemgr.module_utils.urls import open_url
+from arolemgr.playbook.role.requirement import RoleRequirement
+from arolemgr.utils.display import Display
+from arolemgr.utils.path import is_subpath, unfrackpath
 
 display = Display()
 

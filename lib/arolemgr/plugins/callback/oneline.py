@@ -13,8 +13,8 @@ DOCUMENTATION = '''
         - This is the output callback used by the C(-o)/C(--one-line) command line option.
 '''
 
-from ansible.plugins.callback import CallbackBase
-from ansible import constants as C
+from arolemgr.plugins.callback import CallbackBase
+from arolemgr import  constants as C
 
 
 class CallbackModule(CallbackBase):

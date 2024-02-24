@@ -17,4 +17,4 @@
 from __future__ import annotations
 
 # moved actual classes to __init__ kept here for backward compat with 3rd parties
-from ansible.plugins.cache import BaseCacheModule, BaseFileCacheModule  # pylint: disable=unused-import
+from arolemgr.plugins.cache import BaseCacheModule, BaseFileCacheModule  # pylint: disable=unused-import

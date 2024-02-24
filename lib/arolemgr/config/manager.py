@@ -15,15 +15,15 @@ from collections import namedtuple
 from collections.abc import Mapping, Sequence
 from jinja2.nativetypes import NativeEnvironment
 
-from ansible.errors import AnsibleOptionsError, AnsibleError
-from ansible.module_utils.common.text.converters import to_text, to_bytes, to_native
-from ansible.module_utils.common.yaml import yaml_load
-from ansible.module_utils.six import string_types
-from ansible.module_utils.parsing.convert_bool import boolean
-from ansible.parsing.quoting import unquote
-from ansible.parsing.yaml.objects import AnsibleVaultEncryptedUnicode
-from ansible.utils import py3compat
-from ansible.utils.path import cleanup_tmp_file, makedirs_safe, unfrackpath
+from arolemgr.errors import AnsibleOptionsError, AnsibleError
+from arolemgr.module_utils.common.text.converters import to_text, to_bytes, to_native
+from arolemgr.module_utils.common.yaml import yaml_load
+from arolemgr.module_utils.six import string_types
+from arolemgr.module_utils.parsing.convert_bool import boolean
+from arolemgr.parsing.quoting import unquote
+from arolemgr.parsing.yaml.objects import AnsibleVaultEncryptedUnicode
+from arolemgr.utils import py3compat
+from arolemgr.utils.path import cleanup_tmp_file, makedirs_safe, unfrackpath
 
 
 Setting = namedtuple('Setting', 'name value origin type')
@@ -506,7 +506,7 @@ class ConfigManager(object):
 
             if value is None and 'cli' in defs[config]:
                 # avoid circular import .. until valid
-                from ansible import context
+                from arolemgr import  context
                 value, origin = self._loop_entries(context.CLIARGS, defs[config]['cli'])
                 origin = 'cli: %s' % origin
 

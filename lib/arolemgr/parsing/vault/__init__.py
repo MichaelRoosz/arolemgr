@@ -50,12 +50,12 @@ try:
 except ImportError:
     pass
 
-from ansible.errors import AnsibleError, AnsibleAssertionError
-from ansible import constants as C
-from ansible.module_utils.six import binary_type
-from ansible.module_utils.common.text.converters import to_bytes, to_text, to_native
-from ansible.utils.display import Display
-from ansible.utils.path import makedirs_safe, unfrackpath
+from arolemgr.errors import AnsibleError, AnsibleAssertionError
+from arolemgr import  constants as C
+from arolemgr.module_utils.six import binary_type
+from arolemgr.module_utils.common.text.converters import to_bytes, to_text, to_native
+from arolemgr.utils.display import Display
+from arolemgr.utils.path import makedirs_safe, unfrackpath
 
 display = Display()
 

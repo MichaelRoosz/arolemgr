@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import re
 
-from ansible.module_utils.six import iteritems
+from arolemgr.module_utils.six import iteritems
 
 SIZE_RANGES = {
     'Y': 1 << 80,

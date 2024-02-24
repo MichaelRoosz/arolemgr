@@ -17,8 +17,8 @@ from __future__ import annotations
 
 import os
 
-from ansible.module_utils.facts.virtual.base import Virtual, VirtualCollector
-from ansible.module_utils.facts.virtual.sysctl import VirtualSysctlDetectionMixin
+from arolemgr.module_utils.facts.virtual.base import Virtual, VirtualCollector
+from arolemgr.module_utils.facts.virtual.sysctl import VirtualSysctlDetectionMixin
 
 
 class FreeBSDVirtual(Virtual, VirtualSysctlDetectionMixin):

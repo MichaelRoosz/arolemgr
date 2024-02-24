@@ -20,10 +20,10 @@ from __future__ import annotations
 
 import subprocess
 
-from ansible import constants as C
-from ansible.module_utils.common.text.converters import to_bytes
-from ansible.module_utils.compat.paramiko import paramiko
-from ansible.utils.display import Display
+from arolemgr import  constants as C
+from arolemgr.module_utils.common.text.converters import to_bytes
+from arolemgr.module_utils.compat.paramiko import paramiko
+from arolemgr.utils.display import Display
 
 display = Display()
 

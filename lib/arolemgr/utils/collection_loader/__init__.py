@@ -9,7 +9,7 @@ from __future__ import annotations
 # FIXME: decide what of this we want to actually be public/toplevel, put other stuff on a utility class?
 from ._collection_config import AnsibleCollectionConfig
 from ._collection_finder import AnsibleCollectionRef
-from ansible.module_utils.common.text.converters import to_text
+from arolemgr.module_utils.common.text.converters import to_text
 
 
 def resource_from_fqcr(ref):

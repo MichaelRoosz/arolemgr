@@ -4,7 +4,7 @@
 from __future__ import annotations
 
 
-from ansible.module_utils.six import text_type
+from arolemgr.module_utils.six import text_type
 
 
 class NativeJinjaText(text_type):

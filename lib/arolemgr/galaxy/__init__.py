@@ -24,10 +24,10 @@ from __future__ import annotations
 
 import os
 
-import ansible.constants as C
-from ansible import context
-from ansible.module_utils.common.text.converters import to_bytes
-from ansible.module_utils.common.yaml import yaml_load
+import arolemgr.constants as C
+from arolemgr import  context
+from arolemgr.module_utils.common.text.converters import to_bytes
+from arolemgr.module_utils.common.yaml import yaml_load
 
 #      default_readme_template
 #      default_meta_template

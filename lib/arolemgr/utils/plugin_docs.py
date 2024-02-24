@@ -6,14 +6,14 @@ from __future__ import annotations
 from collections.abc import MutableMapping, MutableSet, MutableSequence
 from pathlib import Path
 
-from ansible import constants as C
-from ansible.release import __version__ as ansible_version
-from ansible.errors import AnsibleError, AnsibleParserError, AnsiblePluginNotFound
-from ansible.module_utils.six import string_types
-from ansible.module_utils.common.text.converters import to_native
-from ansible.parsing.plugin_docs import read_docstring
-from ansible.parsing.yaml.loader import AnsibleLoader
-from ansible.utils.display import Display
+from arolemgr import  constants as C
+from arolemgr.release import __version__ as ansible_version
+from arolemgr.errors import AnsibleError, AnsibleParserError, AnsiblePluginNotFound
+from arolemgr.module_utils.six import string_types
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.parsing.plugin_docs import read_docstring
+from arolemgr.parsing.yaml.loader import AnsibleLoader
+from arolemgr.utils.display import Display
 
 display = Display()
 

@@ -301,7 +301,7 @@ import operator
 import shlex
 import traceback
 
-from ansible.module_utils.compat.version import LooseVersion
+from arolemgr.module_utils.compat.version import LooseVersion
 
 PACKAGING_IMP_ERR = None
 HAS_PACKAGING = False
@@ -321,9 +321,9 @@ except Exception:
     except ImportError:
         pass
 
-from ansible.module_utils.common.text.converters import to_native
-from ansible.module_utils.basic import AnsibleModule, is_executable, missing_required_lib
-from ansible.module_utils.common.locale import get_best_parsable_locale
+from arolemgr.module_utils.common.text.converters import to_native
+from arolemgr.module_utils.basic import AnsibleModule, is_executable, missing_required_lib
+from arolemgr.module_utils.common.locale import get_best_parsable_locale
 
 
 #: Python one-liners to be run at the command line that will determine the

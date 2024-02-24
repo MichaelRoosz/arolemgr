@@ -3,7 +3,7 @@
 
 from __future__ import annotations
 
-from ansible.module_utils.common.warnings import deprecate
+from arolemgr.module_utils.common.warnings import deprecate
 
 
 def __getattr__(importable_name):

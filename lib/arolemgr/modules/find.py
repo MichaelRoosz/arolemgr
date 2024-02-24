@@ -271,9 +271,9 @@ import re
 import stat
 import time
 
-from ansible.module_utils.common.text.converters import to_text, to_native
-from ansible.module_utils.basic import AnsibleModule
-from ansible.module_utils.six import string_types
+from arolemgr.module_utils.common.text.converters import to_text, to_native
+from arolemgr.module_utils.basic import AnsibleModule
+from arolemgr.module_utils.six import string_types
 
 
 class _Object:

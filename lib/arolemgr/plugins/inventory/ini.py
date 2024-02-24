@@ -76,12 +76,12 @@ import ast
 import re
 import warnings
 
-from ansible.inventory.group import to_safe_group_name
-from ansible.plugins.inventory import BaseFileInventoryPlugin
+from arolemgr.inventory.group import to_safe_group_name
+from arolemgr.plugins.inventory import BaseFileInventoryPlugin
 
-from ansible.errors import AnsibleError, AnsibleParserError
-from ansible.module_utils.common.text.converters import to_bytes, to_text
-from ansible.utils.shlex import shlex_split
+from arolemgr.errors import AnsibleError, AnsibleParserError
+from arolemgr.module_utils.common.text.converters import to_bytes, to_text
+from arolemgr.utils.shlex import shlex_split
 
 
 class InventoryModule(BaseFileInventoryPlugin):

@@ -8,11 +8,11 @@ import string
 
 from collections import namedtuple
 
-from ansible import constants as C
-from ansible.errors import AnsibleError, AnsibleAssertionError
-from ansible.module_utils.six import text_type
-from ansible.module_utils.common.text.converters import to_text, to_bytes
-from ansible.utils.display import Display
+from arolemgr import  constants as C
+from arolemgr.errors import AnsibleError, AnsibleAssertionError
+from arolemgr.module_utils.six import text_type
+from arolemgr.module_utils.common.text.converters import to_text, to_bytes
+from arolemgr.utils.display import Display
 
 PASSLIB_E = None
 PASSLIB_AVAILABLE = False

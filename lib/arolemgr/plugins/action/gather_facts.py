@@ -7,11 +7,11 @@ import os
 import time
 import typing as t
 
-from ansible import constants as C
-from ansible.executor.module_common import get_action_args_with_defaults
-from ansible.module_utils.parsing.convert_bool import boolean
-from ansible.plugins.action import ActionBase
-from ansible.utils.vars import merge_hash
+from arolemgr import  constants as C
+from arolemgr.executor.module_common import get_action_args_with_defaults
+from arolemgr.module_utils.parsing.convert_bool import boolean
+from arolemgr.plugins.action import ActionBase
+from arolemgr.utils.vars import merge_hash
 
 
 class ActionModule(ActionBase):

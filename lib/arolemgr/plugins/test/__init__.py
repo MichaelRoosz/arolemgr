@@ -3,7 +3,7 @@
 
 from __future__ import annotations
 
-from ansible.plugins import AnsibleJinja2Plugin
+from arolemgr.plugins import AnsibleJinja2Plugin
 
 
 class AnsibleJinja2Test(AnsibleJinja2Plugin):

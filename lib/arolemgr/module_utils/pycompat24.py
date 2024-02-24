@@ -30,7 +30,7 @@ from __future__ import annotations
 
 import sys
 
-from ansible.module_utils.common.warnings import deprecate
+from arolemgr.module_utils.common.warnings import deprecate
 
 
 def get_exception():

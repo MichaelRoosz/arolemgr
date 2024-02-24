@@ -62,7 +62,7 @@ except (ImportError, AttributeError):
 
 HAVE_SELINUX = False
 try:
-    from ansible.module_utils.compat import selinux
+    from arolemgr.module_utils.compat import selinux
     HAVE_SELINUX = True
 except ImportError:
     pass
@@ -71,15 +71,15 @@ except ImportError:
 NoneType = type(None)
 
 from ._text import to_native, to_bytes, to_text
-from ansible.module_utils.common.text.converters import (
+from arolemgr.module_utils.common.text.converters import (
     jsonify,
     container_to_bytes as json_dict_unicode_to_bytes,
     container_to_text as json_dict_bytes_to_unicode,
 )
 
-from ansible.module_utils.common.arg_spec import ModuleArgumentSpecValidator
+from arolemgr.module_utils.common.arg_spec import ModuleArgumentSpecValidator
 
-from ansible.module_utils.common.text.formatters import (
+from arolemgr.module_utils.common.text.formatters import (
     lenient_lowercase,
     bytes_to_human,
     human_to_bytes,
@@ -110,15 +110,15 @@ def _get_available_hash_algorithms():
 
 AVAILABLE_HASH_ALGORITHMS = _get_available_hash_algorithms()
 
-from ansible.module_utils.six.moves.collections_abc import (
+from arolemgr.module_utils.six.moves.collections_abc import (
     KeysView,
     Mapping, MutableMapping,
     Sequence, MutableSequence,
     Set, MutableSet,
 )
-from ansible.module_utils.common.locale import get_best_parsable_locale
-from ansible.module_utils.common.process import get_bin_path
-from ansible.module_utils.common.file import (
+from arolemgr.module_utils.common.locale import get_best_parsable_locale
+from arolemgr.module_utils.common.process import get_bin_path
+from arolemgr.module_utils.common.file import (
     _PERM_BITS as PERM_BITS,
     _EXEC_PERM_BITS as EXEC_PERM_BITS,
     _DEFAULT_PERM as DEFAULT_PERM,
@@ -127,12 +127,12 @@ from ansible.module_utils.common.file import (
     get_flags_from_attributes,
     FILE_ATTRIBUTES,
 )
-from ansible.module_utils.common.sys_info import (
+from arolemgr.module_utils.common.sys_info import (
     get_distribution,
     get_distribution_version,
     get_platform_subclass,
 )
-from ansible.module_utils.common.parameters import (
+from arolemgr.module_utils.common.parameters import (
     env_fallback,
     remove_values,
     sanitize_keys,
@@ -141,14 +141,14 @@ from ansible.module_utils.common.parameters import (
     PASS_BOOLS,
 )
 
-from ansible.module_utils.errors import AnsibleFallbackNotFound, AnsibleValidationErrorMultiple, UnsupportedError
-from ansible.module_utils.common.validation import (
+from arolemgr.module_utils.errors import AnsibleFallbackNotFound, AnsibleValidationErrorMultiple, UnsupportedError
+from arolemgr.module_utils.common.validation import (
     check_missing_parameters,
     safe_eval,
 )
-from ansible.module_utils.common._utils import get_all_subclasses as _get_all_subclasses
-from ansible.module_utils.parsing.convert_bool import BOOLEANS, BOOLEANS_FALSE, BOOLEANS_TRUE, boolean
-from ansible.module_utils.common.warnings import (
+from arolemgr.module_utils.common._utils import get_all_subclasses as _get_all_subclasses
+from arolemgr.module_utils.parsing.convert_bool import BOOLEANS, BOOLEANS_FALSE, BOOLEANS_TRUE, boolean
+from arolemgr.module_utils.common.warnings import (
     deprecate,
     get_deprecation_messages,
     get_warning_messages,
@@ -2075,7 +2075,7 @@ def get_module_path():
 def __getattr__(importable_name):
     """Inject import-time deprecation warnings."""
     if importable_name == 'get_exception':
-        from ansible.module_utils.pycompat24 import get_exception
+        from arolemgr.module_utils.pycompat24 import get_exception
         importable = get_exception
     elif importable_name in {'literal_eval', '_literal_eval'}:
         from ast import literal_eval

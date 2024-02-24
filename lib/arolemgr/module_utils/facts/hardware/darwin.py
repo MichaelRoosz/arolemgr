@@ -19,9 +19,9 @@ from __future__ import annotations
 import struct
 import time
 
-from ansible.module_utils.common.process import get_bin_path
-from ansible.module_utils.facts.hardware.base import Hardware, HardwareCollector
-from ansible.module_utils.facts.sysctl import get_sysctl
+from arolemgr.module_utils.common.process import get_bin_path
+from arolemgr.module_utils.facts.hardware.base import Hardware, HardwareCollector
+from arolemgr.module_utils.facts.sysctl import get_sysctl
 
 
 class DarwinHardware(Hardware):

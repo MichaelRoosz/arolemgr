@@ -24,12 +24,12 @@ import uuid
 from collections.abc import MutableMapping, MutableSequence
 from json import dumps
 
-from ansible import constants as C
-from ansible import context
-from ansible.errors import AnsibleError, AnsibleOptionsError
-from ansible.module_utils.six import string_types
-from ansible.module_utils.common.text.converters import to_native, to_text
-from ansible.parsing.splitter import parse_kv
+from arolemgr import  constants as C
+from arolemgr import  context
+from arolemgr.errors import AnsibleError, AnsibleOptionsError
+from arolemgr.module_utils.six import string_types
+from arolemgr.module_utils.common.text.converters import to_native, to_text
+from arolemgr.parsing.splitter import parse_kv
 
 
 ADDITIONAL_PY2_KEYWORDS = frozenset(("True", "False", "None"))
