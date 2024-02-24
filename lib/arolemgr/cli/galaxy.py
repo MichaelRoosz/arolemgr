@@ -1577,7 +1577,7 @@ class GalaxyCLI(CLI):
 
                     self._execute_install_role_handle_install_result(role, installed, requirements, next_roles_to_install)
 
-            if max_concurrent_downloads > 1:
+            if max_concurrent_downloads > 1 and scheduled_role_installs:
                 async def install_role_async(sem, role):
                     async with sem:
                         return await role.install_async()
