@@ -183,7 +183,7 @@ def version(prog=None):
     else:
         cpath = C.DEFAULT_MODULE_PATH
     result.append("  configured module search path = %s" % cpath)
-    result.append("  ansible python module location = %s" % ':'.join(ansible.__path__))
+    result.append("  ansible python module location = %s" % ':'.join(arolemgr.__path__))
     result.append("  ansible collection location = %s" % ':'.join(C.COLLECTIONS_PATHS))
     result.append("  executable location = %s" % sys.argv[0])
     result.append("  python version = %s (%s)" % (''.join(sys.version.splitlines()), to_native(sys.executable)))
@@ -219,7 +219,7 @@ def create_base_parser(prog, usage="", desc=None, epilog=None):
 def add_verbosity_options(parser):
     """Add options for verbosity"""
     parser.add_argument('-v', '--verbose', dest='verbosity', default=C.DEFAULT_VERBOSITY, action="count",
-                        help="Causes Ansible to print more debug messages. Adding multiple -v will increase the verbosity, "
+                        help="Prints more debug messages. Adding multiple -v will increase the verbosity, "
                              "the builtin plugins currently evaluate up to -vvvvvv. A reasonable level to start is -vvv, "
                              "connection debugging might require -vvvv.")
 

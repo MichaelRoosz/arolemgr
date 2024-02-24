@@ -239,7 +239,7 @@ class _AnsibleTraversableResources(TraversableResources):
 class _AnsibleCollectionFinder:
     def __init__(self, paths=None, scan_sys_paths=True):
         # TODO: accept metadata loader override
-        self._ansible_pkg_path = to_native(os.path.dirname(to_bytes(sys.modules['ansible'].__file__)))
+        self._ansible_pkg_path = to_native(os.path.dirname(to_bytes(sys.modules['arolemgr'].__file__)))
 
         if isinstance(paths, string_types):
             paths = [paths]

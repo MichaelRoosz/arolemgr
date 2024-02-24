@@ -206,7 +206,7 @@ class GalaxyCLI(CLI):
        Use an external scheduler and/or locking to ensure there are no clashing operations.
     '''
 
-    name = 'ansible-galaxy'
+    name = 'arolemgr'
 
     SKIP_INFO_KEYS = ("name", "description", "readme_html", "related", "summary_fields", "average_aw_composite", "average_aw_score", "url")
 
@@ -225,7 +225,7 @@ class GalaxyCLI(CLI):
                 display.error(
                     "The login command was removed in late 2020. An API key is now required to publish roles or collections "
                     "to Galaxy. The key can be found at https://galaxy.ansible.com/me/preferences, and passed to the "
-                    "ansible-galaxy CLI via a file at {0} or (insecurely) via the `--token` "
+                    "arolemgr CLI via a file at {0} or (insecurely) via the `--token` "
                     "command-line argument.".format(to_text(C.GALAXY_TOKEN_PATH)))
                 sys.exit(1)
 
@@ -576,7 +576,7 @@ class GalaxyCLI(CLI):
                                         default=False,
                                         help='Use tar instead of the scm archive option when packaging the role.')
 
-            install_parser.add_argument('--max-concurrent-downloads', dest='max_concurrent_downloads', type=int, default=1,
+            install_parser.add_argument('--max-concurrent-downloads', dest='max_concurrent_downloads', type=int, default=3,
                                         help="The maximum number of concurrent downloads to perform when installing roles.")
 
     def add_build_options(self, parser, parents=None):
@@ -1334,7 +1334,7 @@ class GalaxyCLI(CLI):
     @with_collection_artifacts_manager
     def execute_install(self, artifacts_manager=None):
         """
-        Install one or more roles(``ansible-galaxy role install``), or one or more collections(``ansible-galaxy collection install``).
+        Install one or more roles(``arolemgr role install``), or one or more collections(``arolemgr collection install``).
         You can pass in a list (roles or collections) or use the file
         option listed below (these are mutually exclusive). If you pass in a list, it
         can be a name (which will be downloaded via the galaxy API and github), or it can be a local tar archive file.
@@ -1350,8 +1350,8 @@ class GalaxyCLI(CLI):
             requirements_file = GalaxyCLI._resolve_path(requirements_file)
 
         two_type_warning = "The requirements file '%s' contains {0}s which will be ignored. To install these {0}s " \
-                           "run 'ansible-galaxy {0} install -r' or to install both at the same time run " \
-                           "'ansible-galaxy install -r' without a custom install path." % to_text(requirements_file)
+                           "run 'arolemgr {0} install -r' or to install both at the same time run " \
+                           "'arolemgr install -r' without a custom install path." % to_text(requirements_file)
 
         # TODO: Would be nice to share the same behaviour with args and -r in collections and roles.
         collection_requirements = []
@@ -1390,7 +1390,7 @@ class GalaxyCLI(CLI):
                 if requirements['collections'] and (not self._implicit_role or '-p' in galaxy_args or
                                                     '--roles-path' in galaxy_args):
 
-                    # We only want to display a warning if 'ansible-galaxy install -r ... -p ...'. Other cases the user
+                    # We only want to display a warning if 'arolemgr install -r ... -p ...'. Other cases the user
                     # was explicit about the type and shouldn't care that collections were skipped.
                     display_func = display.warning if self._implicit_role else display.vvv
                     display_func(two_type_warning.format('collection'))
@@ -1414,7 +1414,7 @@ class GalaxyCLI(CLI):
 
         if collection_requirements:
             display.display("Starting galaxy collection install process")
-            # Collections can technically be installed even when ansible-galaxy is in role mode so we need to pass in
+            # Collections can technically be installed even when arolemgr is in role mode so we need to pass in
             # the install path as context.CLIARGS['collections_path'] won't be set (default is calculated above).
             self._execute_install_collection(
                 collection_requirements, collection_path,
@@ -1433,12 +1433,12 @@ class GalaxyCLI(CLI):
         except KeyError:
             if self._implicit_role:
                 raise AnsibleError(
-                    'Unable to properly parse command line arguments. Please use "ansible-galaxy collection install" '
-                    'instead of "ansible-galaxy install".'
+                    'Unable to properly parse command line arguments. Please use "arolemgr collection install" '
+                    'instead of "arolemgr install".'
                 )
             raise
 
-        # If `ansible-galaxy install` is used, collection-only options aren't available to the user and won't be in context.CLIARGS
+        # If `arolemgr install` is used, collection-only options aren't available to the user and won't be in context.CLIARGS
         allow_pre_release = context.CLIARGS.get('allow_pre_release', False)
         upgrade = context.CLIARGS.get('upgrade', False)
 
@@ -1451,7 +1451,7 @@ class GalaxyCLI(CLI):
         if unexpected_path and any(p.startswith(path) for p in read_req_paths):
             display.warning(
                 f"The specified collections path '{path}' appears to be part of the pip Ansible package. "
-                "Managing these directly with ansible-galaxy could break the Ansible package. "
+                "Managing these directly with arolemgr could break the Ansible package. "
                 "Install collections to a configured collections path, which will take precedence over "
                 "collections found in the PYTHONPATH."
             )
