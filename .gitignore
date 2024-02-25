@@ -71,4 +71,5 @@ htmlcov/
 # tmp
 roles
 bb-cloud-ssh.yml
+bb-tar.yml
 tar.yml

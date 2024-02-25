@@ -256,8 +256,20 @@ class GalaxyRole(object):
 
             display.display("- downloading role from %s" % archive_url)
 
+            if archive_url.startswith('auth:'):
+                dummy, auth, archive_url = archive_url.split(":", 2)
+                url_username = os.environ.get('ANISBLE_GALAXY_AUTH_%s_USERNAME' % auth.upper())
+                url_password = os.environ.get('ANISBLE_GALAXY_AUTH_%s_PASSWORD' % auth.upper())
+                force_basic_auth = True
+
+            else:
+                url_username = None
+                url_password = None
+                force_basic_auth = False
+    
             try:
-                url_file = open_url(archive_url, validate_certs=self._validate_certs, http_agent=user_agent())
+                url_file = open_url(archive_url, validate_certs=self._validate_certs, http_agent=user_agent(),
+                                    url_username=url_username, url_password=url_password, force_basic_auth=force_basic_auth)
                 temp_file = tempfile.NamedTemporaryFile(delete=False)
                 data = url_file.read()
                 while data:
